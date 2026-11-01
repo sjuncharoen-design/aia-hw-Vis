@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>วันที่ราคาขยับเกิน 5%: TIDLOR DOHOME MOSHI PR9</title>
+<style>
+:root{--bg:#f7f6f2;--card:#fff;--tx:#1d1d1b;--mut:#6b6a63;--bd:#e3e1d8;--up:#0f7b4f;--dn:#c0392b;--ac:#2a5db0;--lo:#8a8a82;--wn:#d19b00}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#15161a;--card:#1e2026;--tx:#ecebe6;--mut:#a3a29a;--bd:#2f323a;--up:#3ecf8e;--dn:#ff7a6b;--ac:#7aa7ff;--lo:#7c7c75}}
+:root[data-theme=dark]{--bg:#15161a;--card:#1e2026;--tx:#ecebe6;--mut:#a3a29a;--bd:#2f323a;--up:#3ecf8e;--dn:#ff7a6b;--ac:#7aa7ff;--lo:#7c7c75}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 "IBM Plex Sans Thai","Noto Sans Thai",system-ui,sans-serif}
+main{max-width:1080px;margin:0 auto;padding:20px 16px 48px}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:17px;margin:0 0 6px}
+.sub{color:var(--mut);margin:0 0 14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:16px;margin:0 0 16px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:0 0 16px}
+.kpi{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 12px}
+.kpi .l{color:var(--mut);font-size:12px}.kpi .v{font-size:22px;font-weight:600}.kpi .s{color:var(--mut);font-size:12px}
+.warn{border-left:4px solid var(--wn);background:color-mix(in srgb,var(--wn) 10%,var(--card))}
+.up{color:var(--up)}.dn{color:var(--dn)}
+svg{width:100%;height:auto;display:block}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}
+.tabs button{border-radius:8px;padding:6px 14px}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 10px}
+button{font:inherit;background:var(--card);color:var(--tx);border:1px solid var(--bd);border-radius:999px;padding:4px 12px;cursor:pointer}
+button[aria-pressed=true],button[aria-selected=true]{background:var(--ac);color:#fff;border-color:var(--ac)}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:660px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--bd);text-align:left;vertical-align:top}
+th{color:var(--mut);font-weight:500;font-size:13px}td.n{text-align:right;white-space:nowrap}
+.tag{display:inline-block;font-size:12px;border:1px solid var(--bd);border-radius:6px;padding:0 6px;color:var(--mut);margin:0 4px 2px 0}
+.tag.mid{color:var(--ac);border-color:var(--ac)}.tag.low{color:var(--lo)}.tag.cal{color:var(--wn);border-color:var(--wn)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:720px){.grid2{grid-template-columns:1fr}}
+ul{margin:6px 0 0;padding-left:20px}li{margin:0 0 6px}.pg{color:var(--mut);font-size:12px}
+a{color:var(--ac)}.mut{color:var(--mut)}
+</style>
+</head>
+<body>
+<main>
+<h1>วันที่ราคาปิดขยับเกิน 5% เกิดจากอะไร</h1>
+<p class="sub" id="sub"></p>
+<div class="tabs" id="tabs" role="tablist"></div>
+<div id="stock"></div>
+<p class="sub">ข้อมูลเพื่อการเรียนรู้และประกอบการวิเคราะห์ ไม่ใช่คำแนะนำการลงทุน</p>
+</main>
+<script id="data" type="application/json">/*DATA*/null</script>
+<script>
+const D=JSON.parse(document.getElementById('data').textContent);
+const S=D.stocks,OPP=D.oppday||{};
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const fd=s=>{const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(s);return m?(+m[3])+' '+MON[+m[2]-1]+' '+m[1]:s};
+const f1=v=>(v>0?'+':'')+v.toFixed(2)+'%';
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const DRV={dividend_buyback:'ปันผล / ซื้อหุ้นคืน',news_negative:'ข่าวลบเฉพาะบริษัท',unknown:'ยังไม่พบสาเหตุ'};
+const CONF={mid:'ปานกลาง',low:'ยังไม่พบ'};
+const total=Object.values(S).reduce((a,s)=>a+s.events.length,0),expl=Object.values(S).reduce((a,s)=>a+s.explained,0);
+document.getElementById('sub').textContent='นิยาม: ราคาปิดวันเดียวขยับมากกว่า 5% เทียบปิดวันก่อน · ราคาจาก Yahoo Finance (ดึง 1 Nov 2026, แหล่งเดียว) · รวม '+Object.keys(S).length+' หุ้น '+total+' วัน พบสาเหตุที่ยืนยันได้ '+expl+' วัน';
+let cur=Object.keys(S)[0],flt='all';
+
+function chart(s){
+ const P=s.prices,E=s.events,W=1000,H=330,L=44,R=12,T=14,B=28;
+ const ps=P.map(r=>r.p),lo=Math.min(...ps)*0.97,hi=Math.max(...ps)*1.03;
+ const X=i=>L+i/(P.length-1)*(W-L-R),Y=v=>T+(1-(v-lo)/(hi-lo))*(H-T-B);
+ const idx={};P.forEach((r,i)=>idx[r.d]=i);
+ let o=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="กราฟราคาปิดรายวัน ${esc(s.ticker)}">`;
+ for(let k=0;k<=4;k++){const v=lo+(hi-lo)*k/4,y=Y(v);o+=`<line x1="${L}" x2="${W-R}" y1="${y}" y2="${y}" stroke="var(--bd)"/><text x="${L-6}" y="${y+4}" text-anchor="end" font-size="11" fill="var(--mut)">${v>=10?v.toFixed(0):v.toFixed(1)}</text>`;}
+ let lastY='';P.forEach((r,i)=>{const y=r.d.slice(0,4),m=+r.d.slice(5,7);const key=y+(m<=6?'a':'b');if(key!==lastY&&(m===1||m===7||i===0)){lastY=key;o+=`<text x="${X(i)}" y="${H-8}" font-size="11" fill="var(--mut)" text-anchor="start">${MON[m-1]} ${y}</text>`;}});
+ o+=`<polyline fill="none" stroke="var(--mut)" stroke-width="1.2" points="${P.map((r,i)=>X(i).toFixed(1)+','+Y(r.p).toFixed(1)).join(' ')}"/>`;
+ E.forEach(e=>{const i=idx[e.date];if(i==null)return;const c=e.dir==='up'?'var(--up)':'var(--dn)',big=e.conf!=='low';
+  o+=`<circle cx="${X(i)}" cy="${Y(e.close)}" r="${big?7:3.6}" fill="${c}" fill-opacity="${big?1:.55}" stroke="var(--card)" stroke-width="1"><title>${fd(e.date)} ${f1(e.ret)} · ${esc(e.why)}</title></circle>`;});
+ return o+'</svg>';
+}
+
+function limits(s){
+ const c=s.coverage,items=[];
+ if(s.ticker==='TIDLOR')items.push('ราคามีแค่ '+s.bars+' แท่งตั้งแต่ '+fd(s.first)+' เพราะ Yahoo มีประวัติของ TIDLOR เฉพาะหลังย้ายเป็นบริษัทโฮลดิ้งและกลับเข้าจดทะเบียนวันที่ 15 May 2025 — ยังไม่ครบ 5 ปี รอ TradingView (ติด rate-limit) เพื่อขยายและตรวจ 2 แหล่ง');
+ else if(s.ticker==='MOSHI')items.push('ราคามี '+s.bars+' แท่งตั้งแต่ '+fd(s.first)+' (เพิ่งเข้าจดทะเบียน) จึงสั้นกว่า 5 ปี');
+ else items.push('ราคา '+s.bars+' แท่ง '+fd(s.first)+' – '+fd(s.last)+' (5 ปี)');
+ items.push('ราคาตรวจจาก Yahoo แหล่งเดียว ยังไม่ได้เทียบกับ TradingView (MCP ติด rate-limit) · Yahoo close ปรับ split แต่ไม่ปรับปันผล');
+ items.push('สแกนเอกสารในเครื่องผ่านไฟล์ .extracted.md แล้ว '+c.files_scanned+' ไฟล์ (ข้าม '+c.files_skipped+': ชื่อเป็นของหุ้นอื่น/ไฟล์ซ้ำ/PDF สแกน) หาข้อความที่เอ่ยถึงวันเกิดเหตุหรือวันถัดไป — ส่วนใหญ่เป็นวันที่บังเอิญในหมายเหตุงบ ไม่ใช่คำอธิบายราคา');
+ items.push('พบสาเหตุที่ยืนยันได้ '+s.explained+' จาก '+s.events.length+' วัน · '+s.with_calendar+' วันตรงกับปฏิทินเปิดเผยข้อมูลของบริษัท (เป็นข้อสังเกต ไม่ใช่สาเหตุ) · ที่เหลือ "ยังไม่พบ" ไม่ได้แปลว่าไม่มีสาเหตุ');
+ return '<h2>ข้อจำกัดของข้อมูลชุดนี้ (อ่านก่อน)</h2><ul>'+items.map(t=>'<li>'+esc(t)+'</li>').join('')+'</ul>';
+}
+
+function render(){
+ const s=S[cur],E=s.events,last=s.prices[s.prices.length-1];
+ const ups=E.filter(e=>e.dir==='up').length,mx=E.reduce((a,b)=>Math.abs(b.ret)>Math.abs(a.ret)?b:a);
+ const cl=new Set(E.map(e=>e.cluster)).size,big=Math.max(...E.reduce((m,e)=>(m[e.cluster]=(m[e.cluster]||0)+1,m),[0]).filter(x=>x));
+ let h=`<p class="sub">${esc(s.name)} · ${esc(s.group)} · ราคาปิด ${fd(s.first)} – ${fd(s.last)} (${s.bars} แท่ง)</p>`;
+ h+='<div class="kpis">'+[
+  ['ราคาปิดล่าสุด',last.p.toFixed(2)+' บาท',fd(last.d)],
+  ['วันที่ขยับเกิน 5%',E.length+' วัน',ups+' ขึ้น · '+(E.length-ups)+' ลง'],
+  ['พบสาเหตุที่ยืนยันได้',s.explained+' จาก '+E.length,'ตรงปฏิทินบริษัท '+s.with_calendar+' วัน'],
+  ['ขยับแรงสุด',f1(mx.ret),fd(mx.date)],
+  ['กลุ่มเหตุการณ์ติดกัน',cl+' กลุ่ม','ใหญ่สุด '+big+' วันภายใน 8 วัน']
+ ].map(k=>`<div class="kpi"><div class="l">${k[0]}</div><div class="v">${k[1]}</div><div class="s">${k[2]}</div></div>`).join('')+'</div>';
+ h+=`<div class="card warn">${limits(s)}</div>`;
+ h+=`<div class="card"><h2>ราคาปิดรายวัน พร้อมวันที่ขยับเกิน ±5%</h2><p class="sub"><span class="up">●</span> ขึ้นแรง · <span class="dn">●</span> ลงแรง · จุดใหญ่ = พบสาเหตุแล้ว · จุดเล็กจาง = ยังไม่พบสาเหตุ · เอาเมาส์ชี้จุดเพื่อดูรายละเอียด</p>${chart(s)}</div>`;
+ h+='<div class="card"><h2>เหตุการณ์ทั้งหมด</h2><div class="tools">'+[['all','ทั้งหมด'],['up','ขึ้นแรง'],['down','ลงแรง'],['found','พบสาเหตุ'],['cal','ตรงปฏิทินบริษัท'],['cluster','อยู่ในกลุ่มติดกัน ≥3 วัน']].map(b=>`<button data-f="${b[0]}" aria-pressed="${b[0]===flt}">${b[1]}</button>`).join('')+'</div><div class="tw"><table id="tb"></table></div><p class="sub" id="tbnote"></p></div>';
+ const op=OPP[s.ticker];
+ if(op){h+=`<div class="grid2"><div class="card"><h2>ตัวขับเคลื่อนหลักตามเอกสารบริษัท</h2><p class="sub">แหล่ง: ${esc(op.file)} (tier A)</p><ul>${op.drivers.map(d=>`<li>${esc(d.t)} <span class="pg">[${esc(d.pg)}]</span></li>`).join('')}</ul></div>
+  <div class="card"><h2>ความเสี่ยงที่ต้องติดตาม</h2><p class="sub">จากเอกสารชุดเดียวกัน</p><ul>${op.risks.map(d=>`<li>${esc(d.t)} <span class="pg">[${esc(d.pg)}]</span></li>`).join('')}</ul></div></div>
+  <div class="card"><h2>เป้าหมายปี 2026 เทียบผลจริง 1H26</h2><div class="tw"><table><thead><tr><th>หัวข้อ</th><th>เป้าหมาย 2026</th><th>1H26 จริง</th></tr></thead><tbody>${op.guidance.map(r=>'<tr><td>'+r.map(esc).join('</td><td>')+'</td></tr>').join('')}</tbody></table></div></div>`;}
+ else h+='<div class="card"><h2>ตัวขับเคลื่อนหลักและความเสี่ยงตามเอกสารบริษัท</h2><p class="sub">ยังไม่ได้สรุปสำหรับหุ้นนี้ — ยังไม่ได้อ่าน Oppday ล่าสุดจนได้ตัวเลขที่ตรวจที่มาได้ จึงไม่ใส่ตัวเลขแทน</p></div>';
+ document.getElementById('stock').innerHTML=h;
+ table();
+}
+
+function table(){
+ const s=S[cur];
+ const rows=s.events.filter(e=>flt==='all'||(flt==='up'&&e.dir==='up')||(flt==='down'&&e.dir==='down')||(flt==='found'&&e.conf!=='low')||(flt==='cal'&&e.calendar.length)||(flt==='cluster'&&e.cluster_n>=3)).slice().reverse();
+ document.getElementById('tb').innerHTML='<thead><tr><th>วันที่</th><th class="n">ปิด</th><th class="n">เปลี่ยน</th><th>สาเหตุ / หลักฐาน</th><th>ความมั่นใจ</th></tr></thead><tbody>'+rows.map(e=>{
+  const ev=e.evidence.map(x=>`<div><span class="tag">${esc(x.tier)}</span> <a href="${esc(x.src)}" target="_blank" rel="noopener">${esc(x.src.replace(/^https?:\/\//,'').slice(0,46))}</a><div class="pg">${esc(x.note)}</div></div>`).join('');
+  const cal=e.calendar.map(c=>`<span class="tag cal" title="${esc(c.src)}">${esc(c.label)} ${esc(fd(c.date))}${c.time?' '+esc(c.time):''} (${esc(c.rel)})</span>`).join('');
+  const cl=e.cluster_n>=3?`<span class="tag">กลุ่ม ${e.cluster_n} วันใน 8 วัน</span>`:'';
+  return `<tr><td>${fd(e.date)}</td><td class="n">${e.close.toFixed(2)}</td><td class="n ${e.dir}">${f1(e.ret)}</td><td>${esc(DRV[e.driver]||e.driver)}: ${esc(e.why)}${e.searched?`<div class="pg">${esc(e.searched)}</div>`:''}${cal||cl?`<div>${cal}${cl}</div>`:''}${e.note?`<div class="pg">${esc(e.note)}</div>`:''}${ev}</td><td><span class="tag ${e.conf}">${CONF[e.conf]}</span></td></tr>`;}).join('')+'</tbody>';
+ document.getElementById('tbnote').textContent='แสดง '+rows.length+' จาก '+s.events.length+' วัน (ใหม่สุดก่อน) · tier A = เอกสารบริษัท/SET · B = สื่อการเงิน/บทวิเคราะห์ · ป้ายส้ม = วันที่บริษัทเปิดเผยข้อมูลใกล้วันนั้น (ข้อสังเกต)';
+}
+
+document.getElementById('tabs').innerHTML=Object.keys(S).map(t=>`<button role="tab" data-t="${t}" aria-selected="${t===cur}">${t}</button>`).join('');
+document.getElementById('tabs').addEventListener('click',ev=>{const b=ev.target.closest('button');if(!b)return;cur=b.dataset.t;flt='all';document.querySelectorAll('#tabs button').forEach(x=>x.setAttribute('aria-selected',x===b));render();});
+document.getElementById('stock').addEventListener('click',ev=>{const b=ev.target.closest('.tools button');if(!b)return;flt=b.dataset.f;document.querySelectorAll('.tools button').forEach(x=>x.setAttribute('aria-pressed',x===b));table();});
+render();
+</script>
+</body>
+</html>

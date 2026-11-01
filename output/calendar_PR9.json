@@ -1,0 +1,215 @@
+{
+ "ticker": "PR9",
+ "items": [
+  {
+   "date": "2020-12-16",
+   "kind": "oppday",
+   "src": "Earning Call/2020Q3_Earningcall_YouTube_PR9.txt"
+  },
+  {
+   "date": "2021-12-13",
+   "kind": "oppday",
+   "src": "Earning Call/2021Q3_Earningcall_YouTube_PR9.txt"
+  },
+  {
+   "date": "2022-08-17",
+   "kind": "oppday",
+   "src": "Earning Call/2022Q2_Earningcall_YouTube_PR9.txt"
+  },
+  {
+   "date": "2022-11-16",
+   "kind": "oppday",
+   "src": "Earning Call/2022Q3_Earningcall_YouTube_PR9.txt"
+  },
+  {
+   "date": "2023-05-12",
+   "time": "10:31",
+   "kind": "fs_filed",
+   "src": "Financial statement/2023 Q1/1463FIN120520231031110230T.zip"
+  },
+  {
+   "date": "2023-05-22",
+   "kind": "oppday",
+   "src": "Earning Call/2023Q1_Earningcall_YouTube_PR9.txt"
+  },
+  {
+   "date": "2023-08-21",
+   "kind": "oppday",
+   "src": "Earning Call/2023Q2_Earningcall_YouTube_PR9.txt"
+  },
+  {
+   "date": "2023-11-09",
+   "time": "14:17",
+   "kind": "fs_filed",
+   "src": "Financial statement/2023 Q3/1463FIN091120231417170581T.zip"
+  },
+  {
+   "date": "2023-11-20",
+   "kind": "oppday",
+   "src": "Earning Call/2023Q3_Earningcall_YouTube_PR9.txt"
+  },
+  {
+   "date": "2024-02-19",
+   "kind": "audit_signed",
+   "src": "Financial statement/2023Q4_AuditReport_PR9.doc.extracted.md"
+  },
+  {
+   "date": "2024-05-13",
+   "kind": "audit_signed",
+   "src": "Financial statement/2024Q1_AuditReport_PR9.doc.extracted.md"
+  },
+  {
+   "date": "2024-05-29",
+   "kind": "oppday",
+   "src": "Earning Call/2024Q1_Earningcall_YouTube_PR9.txt"
+  },
+  {
+   "date": "2024-08-07",
+   "kind": "audit_signed",
+   "src": "Financial statement/2024Q2_AuditReport_PR9.doc.extracted.md"
+  },
+  {
+   "date": "2024-09-06",
+   "kind": "oppday",
+   "src": "Earning Call/2024Q2_Earningcall_YouTube_PR9.txt"
+  },
+  {
+   "date": "2024-11-08",
+   "kind": "audit_signed",
+   "src": "Financial statement/2024Q3_AuditReport_PR9.doc.extracted.md"
+  },
+  {
+   "date": "2024-12-02",
+   "kind": "oppday",
+   "src": "Earning Call/2024Q3_Earningcall_YouTube_PR9.txt"
+  },
+  {
+   "date": "2025-02-18",
+   "kind": "audit_signed",
+   "src": "Financial statement/2024Q4_AuditReport_PR9.doc.extracted.md"
+  },
+  {
+   "date": "2025-05-07",
+   "kind": "audit_signed",
+   "src": "Financial statement/1482Q1_AuditReport_PR9.docx.extracted.md"
+  },
+  {
+   "date": "2025-05-15",
+   "kind": "audit_signed",
+   "src": "Financial statement/2025Q1_AuditReport_PR9.doc.extracted.md"
+  },
+  {
+   "date": "2025-05-30",
+   "kind": "oppday",
+   "src": "Earning Call/2025Q1_Earningcall_YouTube_PR9.txt"
+  },
+  {
+   "date": "2025-08-14",
+   "kind": "audit_signed",
+   "src": "Financial statement/1482Q2_AuditReport_PR9.docx.extracted.md"
+  },
+  {
+   "date": "2025-08-22",
+   "kind": "oppday",
+   "src": "Earning Call/2025Q2_Earningcall_YouTube_PR9.txt"
+  },
+  {
+   "date": "2025-11-07",
+   "kind": "audit_signed",
+   "src": "Financial statement/2025Q3_AuditReport_PR9.doc.extracted.md"
+  },
+  {
+   "date": "2025-11-12",
+   "kind": "audit_signed",
+   "src": "Financial statement/1482Q3_AuditReport_PR9.docx.extracted.md"
+  },
+  {
+   "date": "2025-11-19",
+   "kind": "oppday",
+   "src": "Earning Call/2025Q3_Earningcall_YouTube_PR9.txt"
+  },
+  {
+   "date": "2026-02-17",
+   "kind": "audit_signed",
+   "src": "Financial statement/2025Q4_AuditReport_PR9.doc.extracted.md"
+  },
+  {
+   "date": "2026-02-25",
+   "kind": "audit_signed",
+   "src": "Financial statement/1482Q4_AuditReport_PR9.docx.extracted.md"
+  },
+  {
+   "date": "2026-05-12",
+   "kind": "audit_signed",
+   "src": "Financial statement/2026Q1_AuditReport_PR9.docx.extracted.md"
+  },
+  {
+   "date": "2026-05-14",
+   "kind": "audit_signed",
+   "src": "Financial statement/1483Q1_AuditReport_PR9.docx.extracted.md"
+  },
+  {
+   "date": "2026-05-15",
+   "kind": "oppday",
+   "src": "Earning Call/2026Q1_Earningcall_YouTube_PR9.txt"
+  },
+  {
+   "date": "2026-08-11",
+   "kind": "audit_signed",
+   "src": "Financial statement/2026Q2_AuditReport_PR9.docx.extracted.md"
+  },
+  {
+   "date": "2026-08-11",
+   "time": "17:47",
+   "kind": "set_news",
+   "src": "News/set_news_2026-08-12.jsonl",
+   "title": "งบการเงิน ไตรมาสที่ 2/2569 (สอบทานแล้ว)",
+   "url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=17864032059281&symbol=PR9"
+  },
+  {
+   "date": "2026-08-11",
+   "time": "17:53",
+   "kind": "set_news",
+   "src": "News/set_news_2026-08-12.jsonl",
+   "title": "สรุปผลการดำเนินงานของ บจ. ไตรมาสที่ 2 (F45) (สอบทานแล้ว)",
+   "url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=105865101&symbol=PR9"
+  },
+  {
+   "date": "2026-08-11",
+   "time": "17:59",
+   "kind": "set_news",
+   "src": "News/set_news_2026-08-12.jsonl",
+   "title": "คำอธิบายและวิเคราะห์ของฝ่ายจัดการ ไตรมาสที่ 2 สิ้นสุดวันที่ 30 มิ.ย. 2569",
+   "url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=105864801&symbol=PR9"
+  },
+  {
+   "date": "2026-08-11",
+   "time": "18:05",
+   "kind": "set_news",
+   "src": "News/set_news_2026-08-12.jsonl",
+   "title": "การจ่ายเงินปันผลระหว่างกาล ปี 2569",
+   "url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=105886301&symbol=PR9"
+  },
+  {
+   "date": "2026-08-14",
+   "kind": "audit_signed",
+   "src": "Financial statement/1483Q2_AuditReport_PR9.docx.extracted.md"
+  },
+  {
+   "date": "2026-08-14",
+   "kind": "oppday",
+   "src": "Earning Call/2026Q2_Earningcall_YouTube_PR9.txt"
+  }
+ ],
+ "matches": [
+  {
+   "event_date": "2025-02-19",
+   "rel": "T-1",
+   "item": {
+    "date": "2025-02-18",
+    "kind": "audit_signed",
+    "src": "Financial statement/2024Q4_AuditReport_PR9.doc.extracted.md"
+   }
+  }
+ ]
+}

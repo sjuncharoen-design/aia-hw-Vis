@@ -1,0 +1,231 @@
+{
+ "ticker": "DOHOME",
+ "items": [
+  {
+   "date": "2022-05-11",
+   "kind": "oppday",
+   "src": "Earning Call/2022Q1_Earningcall_YouTube_DOHOME.txt"
+  },
+  {
+   "date": "2022-08-11",
+   "kind": "oppday",
+   "src": "Earning Call/2022Q2_Earningcall_YouTube_DOHOME.txt"
+  },
+  {
+   "date": "2022-11-11",
+   "kind": "oppday",
+   "src": "Earning Call/2022Q3_Earningcall_YouTube_DOHOME.txt"
+  },
+  {
+   "date": "2023-05-15",
+   "kind": "oppday",
+   "src": "Earning Call/2023Q1_Earningcall_YouTube_DOHOME.txt"
+  },
+  {
+   "date": "2023-06-30",
+   "kind": "audit_signed",
+   "src": "Financial statement/2023Q2_AuditReport_DOHOME.DOC.extracted.md"
+  },
+  {
+   "date": "2023-08-11",
+   "kind": "oppday",
+   "src": "Earning Call/2023Q2_Earningcall_YouTube_DOHOME.txt"
+  },
+  {
+   "date": "2023-09-30",
+   "kind": "audit_signed",
+   "src": "Financial statement/2023Q3_AuditReport_DOHOME.DOC.extracted.md"
+  },
+  {
+   "date": "2023-11-10",
+   "kind": "oppday",
+   "src": "Earning Call/2023Q3_Earningcall_YouTube_DOHOME.txt"
+  },
+  {
+   "date": "2024-02-20",
+   "kind": "audit_signed",
+   "src": "Financial statement/2023Q4_AuditReport_DOHOME.doc.extracted.md"
+  },
+  {
+   "date": "2024-05-07",
+   "kind": "audit_signed",
+   "src": "Financial statement/2024Q1_AuditReport_DOHOME.doc.extracted.md"
+  },
+  {
+   "date": "2024-05-10",
+   "kind": "oppday",
+   "src": "Earning Call/2024Q1_Earningcall_YouTube_DOHOME.txt"
+  },
+  {
+   "date": "2024-08-06",
+   "kind": "audit_signed",
+   "src": "Financial statement/2024Q2_AuditReport_DOHOME.doc.extracted.md"
+  },
+  {
+   "date": "2024-08-08",
+   "kind": "oppday",
+   "src": "Earning Call/2024Q2_Earningcall_YouTube_DOHOME.txt"
+  },
+  {
+   "date": "2024-11-05",
+   "kind": "audit_signed",
+   "src": "Financial statement/2024Q3_AuditReport_DOHOME.doc.extracted.md"
+  },
+  {
+   "date": "2024-11-08",
+   "kind": "oppday",
+   "src": "Earning Call/2024Q3_Earningcall_YouTube_DOHOME.txt"
+  },
+  {
+   "date": "2025-02-19",
+   "kind": "audit_signed",
+   "src": "Financial statement/2024Q4_AuditReport_DOHOME.doc.extracted.md"
+  },
+  {
+   "date": "2025-05-08",
+   "kind": "audit_signed",
+   "src": "Financial statement/2025Q1_AuditReport_DOHOME.doc.extracted.md"
+  },
+  {
+   "date": "2025-05-15",
+   "kind": "oppday",
+   "src": "Earning Call/2025Q1_Earningcall_YouTube_DOHOME.txt"
+  },
+  {
+   "date": "2025-08-06",
+   "kind": "audit_signed",
+   "src": "Financial statement/2025Q2_AuditReport_DOHOME.doc.extracted.md"
+  },
+  {
+   "date": "2025-08-13",
+   "kind": "oppday",
+   "src": "Earning Call/2025Q2_Earningcall_YouTube_DOHOME.txt"
+  },
+  {
+   "date": "2025-11-07",
+   "kind": "audit_signed",
+   "src": "Financial statement/2025Q3_AuditReport_DOHOME.doc.extracted.md"
+  },
+  {
+   "date": "2025-11-12",
+   "kind": "oppday",
+   "src": "Earning Call/2025Q3_Earningcall_YouTube_DOHOME.txt"
+  },
+  {
+   "date": "2026-02-20",
+   "kind": "audit_signed",
+   "src": "Financial statement/2025Q4_AuditReport_DOHOME.doc.extracted.md"
+  },
+  {
+   "date": "2026-05-11",
+   "kind": "audit_signed",
+   "src": "Financial statement/2026Q1_AuditReport_DOHOME.docx.extracted.md"
+  },
+  {
+   "date": "2026-05-18",
+   "kind": "oppday",
+   "src": "Earning Call/2026Q1_Earningcall_YouTube_DOHOME.txt"
+  },
+  {
+   "date": "2026-08-11",
+   "kind": "audit_signed",
+   "src": "Financial statement/2026Q2_AuditReport_DOHOME.docx.extracted.md"
+  },
+  {
+   "date": "2026-08-11",
+   "time": "19:30",
+   "kind": "set_news",
+   "src": "News/set_news_2026-08-12.jsonl",
+   "title": "คำอธิบายและวิเคราะห์ของฝ่ายจัดการ ไตรมาสที่ 2 สิ้นสุดวันที่ 30 มิ.ย. 2569",
+   "url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=105830301&symbol=DOHOME"
+  },
+  {
+   "date": "2026-08-18",
+   "kind": "oppday",
+   "src": "Earning Call/2026Q2_Earningcall_YouTube_DOHOME.txt"
+  }
+ ],
+ "matches": [
+  {
+   "event_date": "2024-02-21",
+   "rel": "T-1",
+   "item": {
+    "date": "2024-02-20",
+    "kind": "audit_signed",
+    "src": "Financial statement/2023Q4_AuditReport_DOHOME.doc.extracted.md"
+   }
+  },
+  {
+   "event_date": "2024-08-05",
+   "rel": "T+1",
+   "item": {
+    "date": "2024-08-06",
+    "kind": "audit_signed",
+    "src": "Financial statement/2024Q2_AuditReport_DOHOME.doc.extracted.md"
+   }
+  },
+  {
+   "event_date": "2025-02-19",
+   "rel": "T",
+   "item": {
+    "date": "2025-02-19",
+    "kind": "audit_signed",
+    "src": "Financial statement/2024Q4_AuditReport_DOHOME.doc.extracted.md"
+   }
+  },
+  {
+   "event_date": "2025-02-20",
+   "rel": "T-1",
+   "item": {
+    "date": "2025-02-19",
+    "kind": "audit_signed",
+    "src": "Financial statement/2024Q4_AuditReport_DOHOME.doc.extracted.md"
+   }
+  },
+  {
+   "event_date": "2025-05-08",
+   "rel": "T",
+   "item": {
+    "date": "2025-05-08",
+    "kind": "audit_signed",
+    "src": "Financial statement/2025Q1_AuditReport_DOHOME.doc.extracted.md"
+   }
+  },
+  {
+   "event_date": "2025-05-09",
+   "rel": "T-1",
+   "item": {
+    "date": "2025-05-08",
+    "kind": "audit_signed",
+    "src": "Financial statement/2025Q1_AuditReport_DOHOME.doc.extracted.md"
+   }
+  },
+  {
+   "event_date": "2025-08-06",
+   "rel": "T",
+   "item": {
+    "date": "2025-08-06",
+    "kind": "audit_signed",
+    "src": "Financial statement/2025Q2_AuditReport_DOHOME.doc.extracted.md"
+   }
+  },
+  {
+   "event_date": "2025-08-07",
+   "rel": "T-1",
+   "item": {
+    "date": "2025-08-06",
+    "kind": "audit_signed",
+    "src": "Financial statement/2025Q2_AuditReport_DOHOME.doc.extracted.md"
+   }
+  },
+  {
+   "event_date": "2026-05-19",
+   "rel": "T-1",
+   "item": {
+    "date": "2026-05-18",
+    "kind": "oppday",
+    "src": "Earning Call/2026Q1_Earningcall_YouTube_DOHOME.txt"
+   }
+  }
+ ]
+}

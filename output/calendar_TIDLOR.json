@@ -1,0 +1,104 @@
+{
+ "ticker": "TIDLOR",
+ "items": [
+  {
+   "date": "2023-11-06",
+   "kind": "audit_signed",
+   "src": "Financial statement/2023Q3_AuditReport_TIDLOR.doc.extracted.md"
+  },
+  {
+   "date": "2024-02-28",
+   "kind": "audit_signed",
+   "src": "Financial statement/2023Q4_AuditReport_TIDLOR.docx.extracted.md"
+  },
+  {
+   "date": "2024-05-07",
+   "kind": "audit_signed",
+   "src": "Financial statement/2024Q1_AuditReport_TIDLOR.docx.extracted.md"
+  },
+  {
+   "date": "2024-11-12",
+   "kind": "audit_signed",
+   "src": "Financial statement/2024Q3_AuditReport_TIDLOR.docx.extracted.md"
+  },
+  {
+   "date": "2025-02-07",
+   "kind": "audit_signed",
+   "src": "Financial statement/2024Q4_AuditReport_TIDLOR.docx.extracted.md"
+  },
+  {
+   "date": "2025-05-08",
+   "kind": "audit_signed",
+   "src": "Financial statement/2025Q1_AuditReport_TIDLOR.docx.extracted.md"
+  },
+  {
+   "date": "2025-08-14",
+   "kind": "oppday",
+   "src": "Earning Call/2025Q2_Earningcall_YouTube_TIDLOR.txt"
+  },
+  {
+   "date": "2025-11-17",
+   "kind": "oppday",
+   "src": "Earning Call/2025Q3_Earningcall_YouTube_TIDLOR.txt"
+  },
+  {
+   "date": "2026-05-11",
+   "kind": "oppday",
+   "src": "Earning Call/2026Q1_Earningcall_YouTube_TIDLOR.txt"
+  },
+  {
+   "date": "2026-08-13",
+   "time": "18:08",
+   "kind": "fs_filed",
+   "src": "Financial statement/2027FIN130820261808350925T.zip"
+  },
+  {
+   "date": "2026-08-13",
+   "time": "18:17",
+   "kind": "set_news",
+   "src": "News/set_news_2026-08-13.jsonl",
+   "title": "งบการเงิน ไตรมาสที่ 2/2569 (สอบทานแล้ว)",
+   "url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=17865761918501&symbol=TIDLOR"
+  },
+  {
+   "date": "2026-08-13",
+   "time": "18:18",
+   "kind": "set_news",
+   "src": "News/set_news_2026-08-13.jsonl",
+   "title": "สรุปผลการดำเนินงานของ บจ. ไตรมาสที่ 2 (F45) (สอบทานแล้ว)",
+   "url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106004201&symbol=TIDLOR"
+  },
+  {
+   "date": "2026-08-13",
+   "time": "18:19",
+   "kind": "set_news",
+   "src": "News/set_news_2026-08-13.jsonl",
+   "title": "คำอธิบายและวิเคราะห์ของฝ่ายจัดการ ไตรมาสที่ 2 สิ้นสุดวันที่ 30 มิ.ย. 2569",
+   "url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106004501&symbol=TIDLOR"
+  },
+  {
+   "date": "2026-08-17",
+   "kind": "oppday",
+   "src": "Earning Call/2026Q2_Earningcall_YouTube_TIDLOR.txt"
+  },
+  {
+   "date": "2026-10-09",
+   "time": "17:02",
+   "kind": "set_news",
+   "src": "News/set_news_2026-10-09.jsonl",
+   "title": "แจ้งการลาออกของกรรมการอิสระและกรรมการสรรหาและกำหนดค่าตอบแทน",
+   "url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=107068401&symbol=TIDLOR"
+  }
+ ],
+ "matches": [
+  {
+   "event_date": "2025-08-13",
+   "rel": "T+1",
+   "item": {
+    "date": "2025-08-14",
+    "kind": "oppday",
+    "src": "Earning Call/2025Q2_Earningcall_YouTube_TIDLOR.txt"
+   }
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "coverage": {
+  "ticker": "DOHOME",
+  "raw_dir": "(นอก repo) Routines5_rawdata/DOHOME",
+  "files_scanned": 195,
+  "files_skipped": 23,
+  "skipped": [
+   {
+    "file": "Earning Call/oppday-20260818-0825323397362-Q2_2026-DOHOME.pdf.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Earning Call/2026Q2_Earningcall_DOHOME.pdf.extracted.md"
+   },
+   {
+    "file": "Financial statement/2025Q1_AuditReport_DOHOME.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2025Q1_AuditReport_DOHOME.doc.extracted.md"
+   },
+   {
+    "file": "Financial statement/2025Q1_FS_DOHOME.xls.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2025Q1_FS_DOHOME.md"
+   },
+   {
+    "file": "Financial statement/2025Q1_NOTES_DOHOME.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2025Q1_NOTES_DOHOME.doc.extracted.md"
+   },
+   {
+    "file": "Financial statement/2025Q2_AuditReport_DOHOME.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2025Q2_AuditReport_DOHOME.doc.extracted.md"
+   },
+   {
+    "file": "Financial statement/2025Q2_FS_DOHOME.xls.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2025Q2_FS_DOHOME.md"
+   },
+   {
+    "file": "Financial statement/2025Q2_NOTES_DOHOME.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2025Q2_NOTES_DOHOME.doc.extracted.md"
+   },
+   {
+    "file": "Financial statement/2025Q3_AuditReport_DOHOME.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2025Q3_AuditReport_DOHOME.doc.extracted.md"
+   },
+   {
+    "file": "Financial statement/2025Q3_FS_DOHOME.xls.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2025Q3_FS_DOHOME.md"
+   },
+   {
+    "file": "Financial statement/2025Q3_NOTES_DOHOME.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2025Q3_NOTES_DOHOME.doc.extracted.md"
+   },
+   {
+    "file": "Financial statement/2025Q4_AuditReport_DOHOME.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2025Q4_AuditReport_DOHOME.doc.extracted.md"
+   },
+   {
+    "file": "Financial statement/2025Q4_FS_DOHOME.xls.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2025Q4_FS_DOHOME.md"
+   },
+   {
+    "file": "Financial statement/2025Q4_NOTES_DOHOME.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2025Q4_NOTES_DOHOME.doc.extracted.md"
+   },
+   {
+    "file": "Financial statement/2026Q1_AuditReport_DOHOME.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2026Q1_AuditReport_DOHOME.docx.extracted.md"
+   },
+   {
+    "file": "Financial statement/2026Q1_FS_DOHOME.xlsx.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2026Q1_FS_DOHOME.md"
+   },
+   {
+    "file": "Financial statement/2026Q1_NOTES_DOHOME.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2026Q1_NOTES_DOHOME.docx.extracted.md"
+   },
+   {
+    "file": "Financial statement/2026Q2_AuditReport_DOHOME.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2026Q2_AuditReport_DOHOME.docx.extracted.md"
+   },
+   {
+    "file": "Financial statement/2026Q2_FS_DOHOME.xlsx.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2026Q2_FS_DOHOME.md"
+   },
+   {
+    "file": "Financial statement/2026Q2_NOTES_DOHOME.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2026Q2_NOTES_DOHOME.docx.extracted.md"
+   },
+   {
+    "file": "OneReport/R561_1504ONE250320260920420669T_zip/ONEREPORTDOHOMET.PDF.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1504ONE250320260920420669T_zip/ONEREPORTDOHOMET.PDF.extracted.md"
+   },
+   {
+    "file": "OneReport/R561_1504ONE250320260920420669T_zip/STRUCTUREDOHOMET.PDF.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1504ONE250320260920420669T_zip/STRUCTUREDOHOMET.PDF.extracted.md"
+   },
+   {
+    "file": "OneReport/R561_1504ONE270320251936190608T_zip/ONEREPORTDOHOMET.PDF.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1504ONE270320251936190608T_zip/ONEREPORTDOHOMET.PDF.extracted.md"
+   },
+   {
+    "file": "OneReport/R561_1504ONE270320251936190608T_zip/STRUCTUREDOHOMET.PDF.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1504ONE270320251936190608T_zip/STRUCTUREDOHOMET.PDF.extracted.md"
+   }
+  ],
+  "by_kind": {
+   "Broker": 51,
+   "Earning Call": 54,
+   "Financial statement": 81,
+   "MANIFEST.md": 1,
+   "News": 4,
+   "OneReport": 4
+  },
+  "events": 76,
+  "events_with_local_evidence": 22
+ }
+}

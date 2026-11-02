@@ -1,5 +1,5 @@
 """สแกน "ทุกไฟล์" ของหุ้นหนึ่งตัว (ผ่าน .extracted.md ไม่เปิดไฟล์ต้นฉบับ pdf/xlsx/docx) หาข้อความที่เอ่ยถึงวัน T และ T+1 ของแต่ละ event
-usage: python scripts/scan_evidence.py TICKER [--raw DIR]   (default DIR = D:/3_Stocks_Analyst/Routines5_rawdata)
+usage: python scripts/scan_evidence.py TICKER [--raw DIR]   (default DIR = D:/3_Stocks_Analyst/AllCompany)
 input : output/events_<T>_raw.csv (จาก fetch_events.py)
 output: output/coverage_<T>.json = {coverage} เท่านั้น (ขึ้น repo ได้)
         <tmp>/evidence_<T>.json = {coverage, events:[{date, window, news[], hits[]}]} เป็นบันทึกงานชั่วคราวนอก repo เพราะมีข้อความตัดมาจากเอกสาร/บทวิเคราะห์โบรก (ลิขสิทธิ์ ห้ามขึ้น Public)
@@ -123,7 +123,7 @@ def scan(t, raw):
     for r in res.values():
         r['news'] = sorted({(n['file'], n['line']): n for n in r['news']}.values(), key=lambda n: n['datetime'])
         r['hits'].sort(key=lambda h: (PRIORITY.index(h['kind']) if h['kind'] in PRIORITY else 9, h['file'], h['line']))
-    cov = dict(ticker=t, raw_dir='(นอก repo) Routines5_rawdata/' + t, files_scanned=len(docs), files_skipped=len(skipped),
+    cov = dict(ticker=t, raw_dir='(นอก repo) AllCompany/' + t, files_scanned=len(docs), files_skipped=len(skipped),
                skipped=[dict(file=a, reason=b) for a, b in skipped],
                by_kind={k: sum(1 for _, r in docs if kind_of(r) == k) for k in sorted({kind_of(r) for _, r in docs})},
                events=len(ev), events_with_local_evidence=sum(1 for r in res.values() if r['news'] or r['hits']))
@@ -134,6 +134,8 @@ def scan(t, raw):
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
-    ap.add_argument('ticker'); ap.add_argument('--raw', default='D:/3_Stocks_Analyst/Routines5_rawdata')
+    ap.add_argument('ticker'); ap.add_argument('--raw', default='D:/3_Stocks_Analyst/AllCompany')
     a = ap.parse_args()
+    if not os.path.isdir(os.path.join(a.raw, a.ticker)):
+        sys.exit(f'ไม่พบโฟลเดอร์ข้อมูลดิบ: {os.path.join(a.raw, a.ticker)}')
     scan(a.ticker, os.path.join(a.raw, a.ticker))

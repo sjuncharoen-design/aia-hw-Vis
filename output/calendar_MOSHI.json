@@ -2,99 +2,60 @@
  "ticker": "MOSHI",
  "items": [
   {
-   "date": "2023-11-10",
-   "kind": "audit_signed",
-   "src": "Financial statement/2023Q3_AuditReport_MOSHI.DOCX.extracted.md"
-  },
-  {
    "date": "2024-02-22",
-   "kind": "audit_signed",
-   "src": "Financial statement/2023Q4_AuditReport_MOSHI.docx.extracted.md"
-  },
-  {
-   "date": "2024-05-13",
-   "kind": "audit_signed",
-   "src": "Financial statement/2024Q1_AuditReport_MOSHI.docx.extracted.md"
+   "time": "12:51",
+   "kind": "fs_filed",
+   "src": "Financial statement/FS_202402_1741FIN2202202412513",
+   "react_date": "2024-02-22"
   },
   {
    "date": "2024-05-23",
    "kind": "oppday",
-   "src": "Earning Call/2024Q1_Earningcall_YouTube_MOSHI.txt"
-  },
-  {
-   "date": "2024-08-09",
-   "kind": "audit_signed",
-   "src": "Financial statement/2024Q2_AuditReport_MOSHI.docx.extracted.md"
+   "src": "Earning Call/2024Q1_Earningcall_YouTube_MOSHI.txt",
+   "react_date": "2024-05-23"
   },
   {
    "date": "2024-08-19",
    "kind": "oppday",
-   "src": "Earning Call/2024Q2_Earningcall_YouTube_MOSHI.txt"
-  },
-  {
-   "date": "2024-11-11",
-   "kind": "audit_signed",
-   "src": "Financial statement/2024Q3_AuditReport_MOSHI.docx.extracted.md"
+   "src": "Earning Call/2024Q2_Earningcall_YouTube_MOSHI.txt",
+   "react_date": "2024-08-19"
   },
   {
    "date": "2024-11-22",
    "kind": "oppday",
-   "src": "Earning Call/2024Q3_Earningcall_YouTube_MOSHI.txt"
-  },
-  {
-   "date": "2025-02-24",
-   "kind": "audit_signed",
-   "src": "Financial statement/2024Q4_AuditReport_MOSHI.docx.extracted.md"
-  },
-  {
-   "date": "2025-05-09",
-   "kind": "audit_signed",
-   "src": "Financial statement/2025Q1_AuditReport_MOSHI.docx.extracted.md"
+   "src": "Earning Call/2024Q3_Earningcall_YouTube_MOSHI.txt",
+   "react_date": "2024-11-22"
   },
   {
    "date": "2025-05-16",
    "kind": "oppday",
-   "src": "Earning Call/2025Q1_Earningcall_YouTube_MOSHI.txt"
-  },
-  {
-   "date": "2025-08-11",
-   "kind": "audit_signed",
-   "src": "Financial statement/2025Q2_AuditReport_MOSHI.docx.extracted.md"
+   "src": "Earning Call/2025Q1_Earningcall_YouTube_MOSHI.txt",
+   "react_date": "2025-05-16"
   },
   {
    "date": "2025-08-19",
    "kind": "oppday",
-   "src": "Earning Call/2025Q2_Earningcall_YouTube_MOSHI.txt"
-  },
-  {
-   "date": "2025-11-13",
-   "kind": "audit_signed",
-   "src": "Financial statement/2025Q3_AuditReport_MOSHI.docx.extracted.md"
+   "src": "Earning Call/2025Q2_Earningcall_YouTube_MOSHI.txt",
+   "react_date": "2025-08-19"
   },
   {
    "date": "2025-11-21",
    "kind": "oppday",
-   "src": "Earning Call/2025Q3_Earningcall_YouTube_MOSHI.txt"
+   "src": "Earning Call/2025Q3_Earningcall_YouTube_MOSHI.txt",
+   "react_date": "2025-11-21"
   },
   {
    "date": "2026-02-23",
-   "kind": "audit_signed",
-   "src": "Financial statement/2025Q4_AuditReport_MOSHI.docx.extracted.md"
-  },
-  {
-   "date": "2026-05-13",
-   "kind": "audit_signed",
-   "src": "Financial statement/2026Q1_AuditReport_MOSHI.docx.extracted.md"
+   "time": "18:04",
+   "kind": "fs_filed",
+   "src": "Financial statement/FS_202602_1741FIN2302202618043",
+   "react_date": "2026-02-24"
   },
   {
    "date": "2026-05-19",
    "kind": "oppday",
-   "src": "Earning Call/2026Q1_Earningcall_YouTube_MOSHI.txt"
-  },
-  {
-   "date": "2026-08-14",
-   "kind": "audit_signed",
-   "src": "Financial statement/2026Q2_AuditReport_MOSHI.docx.extracted.md"
+   "src": "Earning Call/2026Q1_Earningcall_YouTube_MOSHI.txt",
+   "react_date": "2026-05-19"
   },
   {
    "date": "2026-08-14",
@@ -102,7 +63,8 @@
    "kind": "set_news",
    "src": "News/set_news_2026-08-15.jsonl",
    "title": "การจ่ายเงินปันผลระหว่างกาล",
-   "url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106253801&symbol=MOSHI"
+   "url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106253801&symbol=MOSHI",
+   "react_date": "2026-08-17"
   },
   {
    "date": "2026-08-14",
@@ -110,7 +72,8 @@
    "kind": "set_news",
    "src": "News/set_news_2026-08-15.jsonl",
    "title": "สรุปผลการดำเนินงานของ บจ. ไตรมาสที่ 2 (F45) (สอบทานแล้ว)",
-   "url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106273601&symbol=MOSHI"
+   "url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106273601&symbol=MOSHI",
+   "react_date": "2026-08-17"
   },
   {
    "date": "2026-08-14",
@@ -118,38 +81,301 @@
    "kind": "set_news",
    "src": "News/set_news_2026-08-15.jsonl",
    "title": "คำอธิบายและวิเคราะห์ของฝ่ายจัดการ ไตรมาสที่ 2 สิ้นสุดวันที่ 30 มิ.ย. 2569",
-   "url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106278001&symbol=MOSHI"
+   "url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106278001&symbol=MOSHI",
+   "react_date": "2026-08-17"
+  },
+  {
+   "date": "2026-08-16",
+   "time": "17:22",
+   "kind": "fs_filed",
+   "src": "Financial statement/FS_202608_1741FIN1608202617223",
+   "react_date": "2026-08-17"
+  },
+  {
+   "date": "2026-08-16",
+   "time": "17:26",
+   "kind": "fs_filed",
+   "src": "Financial statement/_FS_EN_ARCHIVED/FS_202608_1741FIN1608202617262",
+   "react_date": "2026-08-17"
   },
   {
    "date": "2026-08-20",
    "kind": "oppday",
-   "src": "Earning Call/2026Q2_Earningcall_YouTube_MOSHI.txt"
+   "src": "Earning Call/2026Q2_Earningcall_YouTube_MOSHI.txt",
+   "react_date": "2026-08-20"
+  },
+  {
+   "date": "2022-12-21",
+   "time": "08:58",
+   "kind": "set_fs",
+   "title": "งบการเงิน ประจำปี 2564 (ก่อนเข้าซื้อขาย)",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2022-12-21&toDate=2022-12-21",
+   "react_date": "2022-12-22"
+  },
+  {
+   "date": "2022-12-23",
+   "time": "13:03",
+   "kind": "set_news",
+   "title": "แจ้งวันหยุดตามประเพณี ประจำปี 2566",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2022-12-23&toDate=2022-12-23",
+   "react_date": "2022-12-23"
+  },
+  {
+   "date": "2023-02-27",
+   "time": "20:20",
+   "kind": "set_fs",
+   "title": "งบการเงิน ประจำปี 2565",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2023-02-27&toDate=2023-02-27",
+   "react_date": "2023-02-28"
+  },
+  {
+   "date": "2023-02-27",
+   "time": "20:53",
+   "kind": "set_news",
+   "title": "มติคณะกรรมการ: แก้ไขหนังสือบริคณห์สนธิ และกำหนดวันประชุมผู้ถือหุ้นประจำปี 2566",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2023-02-27&toDate=2023-02-27",
+   "react_date": "2023-02-28"
+  },
+  {
+   "date": "2023-04-05",
+   "time": "17:57",
+   "kind": "set_news",
+   "title": "การทำรายการที่เกี่ยวโยง และการได้มาซึ่งสินทรัพย์",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2023-04-05&toDate=2023-04-05",
+   "react_date": "2023-04-07"
+  },
+  {
+   "date": "2023-05-12",
+   "time": "12:40",
+   "kind": "set_fs",
+   "title": "งบการเงิน ไตรมาสที่ 1/2566",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2023-05-12&toDate=2023-05-12",
+   "react_date": "2023-05-12"
+  },
+  {
+   "date": "2023-05-31",
+   "time": "08:42",
+   "kind": "set_news",
+   "title": "หุ้นเพิ่มทุนของ MOSHI เริ่มซื้อขายวันที่ 1 มิ.ย. 2566",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2023-05-31&toDate=2023-05-31",
+   "react_date": "2023-05-31"
+  },
+  {
+   "date": "2023-08-11",
+   "time": "13:13",
+   "kind": "set_fs",
+   "title": "งบการเงิน ไตรมาสที่ 2/2566",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2023-08-11&toDate=2023-08-11",
+   "react_date": "2023-08-11"
+  },
+  {
+   "date": "2023-11-10",
+   "time": "17:04",
+   "kind": "set_fs",
+   "title": "งบการเงิน ไตรมาสที่ 3/2566",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2023-11-10&toDate=2023-11-10",
+   "react_date": "2023-11-13"
+  },
+  {
+   "date": "2024-05-13",
+   "time": "12:34",
+   "kind": "set_fs",
+   "title": "งบการเงิน ไตรมาสที่ 1/2567",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2024-05-13&toDate=2024-05-13",
+   "react_date": "2024-05-13"
+  },
+  {
+   "date": "2024-08-09",
+   "time": "17:02",
+   "kind": "set_fs",
+   "title": "งบการเงิน ไตรมาสที่ 2/2567",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2024-08-09&toDate=2024-08-09",
+   "react_date": "2024-08-13"
+  },
+  {
+   "date": "2024-11-11",
+   "time": "17:52",
+   "kind": "set_fs",
+   "title": "งบการเงิน ไตรมาสที่ 3/2567",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2024-11-11&toDate=2024-11-11",
+   "react_date": "2024-11-12"
+  },
+  {
+   "date": "2025-02-24",
+   "time": "17:15",
+   "kind": "set_fs",
+   "title": "งบการเงิน ประจำปี 2567",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2025-02-24&toDate=2025-02-24",
+   "react_date": "2025-02-25"
+  },
+  {
+   "date": "2025-02-24",
+   "time": "18:16",
+   "kind": "set_news",
+   "title": "รายชื่อหลักทรัพย์ที่จะนำมารวมในการคำนวณดัชนี SET100 และ SET100FF",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2025-02-24&toDate=2025-02-24",
+   "react_date": "2025-02-25"
+  },
+  {
+   "date": "2025-05-09",
+   "time": "17:10",
+   "kind": "set_fs",
+   "title": "งบการเงิน ไตรมาสที่ 1/2568",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2025-05-09&toDate=2025-05-09",
+   "react_date": "2025-05-13"
+  },
+  {
+   "date": "2025-08-13",
+   "time": "07:15",
+   "kind": "set_fs",
+   "title": "งบการเงิน ไตรมาสที่ 2/2568",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2025-08-13&toDate=2025-08-13",
+   "react_date": "2025-08-13"
+  },
+  {
+   "date": "2025-11-13",
+   "time": "17:53",
+   "kind": "set_fs",
+   "title": "งบการเงิน ไตรมาสที่ 3/2568",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2025-11-13&toDate=2025-11-13",
+   "react_date": "2025-11-14"
+  },
+  {
+   "date": "2026-05-13",
+   "time": "17:15",
+   "kind": "set_fs",
+   "title": "งบการเงิน ไตรมาสที่ 1/2569",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2026-05-13&toDate=2026-05-13",
+   "react_date": "2026-05-14"
   },
   {
    "date": "2023-05-02",
    "kind": "xd",
    "src": "Yahoo dividends",
-   "amount": "0.1"
+   "amount": 0.1
+  },
+  {
+   "date": "2024-05-02",
+   "kind": "xd",
+   "src": "Yahoo dividends",
+   "amount": 0.6
+  },
+  {
+   "date": "2025-04-30",
+   "kind": "xd",
+   "src": "Yahoo dividends",
+   "amount": 0.8
+  },
+  {
+   "date": "2026-04-29",
+   "kind": "xd",
+   "src": "Yahoo dividends",
+   "amount": 1.22
+  },
+  {
+   "date": "2026-08-28",
+   "kind": "xd",
+   "src": "Yahoo dividends",
+   "amount": 0.64
+  },
+  {
+   "date": "2023-05-02",
+   "kind": "xd_stock",
+   "src": "Yahoo splits",
+   "ratio": "11:10"
   }
  ],
  "matches": [
   {
+   "event_date": "2022-12-23",
+   "rel": "R+1",
+   "item": {
+    "date": "2022-12-21",
+    "time": "08:58",
+    "kind": "set_fs",
+    "title": "งบการเงิน ประจำปี 2564 (ก่อนเข้าซื้อขาย)",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2022-12-21&toDate=2022-12-21",
+    "react_date": "2022-12-22"
+   }
+  },
+  {
+   "event_date": "2022-12-23",
+   "rel": "R",
+   "item": {
+    "date": "2022-12-23",
+    "time": "13:03",
+    "kind": "set_news",
+    "title": "แจ้งวันหยุดตามประเพณี ประจำปี 2566",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2022-12-23&toDate=2022-12-23",
+    "react_date": "2022-12-23"
+   }
+  },
+  {
+   "event_date": "2023-02-28",
+   "rel": "R",
+   "item": {
+    "date": "2023-02-27",
+    "time": "20:20",
+    "kind": "set_fs",
+    "title": "งบการเงิน ประจำปี 2565",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2023-02-27&toDate=2023-02-27",
+    "react_date": "2023-02-28"
+   }
+  },
+  {
+   "event_date": "2023-02-28",
+   "rel": "R",
+   "item": {
+    "date": "2023-02-27",
+    "time": "20:53",
+    "kind": "set_news",
+    "title": "มติคณะกรรมการ: แก้ไขหนังสือบริคณห์สนธิ และกำหนดวันประชุมผู้ถือหุ้นประจำปี 2566",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2023-02-27&toDate=2023-02-27",
+    "react_date": "2023-02-28"
+   }
+  },
+  {
+   "event_date": "2023-05-31",
+   "rel": "R",
+   "item": {
+    "date": "2023-05-31",
+    "time": "08:42",
+    "kind": "set_news",
+    "title": "หุ้นเพิ่มทุนของ MOSHI เริ่มซื้อขายวันที่ 1 มิ.ย. 2566",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2023-05-31&toDate=2023-05-31",
+    "react_date": "2023-05-31"
+   }
+  },
+  {
+   "event_date": "2024-08-13",
+   "rel": "R",
+   "item": {
+    "date": "2024-08-09",
+    "time": "17:02",
+    "kind": "set_fs",
+    "title": "งบการเงิน ไตรมาสที่ 2/2567",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=MOSHI&securityType=S&fromDate=2024-08-09&toDate=2024-08-09",
+    "react_date": "2024-08-13"
+   }
+  },
+  {
    "event_date": "2023-05-02",
-   "rel": "T",
+   "rel": "XD",
    "item": {
     "date": "2023-05-02",
     "kind": "xd",
     "src": "Yahoo dividends",
-    "amount": "0.1"
+    "amount": 0.1
    }
   },
   {
-   "event_date": "2025-05-15",
-   "rel": "T+1",
+   "event_date": "2023-05-02",
+   "rel": "XD",
    "item": {
-    "date": "2025-05-16",
-    "kind": "oppday",
-    "src": "Earning Call/2025Q1_Earningcall_YouTube_MOSHI.txt"
+    "date": "2023-05-02",
+    "kind": "xd_stock",
+    "src": "Yahoo splits",
+    "ratio": "11:10"
    }
   }
  ]

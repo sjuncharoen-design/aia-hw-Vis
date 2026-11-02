@@ -1,9 +1,9 @@
 {
  "coverage": {
   "ticker": "PR9",
-  "raw_dir": "(นอก repo) Routines5_rawdata/PR9",
+  "raw_dir": "(นอก repo) AllCompany/PR9",
   "files_scanned": 281,
-  "files_skipped": 54,
+  "files_skipped": 57,
   "skipped": [
    {
     "file": "Broker/KSec_2026-08-13.pdf.extracted__rawpdf_dup.md",
@@ -170,56 +170,68 @@
     "reason": "ไฟล์ซ้ำของ Financial statement/2026Q2_AuditReport_PR9.docx.extracted.md"
    },
    {
+    "file": "OneReport/2025/E_ONE_REPORT_PR9T.PDF.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1463E1N250320261215420227T_zip/E_ONE_REPORT_PR9T.PDF.extracted.md"
+   },
+   {
+    "file": "OneReport/E_ONE_REPORT_PR9T.PDF.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1463E1N240320251704460853T_zip/E_ONE_REPORT_PR9T.PDF.extracted.md"
+   },
+   {
     "file": "OneReport/E_ONE_REPORT_PR9T.PDF.extracted_dup2.md",
-    "reason": "ไฟล์ซ้ำของ OneReport/2025/E_ONE_REPORT_PR9T.PDF.extracted.md"
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1463E1N250320261215420227T_zip/E_ONE_REPORT_PR9T.PDF.extracted.md"
    },
    {
     "file": "OneReport/E_ONE_REPORT_PR9T.PDF.extracted_dup3.md",
-    "reason": "ไฟล์ซ้ำของ OneReport/2025/E_ONE_REPORT_PR9T.PDF.extracted.md"
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1463E1N250320261215420227T_zip/E_ONE_REPORT_PR9T.PDF.extracted.md"
    },
    {
     "file": "OneReport/E_ONE_REPORT_PR9T.PDF.extracted_dup4.md",
-    "reason": "ไฟล์ซ้ำของ OneReport/2025/E_ONE_REPORT_PR9T.PDF.extracted.md"
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1463E1N250320261215420227T_zip/E_ONE_REPORT_PR9T.PDF.extracted.md"
    },
    {
     "file": "OneReport/E_ONE_REPORT_PR9T.PDF.extracted_dup5.md",
-    "reason": "ไฟล์ซ้ำของ OneReport/E_ONE_REPORT_PR9T.PDF.extracted.md"
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1463E1N240320251704460853T_zip/E_ONE_REPORT_PR9T.PDF.extracted.md"
    },
    {
     "file": "OneReport/E_ONE_REPORT_PR9T.PDF.extracted_dup6.md",
-    "reason": "ไฟล์ซ้ำของ OneReport/2025/E_ONE_REPORT_PR9T.PDF.extracted.md"
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1463E1N250320261215420227T_zip/E_ONE_REPORT_PR9T.PDF.extracted.md"
    },
    {
     "file": "OneReport/E_ONE_REPORT_PR9T_dup2.PDF.extracted.md",
-    "reason": "ไฟล์ซ้ำของ OneReport/2025/E_ONE_REPORT_PR9T.PDF.extracted.md"
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1463E1N250320261215420227T_zip/E_ONE_REPORT_PR9T.PDF.extracted.md"
    },
    {
     "file": "OneReport/E_ONE_REPORT_PR9T_dup3.PDF.extracted.md",
-    "reason": "ไฟล์ซ้ำของ OneReport/2025/E_ONE_REPORT_PR9T.PDF.extracted.md"
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1463E1N250320261215420227T_zip/E_ONE_REPORT_PR9T.PDF.extracted.md"
    },
    {
     "file": "OneReport/E_ONE_REPORT_PR9T_dup4.PDF.extracted.md",
-    "reason": "ไฟล์ซ้ำของ OneReport/2025/E_ONE_REPORT_PR9T.PDF.extracted.md"
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1463E1N250320261215420227T_zip/E_ONE_REPORT_PR9T.PDF.extracted.md"
    },
    {
     "file": "OneReport/E_ONE_REPORT_PR9T_dup5.PDF.extracted.md",
-    "reason": "ไฟล์ซ้ำของ OneReport/2025/E_ONE_REPORT_PR9T.PDF.extracted.md"
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1463E1N250320261215420227T_zip/E_ONE_REPORT_PR9T.PDF.extracted.md"
+   },
+   {
+    "file": "OneReport/ONE_REPORT_PR9T.PDF.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1463E1N240320251704460853T_zip/ONE_REPORT_PR9T.PDF.extracted.md"
    },
    {
     "file": "OneReport/ONE_REPORT_PR9T.PDF.extracted_dup2.md",
-    "reason": "ไฟล์ซ้ำของ OneReport/ONE_REPORT_PR9T.PDF.extracted.md"
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1463E1N240320251704460853T_zip/ONE_REPORT_PR9T.PDF.extracted.md"
    },
    {
     "file": "OneReport/R561_1463E1N240320251704460853T_zip/E_ONE_REPORT_PR9T.PDF.extracted.md",
-    "reason": "ไฟล์ซ้ำของ OneReport/E_ONE_REPORT_PR9T.PDF.extracted.md"
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1463E1N240320251704460853T_zip/E_ONE_REPORT_PR9T.PDF.extracted.md"
    },
    {
     "file": "OneReport/R561_1463E1N240320251704460853T_zip/ONE_REPORT_PR9T.PDF.extracted.md",
-    "reason": "ไฟล์ซ้ำของ OneReport/ONE_REPORT_PR9T.PDF.extracted.md"
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1463E1N240320251704460853T_zip/ONE_REPORT_PR9T.PDF.extracted.md"
    },
    {
     "file": "OneReport/R561_1463E1N250320261215420227T_zip/E_ONE_REPORT_PR9T.PDF.extracted.md",
-    "reason": "ไฟล์ซ้ำของ OneReport/2025/E_ONE_REPORT_PR9T.PDF.extracted.md"
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1463E1N250320261215420227T_zip/E_ONE_REPORT_PR9T.PDF.extracted.md"
    }
   ],
   "by_kind": {
@@ -227,11 +239,11 @@
    "EP191 PR9.pdf.extracted.md": 1,
    "EP191 PR9.txt": 1,
    "Earning Call": 77,
-   "Financial statement": 137,
+   "Financial statement": 140,
    "MANIFEST.md": 1,
    "News": 3,
    "NotebookLM": 1,
-   "OneReport": 15
+   "OneReport": 12
   },
   "events": 25,
   "events_with_local_evidence": 10

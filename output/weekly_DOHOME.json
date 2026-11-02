@@ -1,0 +1,439 @@
+{
+ "ticker": "DOHOME",
+ "threshold": 10.0,
+ "weeks_total": 261,
+ "weeks": [
+  {
+   "week": "2023-W08",
+   "start": "2023-02-20",
+   "end": "2023-02-24",
+   "prev_close": 11.86,
+   "close": 13.06,
+   "ret": 10.12,
+   "dir": "up",
+   "mkt": -0.94,
+   "residual": 11.06,
+   "vol_ratio": 2.88,
+   "kind": "drift",
+   "days": [],
+   "market": false,
+   "status": "unknown",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2023-W19",
+   "start": "2023-05-08",
+   "end": "2023-05-12",
+   "prev_close": 11.96,
+   "close": 13.24,
+   "ret": 10.7,
+   "dir": "up",
+   "mkt": 2.43,
+   "residual": 8.27,
+   "vol_ratio": 1.67,
+   "kind": "spike",
+   "days": [
+    {
+     "date": "2023-05-08",
+     "ret": 6.11,
+     "status": "lead",
+     "type": null
+    }
+   ],
+   "market": false,
+   "status": "lead",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2023-W27",
+   "start": "2023-07-03",
+   "end": "2023-07-07",
+   "prev_close": 11.23,
+   "close": 9.4,
+   "ret": -16.3,
+   "dir": "down",
+   "mkt": -0.45,
+   "residual": -15.85,
+   "vol_ratio": 1.96,
+   "kind": "spike",
+   "days": [
+    {
+     "date": "2023-07-05",
+     "ret": -6.61,
+     "status": "unknown",
+     "type": null
+    },
+    {
+     "date": "2023-07-06",
+     "ret": -7.96,
+     "status": "unknown",
+     "type": null
+    }
+   ],
+   "market": false,
+   "status": "unknown",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2024-W24",
+   "start": "2024-06-10",
+   "end": "2024-06-14",
+   "prev_close": 10.5,
+   "close": 9.4,
+   "ret": -10.48,
+   "dir": "down",
+   "mkt": -0.87,
+   "residual": -9.6,
+   "vol_ratio": 2.19,
+   "kind": "drift",
+   "days": [],
+   "market": false,
+   "status": "unknown",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2024-W32",
+   "start": "2024-08-05",
+   "end": "2024-08-09",
+   "prev_close": 10.79,
+   "close": 9.4,
+   "ret": -12.88,
+   "dir": "down",
+   "mkt": -1.35,
+   "residual": -11.53,
+   "vol_ratio": 2.04,
+   "kind": "spike",
+   "days": [
+    {
+     "date": "2024-08-05",
+     "ret": -9.73,
+     "status": "unknown",
+     "type": null
+    }
+   ],
+   "market": false,
+   "status": "unknown",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2025-W05",
+   "start": "2025-01-27",
+   "end": "2025-01-31",
+   "prev_close": 7.88,
+   "close": 7.02,
+   "ret": -10.91,
+   "dir": "down",
+   "mkt": -6.19,
+   "residual": -4.73,
+   "vol_ratio": 1.52,
+   "kind": "spike",
+   "days": [
+    {
+     "date": "2025-01-31",
+     "ret": -7.55,
+     "status": "lead",
+     "type": null
+    }
+   ],
+   "market": true,
+   "status": "lead",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2025-W08",
+   "start": "2025-02-17",
+   "end": "2025-02-21",
+   "prev_close": 5.82,
+   "close": 7.06,
+   "ret": 21.31,
+   "dir": "up",
+   "mkt": -3.66,
+   "residual": 24.97,
+   "vol_ratio": 2.35,
+   "kind": "spike",
+   "days": [
+    {
+     "date": "2025-02-19",
+     "ret": 5.56,
+     "status": "unknown",
+     "type": null
+    },
+    {
+     "date": "2025-02-20",
+     "ret": 5.26,
+     "status": "lead",
+     "type": null
+    },
+    {
+     "date": "2025-02-21",
+     "ret": 5.71,
+     "status": "lead",
+     "type": null
+    }
+   ],
+   "market": false,
+   "status": "lead",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2025-W13",
+   "start": "2025-03-24",
+   "end": "2025-03-28",
+   "prev_close": 6.3,
+   "close": 5.55,
+   "ret": -11.9,
+   "dir": "down",
+   "mkt": -0.69,
+   "residual": -11.22,
+   "vol_ratio": 0.96,
+   "kind": "drift",
+   "days": [],
+   "market": false,
+   "status": "unknown",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2025-W15",
+   "start": "2025-04-08",
+   "end": "2025-04-11",
+   "prev_close": 5.15,
+   "close": 4.6,
+   "ret": -10.68,
+   "dir": "down",
+   "mkt": 0.57,
+   "residual": -11.25,
+   "vol_ratio": 1.21,
+   "kind": "spike",
+   "days": [
+    {
+     "date": "2025-04-09",
+     "ret": -6.88,
+     "status": "unknown",
+     "type": null
+    }
+   ],
+   "market": false,
+   "status": "unknown",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2025-W16",
+   "start": "2025-04-16",
+   "end": "2025-04-18",
+   "prev_close": 4.6,
+   "close": 5.25,
+   "ret": 14.13,
+   "dir": "up",
+   "mkt": 2.0,
+   "residual": 12.13,
+   "vol_ratio": 0.63,
+   "kind": "spike",
+   "days": [
+    {
+     "date": "2025-04-18",
+     "ret": 5.0,
+     "status": "unknown",
+     "type": null
+    }
+   ],
+   "market": false,
+   "status": "unknown",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2025-W19",
+   "start": "2025-05-06",
+   "end": "2025-05-09",
+   "prev_close": 5.15,
+   "close": 4.6,
+   "ret": -10.68,
+   "dir": "down",
+   "mkt": 1.59,
+   "residual": -12.27,
+   "vol_ratio": 1.05,
+   "kind": "spike",
+   "days": [
+    {
+     "date": "2025-05-08",
+     "ret": -7.66,
+     "status": "lead",
+     "type": null
+    },
+    {
+     "date": "2025-05-09",
+     "ret": -6.88,
+     "status": "lead",
+     "type": null
+    }
+   ],
+   "market": false,
+   "status": "lead",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2025-W21",
+   "start": "2025-05-19",
+   "end": "2025-05-23",
+   "prev_close": 4.56,
+   "close": 3.68,
+   "ret": -19.3,
+   "dir": "down",
+   "mkt": -0.79,
+   "residual": -18.5,
+   "vol_ratio": 2.89,
+   "kind": "spike",
+   "days": [
+    {
+     "date": "2025-05-20",
+     "ret": -6.39,
+     "status": "unknown",
+     "type": null
+    },
+    {
+     "date": "2025-05-21",
+     "ret": -5.85,
+     "status": "lead",
+     "type": null
+    },
+    {
+     "date": "2025-05-22",
+     "ret": -8.81,
+     "status": "lead",
+     "type": null
+    }
+   ],
+   "market": false,
+   "status": "lead",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2025-W29",
+   "start": "2025-07-14",
+   "end": "2025-07-18",
+   "prev_close": 3.28,
+   "close": 3.7,
+   "ret": 12.8,
+   "dir": "up",
+   "mkt": 7.83,
+   "residual": 4.97,
+   "vol_ratio": 1.08,
+   "kind": "drift",
+   "days": [],
+   "market": true,
+   "status": "lead",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2025-W36",
+   "start": "2025-09-01",
+   "end": "2025-09-05",
+   "prev_close": 3.62,
+   "close": 4.1,
+   "ret": 13.26,
+   "dir": "up",
+   "mkt": 2.02,
+   "residual": 11.24,
+   "vol_ratio": 1.52,
+   "kind": "spike",
+   "days": [
+    {
+     "date": "2025-09-01",
+     "ret": 6.63,
+     "status": "unknown",
+     "type": null
+    },
+    {
+     "date": "2025-09-03",
+     "ret": 5.76,
+     "status": "unknown",
+     "type": null
+    }
+   ],
+   "market": false,
+   "status": "unknown",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2026-W10",
+   "start": "2026-03-02",
+   "end": "2026-03-06",
+   "prev_close": 3.75,
+   "close": 3.28,
+   "ret": -12.53,
+   "dir": "down",
+   "mkt": -7.62,
+   "residual": -4.91,
+   "vol_ratio": 0.99,
+   "kind": "spike",
+   "days": [
+    {
+     "date": "2026-03-02",
+     "ret": -8.72,
+     "status": "unknown",
+     "type": null
+    }
+   ],
+   "market": true,
+   "status": "lead",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2026-W14",
+   "start": "2026-03-30",
+   "end": "2026-04-03",
+   "prev_close": 3.14,
+   "close": 3.52,
+   "ret": 12.1,
+   "dir": "up",
+   "mkt": 0.85,
+   "residual": 11.25,
+   "vol_ratio": 0.68,
+   "kind": "drift",
+   "days": [],
+   "market": false,
+   "status": "unknown",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2026-W26",
+   "start": "2026-06-22",
+   "end": "2026-06-26",
+   "prev_close": 3.34,
+   "close": 3.88,
+   "ret": 16.17,
+   "dir": "up",
+   "mkt": -1.39,
+   "residual": 17.55,
+   "vol_ratio": 2.72,
+   "kind": "spike",
+   "days": [
+    {
+     "date": "2026-06-26",
+     "ret": 10.86,
+     "status": "lead",
+     "type": null
+    }
+   ],
+   "market": false,
+   "status": "lead",
+   "types": [],
+   "why": null
+  }
+ ]
+}

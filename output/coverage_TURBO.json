@@ -1,0 +1,87 @@
+{
+ "coverage": {
+  "ticker": "TURBO",
+  "raw_dir": "(นอก repo) AllCompany/TURBO",
+  "files_scanned": 155,
+  "files_skipped": 15,
+  "skipped": [
+   {
+    "file": "Broker/KSec_2026-07-23.pdf.extracted__rawpdf_dup.md",
+    "reason": "ไฟล์ซ้ำของ Broker/KSec_2026-07-23.pdf.extracted.md"
+   },
+   {
+    "file": "Broker/KSec_2026-07-24.pdf.extracted__rawpdf_dup.md",
+    "reason": "ไฟล์ซ้ำของ Broker/KSec_2026-07-24.pdf.extracted.md"
+   },
+   {
+    "file": "Earning Call/2025Q4_Earningcall_TURBO.pdf.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Earning Call/2025 q4/2025Q4_Earningcall_TURBO.pdf.extracted.md"
+   },
+   {
+    "file": "Earning Call/TURBO_Earningcall_2026_Q1.pdf.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Earning Call/2026Q1_Earningcall_TURBO.pdf.extracted.md"
+   },
+   {
+    "file": "Earning Call/TURBO_Earningcall_2026_Q2.pdf.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Earning Call/2026Q2_Earningcall_TURBO.pdf.extracted.md"
+   },
+   {
+    "file": "Financial statement/2026Q2_AuditReport_TURBO.docx.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/1890FIN130820261327570819T/AUDITOR_REPORT.DOCX.extracted.md"
+   },
+   {
+    "file": "Financial statement/2026Q2_FS_TURBO.xlsx.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/1890FIN130820261327570819T/FINANCIAL_STATEMENTS.XLSX.extracted.md"
+   },
+   {
+    "file": "Financial statement/2026Q2_NOTES_TURBO.docx.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/1890FIN130820261327570819T/NOTES.DOCX.extracted.md"
+   },
+   {
+    "file": "Financial statement/Turbo2026q2-FINANCIAL_STATEMENTS.XLSX.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/1890FIN130820261327570819T/FINANCIAL_STATEMENTS.XLSX.extracted.md"
+   },
+   {
+    "file": "Financial statement/Turbo2026q2-MDA.pdf.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/2026Q2_MDA_TURBO.pdf.extracted.md"
+   },
+   {
+    "file": "Financial statement/Turbo2026q2-NOTES.DOCX.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/1890FIN130820261327570819T/NOTES.DOCX.extracted.md"
+   },
+   {
+    "file": "OneReport/2025/ONEREPORTTURBOT.PDF.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1890ONE260320261844180374T_zip/ONEREPORTTURBOT.PDF.extracted.md"
+   },
+   {
+    "file": "OneReport/2025/STRUCTURETURBOT.PDF.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1890ONE260320261844180374T_zip/STRUCTURETURBOT.PDF.extracted.md"
+   },
+   {
+    "file": "OneReport/R561_1890ONE260320261844180374T_zip/ONEREPORTTURBOT.PDF.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1890ONE260320261844180374T_zip/ONEREPORTTURBOT.PDF.extracted.md"
+   },
+   {
+    "file": "OneReport/R561_1890ONE260320261844180374T_zip/STRUCTURETURBOT.PDF.extracted.md",
+    "reason": "ไฟล์ซ้ำของ Financial statement/R561_1890ONE260320261844180374T_zip/STRUCTURETURBOT.PDF.extracted.md"
+   }
+  ],
+  "by_kind": {
+   "Broker": 18,
+   "EP152 TURBO 11-11-2024.pdf.extracted.md": 1,
+   "EP152 TURBO 11-11-2024.txt": 1,
+   "Earning Call": 17,
+   "Financial statement": 98,
+   "IPO FS": 2,
+   "IPO_TURBO_Company Profile_27 Mar 2026.pdf.extracted.md": 1,
+   "IPO_TURBO_Company Profile_27 Mar 2026.txt": 1,
+   "Jump.pdf.extracted.md": 1,
+   "Jump.txt": 1,
+   "MANIFEST.md": 1,
+   "News": 5,
+   "OneReport": 8
+  },
+  "events": 20,
+  "events_with_local_evidence": 8
+ }
+}

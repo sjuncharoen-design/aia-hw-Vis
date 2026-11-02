@@ -1,0 +1,443 @@
+{
+ "ticker": "TURBO",
+ "unit": "ล้านบาท",
+ "quarters": {
+  "2025Q2": {
+   "cur": {
+    "rev": 768.99,
+    "cogs": 0.18,
+    "gp": null,
+    "sell": null,
+    "admin": 356.31,
+    "fin": 104.53,
+    "ecl": 199.37,
+    "np": 90.94,
+    "gpm": null,
+    "sell_pct": null,
+    "admin_pct": 46.34
+   },
+   "prior": {
+    "rev": 754.75,
+    "cogs": 3.02,
+    "gp": null,
+    "sell": null,
+    "admin": 435.73,
+    "fin": 109.48,
+    "ecl": 207.6,
+    "np": 6.52,
+    "gpm": null,
+    "sell_pct": null,
+    "admin_pct": 57.73
+   },
+   "yoy": {
+    "rev": {
+     "delta": 14.24,
+     "pct": 1.89
+    },
+    "cogs": {
+     "delta": -2.84,
+     "pct": -94.09
+    },
+    "admin": {
+     "delta": -79.42,
+     "pct": -18.23
+    },
+    "fin": {
+     "delta": -4.95,
+     "pct": -4.53
+    },
+    "ecl": {
+     "delta": -8.23,
+     "pct": -3.96
+    },
+    "np": {
+     "delta": 84.42,
+     "pct": 1294.99
+    },
+    "admin_pct": {
+     "delta": -11.4,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "item": "รายได้รวม",
+     "delta": 14.24
+    },
+    {
+     "item": "ค่าใช้จ่ายในการบริหาร (opex)",
+     "delta": 79.42
+    },
+    {
+     "item": "ผลขาดทุนด้านเครดิต",
+     "delta": 8.23
+    },
+    {
+     "item": "ต้นทุนการเงิน",
+     "delta": 4.95
+    },
+    {
+     "item": "รายการอื่น/ภาษี/รายได้อื่น",
+     "delta": -22.42
+    },
+    {
+     "item": "Δ กำไรสุทธิ",
+     "delta": 84.42
+    }
+   ]
+  },
+  "2025Q3": {
+   "cur": {
+    "rev": 762.9,
+    "cogs": 0.2,
+    "gp": null,
+    "sell": null,
+    "admin": 377.08,
+    "fin": 99.97,
+    "ecl": 132.13,
+    "np": 125.66,
+    "gpm": null,
+    "sell_pct": null,
+    "admin_pct": 49.43
+   },
+   "prior": {
+    "rev": 777.41,
+    "cogs": 0.33,
+    "gp": null,
+    "sell": null,
+    "admin": 412.8,
+    "fin": 115.96,
+    "ecl": 220.76,
+    "np": 26.67,
+    "gpm": null,
+    "sell_pct": null,
+    "admin_pct": 53.1
+   },
+   "yoy": {
+    "rev": {
+     "delta": -14.51,
+     "pct": -1.87
+    },
+    "cogs": {
+     "delta": -0.13,
+     "pct": -39.72
+    },
+    "admin": {
+     "delta": -35.72,
+     "pct": -8.65
+    },
+    "fin": {
+     "delta": -15.99,
+     "pct": -13.79
+    },
+    "ecl": {
+     "delta": -88.64,
+     "pct": -40.15
+    },
+    "np": {
+     "delta": 98.98,
+     "pct": 371.12
+    },
+    "admin_pct": {
+     "delta": -3.67,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "item": "รายได้รวม",
+     "delta": -14.51
+    },
+    {
+     "item": "ค่าใช้จ่ายในการบริหาร (opex)",
+     "delta": 35.72
+    },
+    {
+     "item": "ผลขาดทุนด้านเครดิต",
+     "delta": 88.64
+    },
+    {
+     "item": "ต้นทุนการเงิน",
+     "delta": 15.99
+    },
+    {
+     "item": "รายการอื่น/ภาษี/รายได้อื่น",
+     "delta": -26.85
+    },
+    {
+     "item": "Δ กำไรสุทธิ",
+     "delta": 98.98
+    }
+   ]
+  },
+  "2025Q4": {
+   "cur": {
+    "rev": 814.24,
+    "cogs": 0.2,
+    "gp": null,
+    "sell": null,
+    "admin": 405.02,
+    "fin": 89.8,
+    "ecl": 145.03,
+    "np": 141.54,
+    "gpm": null,
+    "sell_pct": null,
+    "admin_pct": 49.74
+   },
+   "prior": {
+    "rev": 792.85,
+    "cogs": -0.16,
+    "gp": null,
+    "sell": null,
+    "admin": 413.16,
+    "fin": 118.42,
+    "ecl": 190.18,
+    "np": 53.75,
+    "gpm": null,
+    "sell_pct": null,
+    "admin_pct": 52.11
+   },
+   "yoy": {
+    "rev": {
+     "delta": 21.38,
+     "pct": 2.7
+    },
+    "cogs": {
+     "delta": 0.36,
+     "pct": -230.06
+    },
+    "admin": {
+     "delta": -8.14,
+     "pct": -1.97
+    },
+    "fin": {
+     "delta": -28.63,
+     "pct": -24.17
+    },
+    "ecl": {
+     "delta": -45.15,
+     "pct": -23.74
+    },
+    "np": {
+     "delta": 87.8,
+     "pct": 163.35
+    },
+    "admin_pct": {
+     "delta": -2.37,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "item": "รายได้รวม",
+     "delta": 21.38
+    },
+    {
+     "item": "ค่าใช้จ่ายในการบริหาร (opex)",
+     "delta": 8.14
+    },
+    {
+     "item": "ผลขาดทุนด้านเครดิต",
+     "delta": 45.15
+    },
+    {
+     "item": "ต้นทุนการเงิน",
+     "delta": 28.63
+    },
+    {
+     "item": "รายการอื่น/ภาษี/รายได้อื่น",
+     "delta": -15.49
+    },
+    {
+     "item": "Δ กำไรสุทธิ",
+     "delta": 87.8
+    }
+   ]
+  },
+  "2026Q1": {
+   "cur": {
+    "rev": 816.67,
+    "cogs": 0.16,
+    "gp": null,
+    "sell": null,
+    "admin": 381.79,
+    "fin": 87.38,
+    "ecl": 131.01,
+    "np": 175.02,
+    "gpm": null,
+    "sell_pct": null,
+    "admin_pct": 46.75
+   },
+   "prior": {
+    "rev": 748.57,
+    "cogs": 0.15,
+    "gp": null,
+    "sell": null,
+    "admin": 337.18,
+    "fin": 107.76,
+    "ecl": 123.64,
+    "np": 144.99,
+    "gpm": null,
+    "sell_pct": null,
+    "admin_pct": 45.04
+   },
+   "yoy": {
+    "rev": {
+     "delta": 68.1,
+     "pct": 9.1
+    },
+    "cogs": {
+     "delta": 0.01,
+     "pct": 7.22
+    },
+    "admin": {
+     "delta": 44.61,
+     "pct": 13.23
+    },
+    "fin": {
+     "delta": -20.38,
+     "pct": -18.91
+    },
+    "ecl": {
+     "delta": 7.37,
+     "pct": 5.96
+    },
+    "np": {
+     "delta": 30.04,
+     "pct": 20.72
+    },
+    "admin_pct": {
+     "delta": 1.71,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "item": "รายได้รวม",
+     "delta": 68.1
+    },
+    {
+     "item": "ค่าใช้จ่ายในการบริหาร (opex)",
+     "delta": -44.61
+    },
+    {
+     "item": "ผลขาดทุนด้านเครดิต",
+     "delta": -7.37
+    },
+    {
+     "item": "ต้นทุนการเงิน",
+     "delta": 20.38
+    },
+    {
+     "item": "รายการอื่น/ภาษี/รายได้อื่น",
+     "delta": -6.47
+    },
+    {
+     "item": "Δ กำไรสุทธิ",
+     "delta": 30.04
+    }
+   ]
+  },
+  "2026Q2": {
+   "cur": {
+    "rev": 859.64,
+    "cogs": 0.19,
+    "gp": null,
+    "sell": null,
+    "admin": 421.67,
+    "fin": 89.07,
+    "ecl": 161.15,
+    "np": 154.1,
+    "gpm": null,
+    "sell_pct": null,
+    "admin_pct": 49.05
+   },
+   "prior": {
+    "rev": 768.99,
+    "cogs": 0.18,
+    "gp": null,
+    "sell": null,
+    "admin": 356.31,
+    "fin": 104.53,
+    "ecl": 199.37,
+    "np": 90.94,
+    "gpm": null,
+    "sell_pct": null,
+    "admin_pct": 46.34
+   },
+   "yoy": {
+    "rev": {
+     "delta": 90.66,
+     "pct": 11.79
+    },
+    "cogs": {
+     "delta": 0.01,
+     "pct": 7.74
+    },
+    "admin": {
+     "delta": 65.35,
+     "pct": 18.34
+    },
+    "fin": {
+     "delta": -15.46,
+     "pct": -14.79
+    },
+    "ecl": {
+     "delta": -38.22,
+     "pct": -19.17
+    },
+    "np": {
+     "delta": 63.16,
+     "pct": 69.45
+    },
+    "admin_pct": {
+     "delta": 2.72,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "item": "รายได้รวม",
+     "delta": 90.66
+    },
+    {
+     "item": "ค่าใช้จ่ายในการบริหาร (opex)",
+     "delta": -65.35
+    },
+    {
+     "item": "ผลขาดทุนด้านเครดิต",
+     "delta": 38.22
+    },
+    {
+     "item": "ต้นทุนการเงิน",
+     "delta": 15.46
+    },
+    {
+     "item": "รายการอื่น/ภาษี/รายได้อื่น",
+     "delta": -15.82
+    },
+    {
+     "item": "Δ กำไรสุทธิ",
+     "delta": 63.16
+    }
+   ]
+  }
+ },
+ "missing": [
+  "2024Q4"
+ ],
+ "events": {
+  "2025-11-12": {
+   "quarter": "2025Q3",
+   "rel": "R",
+   "filed": "2025-11-11",
+   "time": "19:09"
+  },
+  "2026-02-25": {
+   "quarter": "2025Q4",
+   "rel": "R",
+   "filed": "2026-02-24",
+   "time": "17:54"
+  }
+ }
+}

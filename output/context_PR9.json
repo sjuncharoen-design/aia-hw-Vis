@@ -1,0 +1,283 @@
+{
+ "ticker": "PR9",
+ "beta": 0.45,
+ "daily_sd": 1.91,
+ "first_filing": "2022-05-13",
+ "events": {
+  "2022-03-18": {
+   "cls": "high_volume",
+   "vol_ratio": 3.22,
+   "gap": 0.85,
+   "mkt": -0.2,
+   "residual": 6.02,
+   "z": 3.1,
+   "after1": -4.0,
+   "after5": -3.2,
+   "before_first_filing": true
+  },
+  "2022-04-20": {
+   "cls": "high_volume",
+   "vol_ratio": 4.67,
+   "gap": 0.78,
+   "mkt": 0.1,
+   "residual": 5.38,
+   "z": 2.8,
+   "after1": 0.0,
+   "after5": 2.21,
+   "before_first_filing": true
+  },
+  "2022-04-25": {
+   "cls": "mid_volume",
+   "vol_ratio": 2.51,
+   "gap": 0.0,
+   "mkt": -0.52,
+   "residual": 6.95,
+   "z": 3.5,
+   "after1": 0.0,
+   "after5": -3.5,
+   "before_first_filing": true
+  },
+  "2022-05-12": {
+   "cls": "low_volume",
+   "vol_ratio": 1.15,
+   "gap": -0.74,
+   "mkt": -0.63,
+   "residual": -4.9,
+   "z": -2.7,
+   "after1": 0.78,
+   "after5": 14.06,
+   "before_first_filing": true
+  },
+  "2022-05-17": {
+   "cls": "earnings",
+   "vol_ratio": 2.16,
+   "gap": -0.78,
+   "mkt": 1.38,
+   "residual": 4.81,
+   "z": 2.8,
+   "after1": 6.62,
+   "after5": 11.76,
+   "before_first_filing": false
+  },
+  "2022-05-18": {
+   "cls": "low_volume",
+   "vol_ratio": 1.15,
+   "gap": -1.47,
+   "mkt": 0.63,
+   "residual": 6.34,
+   "z": 3.5,
+   "after1": 0.69,
+   "after5": 5.52,
+   "before_first_filing": false
+  },
+  "2022-05-26": {
+   "cls": "low_volume",
+   "vol_ratio": 0.93,
+   "gap": -0.65,
+   "mkt": -0.1,
+   "residual": -5.18,
+   "z": -2.7,
+   "after1": 0.0,
+   "after5": -2.07,
+   "before_first_filing": false
+  },
+  "2022-10-03": {
+   "cls": "market",
+   "vol_ratio": 1.75,
+   "gap": -0.56,
+   "mkt": -1.68,
+   "residual": -4.33,
+   "z": -2.7,
+   "after1": 4.17,
+   "after5": 0.6,
+   "before_first_filing": false
+  },
+  "2022-11-28": {
+   "cls": "mid_volume",
+   "vol_ratio": 2.1,
+   "gap": -0.6,
+   "mkt": 0.21,
+   "residual": 5.33,
+   "z": 2.8,
+   "after1": 0.0,
+   "after5": -1.14,
+   "before_first_filing": false
+  },
+  "2022-12-27": {
+   "cls": "mid_volume",
+   "vol_ratio": 1.84,
+   "gap": 1.23,
+   "mkt": 1.13,
+   "residual": 5.63,
+   "z": 3.2,
+   "after1": -2.31,
+   "after5": 4.05,
+   "before_first_filing": false
+  },
+  "2023-04-10": {
+   "cls": "high_volume",
+   "vol_ratio": 8.04,
+   "gap": -0.96,
+   "mkt": 1.19,
+   "residual": -10.1,
+   "z": -5.0,
+   "after1": -2.65,
+   "after5": 3.17,
+   "before_first_filing": false
+  },
+  "2023-05-16": {
+   "cls": "earnings",
+   "vol_ratio": 3.14,
+   "gap": -0.52,
+   "mkt": -0.65,
+   "residual": -9.66,
+   "z": -5.2,
+   "after1": 2.91,
+   "after5": 3.49,
+   "before_first_filing": false
+  },
+  "2023-05-19": {
+   "cls": "low_volume",
+   "vol_ratio": 1.45,
+   "gap": -0.57,
+   "mkt": -1.1,
+   "residual": -5.22,
+   "z": -3.0,
+   "after1": 4.24,
+   "after5": 7.27,
+   "before_first_filing": false
+  },
+  "2023-08-28": {
+   "cls": "mid_volume",
+   "vol_ratio": 2.38,
+   "gap": 0.58,
+   "mkt": 0.64,
+   "residual": 4.98,
+   "z": 2.8,
+   "after1": -0.56,
+   "after5": -2.22,
+   "before_first_filing": false
+  },
+  "2023-10-19": {
+   "cls": "high_volume",
+   "vol_ratio": 3.81,
+   "gap": -0.6,
+   "mkt": -0.92,
+   "residual": -5.01,
+   "z": -2.8,
+   "after1": 0.64,
+   "after5": 1.91,
+   "before_first_filing": false
+  },
+  "2023-11-17": {
+   "cls": "mid_volume",
+   "vol_ratio": 2.68,
+   "gap": 0.0,
+   "mkt": -0.46,
+   "residual": 5.76,
+   "z": 2.9,
+   "after1": 1.97,
+   "after5": 4.61,
+   "before_first_filing": false
+  },
+  "2024-10-25": {
+   "cls": "mid_volume",
+   "vol_ratio": 2.44,
+   "gap": 0.87,
+   "mkt": 0.0,
+   "residual": 6.52,
+   "z": 3.4,
+   "after1": 0.41,
+   "after5": -1.22,
+   "before_first_filing": false
+  },
+  "2024-11-14": {
+   "cls": "low_volume",
+   "vol_ratio": 0.83,
+   "gap": 0.99,
+   "mkt": -0.33,
+   "residual": 6.09,
+   "z": 3.1,
+   "after1": -4.67,
+   "after5": -4.67,
+   "before_first_filing": false
+  },
+  "2025-01-21": {
+   "cls": "high_volume",
+   "vol_ratio": 8.09,
+   "gap": -1.39,
+   "mkt": 0.69,
+   "residual": -5.66,
+   "z": -2.8,
+   "after1": 4.18,
+   "after5": -5.44,
+   "before_first_filing": false
+  },
+  "2025-02-19": {
+   "cls": "earnings",
+   "vol_ratio": 1.75,
+   "gap": 2.26,
+   "mkt": 0.13,
+   "residual": 6.73,
+   "z": 3.5,
+   "after1": -1.69,
+   "after5": -2.97,
+   "before_first_filing": false
+  },
+  "2025-04-10": {
+   "cls": "market",
+   "vol_ratio": 1.75,
+   "gap": 2.29,
+   "mkt": 5.19,
+   "residual": 3.19,
+   "z": 2.9,
+   "after1": -2.17,
+   "after5": 3.48,
+   "before_first_filing": false
+  },
+  "2025-05-22": {
+   "cls": "mid_volume",
+   "vol_ratio": 2.33,
+   "gap": -0.41,
+   "mkt": -0.4,
+   "residual": -5.54,
+   "z": -3.0,
+   "after1": -1.3,
+   "after5": 3.46,
+   "before_first_filing": false
+  },
+  "2026-01-12": {
+   "cls": "high_volume",
+   "vol_ratio": 5.26,
+   "gap": 1.09,
+   "mkt": -0.6,
+   "residual": -7.93,
+   "z": -4.3,
+   "after1": 1.79,
+   "after5": 12.5,
+   "before_first_filing": false
+  },
+  "2026-03-02": {
+   "cls": "low_volume",
+   "vol_ratio": 1.44,
+   "gap": -4.64,
+   "mkt": -3.66,
+   "residual": -5.58,
+   "z": -3.8,
+   "after1": -3.89,
+   "after5": -5.56,
+   "before_first_filing": false
+  },
+  "2026-07-08": {
+   "cls": "mid_volume",
+   "vol_ratio": 1.57,
+   "gap": -0.56,
+   "mkt": -1.06,
+   "residual": -4.58,
+   "z": -2.6,
+   "after1": 3.55,
+   "after5": 6.51,
+   "before_first_filing": false
+  }
+ }
+}

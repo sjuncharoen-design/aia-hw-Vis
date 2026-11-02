@@ -4,132 +4,114 @@
   {
    "date": "2022-05-11",
    "kind": "oppday",
-   "src": "Earning Call/2022Q1_Earningcall_YouTube_DOHOME.txt"
+   "src": "Earning Call/2022Q1_Earningcall_YouTube_DOHOME.txt",
+   "react_date": "2022-05-11"
   },
   {
    "date": "2022-08-11",
    "kind": "oppday",
-   "src": "Earning Call/2022Q2_Earningcall_YouTube_DOHOME.txt"
+   "src": "Earning Call/2022Q2_Earningcall_YouTube_DOHOME.txt",
+   "react_date": "2022-08-11"
   },
   {
    "date": "2022-11-11",
    "kind": "oppday",
-   "src": "Earning Call/2022Q3_Earningcall_YouTube_DOHOME.txt"
+   "src": "Earning Call/2022Q3_Earningcall_YouTube_DOHOME.txt",
+   "react_date": "2022-11-11"
   },
   {
    "date": "2023-05-15",
    "kind": "oppday",
-   "src": "Earning Call/2023Q1_Earningcall_YouTube_DOHOME.txt"
-  },
-  {
-   "date": "2023-06-30",
-   "kind": "audit_signed",
-   "src": "Financial statement/2023Q2_AuditReport_DOHOME.DOC.extracted.md"
+   "src": "Earning Call/2023Q1_Earningcall_YouTube_DOHOME.txt",
+   "react_date": "2023-05-15"
   },
   {
    "date": "2023-08-11",
    "kind": "oppday",
-   "src": "Earning Call/2023Q2_Earningcall_YouTube_DOHOME.txt"
+   "src": "Earning Call/2023Q2_Earningcall_YouTube_DOHOME.txt",
+   "react_date": "2023-08-11"
   },
   {
-   "date": "2023-09-30",
+   "date": "2023-11-07",
    "kind": "audit_signed",
-   "src": "Financial statement/2023Q3_AuditReport_DOHOME.DOC.extracted.md"
+   "src": "Financial statement/2023Q3_AuditReport_DOHOME.DOC.extracted.md",
+   "react_date": "2023-11-08"
   },
   {
    "date": "2023-11-10",
    "kind": "oppday",
-   "src": "Earning Call/2023Q3_Earningcall_YouTube_DOHOME.txt"
-  },
-  {
-   "date": "2024-02-20",
-   "kind": "audit_signed",
-   "src": "Financial statement/2023Q4_AuditReport_DOHOME.doc.extracted.md"
+   "src": "Earning Call/2023Q3_Earningcall_YouTube_DOHOME.txt",
+   "react_date": "2023-11-10"
   },
   {
    "date": "2024-05-07",
-   "kind": "audit_signed",
-   "src": "Financial statement/2024Q1_AuditReport_DOHOME.doc.extracted.md"
+   "time": "17:59",
+   "kind": "fs_filed",
+   "src": "Financial statement/_FS_EN_ARCHIVED/FS_202405_1504FIN0705202417590",
+   "react_date": "2024-05-08"
   },
   {
    "date": "2024-05-10",
    "kind": "oppday",
-   "src": "Earning Call/2024Q1_Earningcall_YouTube_DOHOME.txt"
-  },
-  {
-   "date": "2024-08-06",
-   "kind": "audit_signed",
-   "src": "Financial statement/2024Q2_AuditReport_DOHOME.doc.extracted.md"
+   "src": "Earning Call/2024Q1_Earningcall_YouTube_DOHOME.txt",
+   "react_date": "2024-05-10"
   },
   {
    "date": "2024-08-08",
    "kind": "oppday",
-   "src": "Earning Call/2024Q2_Earningcall_YouTube_DOHOME.txt"
+   "src": "Earning Call/2024Q2_Earningcall_YouTube_DOHOME.txt",
+   "react_date": "2024-08-08"
   },
   {
    "date": "2024-11-05",
-   "kind": "audit_signed",
-   "src": "Financial statement/2024Q3_AuditReport_DOHOME.doc.extracted.md"
+   "time": "18:01",
+   "kind": "fs_filed",
+   "src": "Financial statement/_FS_EN_ARCHIVED/FS_202411_1504FIN0511202418015",
+   "react_date": "2024-11-06"
   },
   {
    "date": "2024-11-08",
    "kind": "oppday",
-   "src": "Earning Call/2024Q3_Earningcall_YouTube_DOHOME.txt"
-  },
-  {
-   "date": "2025-02-19",
-   "kind": "audit_signed",
-   "src": "Financial statement/2024Q4_AuditReport_DOHOME.doc.extracted.md"
-  },
-  {
-   "date": "2025-05-08",
-   "kind": "audit_signed",
-   "src": "Financial statement/2025Q1_AuditReport_DOHOME.doc.extracted.md"
+   "src": "Earning Call/2024Q3_Earningcall_YouTube_DOHOME.txt",
+   "react_date": "2024-11-08"
   },
   {
    "date": "2025-05-15",
    "kind": "oppday",
-   "src": "Earning Call/2025Q1_Earningcall_YouTube_DOHOME.txt"
-  },
-  {
-   "date": "2025-08-06",
-   "kind": "audit_signed",
-   "src": "Financial statement/2025Q2_AuditReport_DOHOME.doc.extracted.md"
+   "src": "Earning Call/2025Q1_Earningcall_YouTube_DOHOME.txt",
+   "react_date": "2025-05-15"
   },
   {
    "date": "2025-08-13",
    "kind": "oppday",
-   "src": "Earning Call/2025Q2_Earningcall_YouTube_DOHOME.txt"
-  },
-  {
-   "date": "2025-11-07",
-   "kind": "audit_signed",
-   "src": "Financial statement/2025Q3_AuditReport_DOHOME.doc.extracted.md"
+   "src": "Earning Call/2025Q2_Earningcall_YouTube_DOHOME.txt",
+   "react_date": "2025-08-13"
   },
   {
    "date": "2025-11-12",
    "kind": "oppday",
-   "src": "Earning Call/2025Q3_Earningcall_YouTube_DOHOME.txt"
-  },
-  {
-   "date": "2026-02-20",
-   "kind": "audit_signed",
-   "src": "Financial statement/2025Q4_AuditReport_DOHOME.doc.extracted.md"
+   "src": "Earning Call/2025Q3_Earningcall_YouTube_DOHOME.txt",
+   "react_date": "2025-11-12"
   },
   {
    "date": "2026-05-11",
-   "kind": "audit_signed",
-   "src": "Financial statement/2026Q1_AuditReport_DOHOME.docx.extracted.md"
+   "time": "18:48",
+   "kind": "fs_filed",
+   "src": "Financial statement/FS_202605_1504FIN1105202618485",
+   "react_date": "2026-05-12"
   },
   {
    "date": "2026-05-18",
    "kind": "oppday",
-   "src": "Earning Call/2026Q1_Earningcall_YouTube_DOHOME.txt"
+   "src": "Earning Call/2026Q1_Earningcall_YouTube_DOHOME.txt",
+   "react_date": "2026-05-18"
   },
   {
    "date": "2026-08-11",
-   "kind": "audit_signed",
-   "src": "Financial statement/2026Q2_AuditReport_DOHOME.docx.extracted.md"
+   "time": "18:26",
+   "kind": "fs_filed",
+   "src": "Financial statement/FS_202608_1504FIN1108202618264",
+   "react_date": "2026-08-13"
   },
   {
    "date": "2026-08-11",
@@ -137,94 +119,505 @@
    "kind": "set_news",
    "src": "News/set_news_2026-08-12.jsonl",
    "title": "คำอธิบายและวิเคราะห์ของฝ่ายจัดการ ไตรมาสที่ 2 สิ้นสุดวันที่ 30 มิ.ย. 2569",
-   "url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=105830301&symbol=DOHOME"
+   "url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=105830301&symbol=DOHOME",
+   "react_date": "2026-08-13"
   },
   {
    "date": "2026-08-18",
    "kind": "oppday",
-   "src": "Earning Call/2026Q2_Earningcall_YouTube_DOHOME.txt"
+   "src": "Earning Call/2026Q2_Earningcall_YouTube_DOHOME.txt",
+   "react_date": "2026-08-18"
+  },
+  {
+   "date": "2022-02-17",
+   "time": "21:03",
+   "kind": "set_fs",
+   "title": "งบการเงิน ประจำปี 2564",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2022-02-17&toDate=2022-02-17",
+   "react_date": "2022-02-18"
+  },
+  {
+   "date": "2022-03-01",
+   "time": "17:11",
+   "kind": "set_news",
+   "title": "การใช้สิทธิ ESOP-W2/ESOP-W3",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2022-03-01&toDate=2022-03-01",
+   "react_date": "2022-03-02"
+  },
+  {
+   "date": "2022-05-05",
+   "time": "20:02",
+   "kind": "set_fs",
+   "title": "งบการเงิน ไตรมาสที่ 1/2565",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2022-05-05&toDate=2022-05-05",
+   "react_date": "2022-05-06"
+  },
+  {
+   "date": "2022-07-06",
+   "time": "08:42",
+   "kind": "set_news",
+   "title": "หุ้นเพิ่มทุนของ DOHOME เริ่มซื้อขายวันที่ 7 ก.ค. 2565",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2022-07-06&toDate=2022-07-06",
+   "react_date": "2022-07-06"
+  },
+  {
+   "date": "2023-05-08",
+   "time": "06:47",
+   "kind": "set_fs",
+   "title": "งบการเงิน ไตรมาสที่ 1/2566",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2023-05-08&toDate=2023-05-08",
+   "react_date": "2023-05-08"
+  },
+  {
+   "date": "2023-05-25",
+   "time": "08:31",
+   "kind": "set_news",
+   "title": "หุ้นเพิ่มทุนของ DOHOME เริ่มซื้อขายวันที่ 26 พ.ค. 2566",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2023-05-25&toDate=2023-05-25",
+   "react_date": "2023-05-25"
+  },
+  {
+   "date": "2023-07-10",
+   "time": "08:48",
+   "kind": "set_news",
+   "title": "หุ้นเพิ่มทุนของ DOHOME เริ่มซื้อขายวันที่ 11 ก.ค. 2566",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2023-07-10&toDate=2023-07-10",
+   "react_date": "2023-07-10"
+  },
+  {
+   "date": "2023-08-08",
+   "time": "21:02",
+   "kind": "set_fs",
+   "title": "งบการเงิน ไตรมาสที่ 2/2566",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2023-08-08&toDate=2023-08-08",
+   "react_date": "2023-08-09"
+  },
+  {
+   "date": "2024-02-20",
+   "time": "20:47",
+   "kind": "set_fs",
+   "title": "งบการเงิน ประจำปี 2566",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2024-02-20&toDate=2024-02-20",
+   "react_date": "2024-02-21"
+  },
+  {
+   "date": "2024-02-20",
+   "time": "20:49",
+   "kind": "set_news",
+   "title": "การจ่ายปันผล การเพิ่มทุนจดทะเบียน และการออกใบสำคัญแสดงสิทธิ ESOP",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2024-02-20&toDate=2024-02-20",
+   "react_date": "2024-02-21"
+  },
+  {
+   "date": "2024-05-20",
+   "time": "08:27",
+   "kind": "set_news",
+   "title": "หุ้นเพิ่มทุนของ DOHOME เริ่มซื้อขายวันที่ 21 พ.ค. 2567",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2024-05-20&toDate=2024-05-20",
+   "react_date": "2024-05-20"
+  },
+  {
+   "date": "2024-08-06",
+   "time": "20:46",
+   "kind": "set_fs",
+   "title": "งบการเงิน ไตรมาสที่ 2/2567",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2024-08-06&toDate=2024-08-06",
+   "react_date": "2024-08-07"
+  },
+  {
+   "date": "2025-02-19",
+   "time": "21:27",
+   "kind": "set_fs",
+   "title": "งบการเงิน ประจำปี 2567",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-02-19&toDate=2025-02-19",
+   "react_date": "2025-02-20"
+  },
+  {
+   "date": "2025-02-19",
+   "time": "21:33",
+   "kind": "set_news",
+   "title": "การจ่ายปันผล เพิ่มทุน ESOP และแต่งตั้งกรรมการใหม่",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-02-19&toDate=2025-02-19",
+   "react_date": "2025-02-20"
+  },
+  {
+   "date": "2025-05-08",
+   "time": "17:40",
+   "kind": "set_fs",
+   "title": "งบการเงิน ไตรมาสที่ 1/2568",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-05-08&toDate=2025-05-08",
+   "react_date": "2025-05-09"
+  },
+  {
+   "date": "2025-05-21",
+   "time": "08:33",
+   "kind": "set_news",
+   "title": "แจ้งกรรมการตรวจสอบลาออก",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-05-21&toDate=2025-05-21",
+   "react_date": "2025-05-21"
+  },
+  {
+   "date": "2025-05-23",
+   "time": "08:42",
+   "kind": "set_news",
+   "title": "หุ้นเพิ่มทุนของ DOHOME เริ่มซื้อขายวันที่ 26 พ.ค. 2568",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-05-23&toDate=2025-05-23",
+   "react_date": "2025-05-23"
+  },
+  {
+   "date": "2025-06-24",
+   "time": "12:37",
+   "kind": "set_news",
+   "title": "ชี้แจงกรณี เจ้าหน้าที่ สมอ. เข้าตรวจสอบ สาขาบางบัวทอง",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-06-24&toDate=2025-06-24",
+   "react_date": "2025-06-24"
+  },
+  {
+   "date": "2025-08-06",
+   "time": "17:24",
+   "kind": "set_fs",
+   "title": "งบการเงิน ไตรมาสที่ 2/2568",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-08-06&toDate=2025-08-06",
+   "react_date": "2025-08-07"
+  },
+  {
+   "date": "2025-09-30",
+   "time": "18:18",
+   "kind": "set_news",
+   "title": "แจ้งเปลี่ยนแปลง CFO (เนื่องจากเกษียณอายุ)",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-09-30&toDate=2025-09-30",
+   "react_date": "2025-10-01"
+  },
+  {
+   "date": "2025-11-07",
+   "time": "17:59",
+   "kind": "set_fs",
+   "title": "งบการเงิน ไตรมาสที่ 3/2568",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-11-07&toDate=2025-11-07",
+   "react_date": "2025-11-10"
+  },
+  {
+   "date": "2025-11-07",
+   "time": "18:00",
+   "kind": "set_news",
+   "title": "แจ้งอนุมัติการเพิ่มทุนในบริษัทย่อย",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-11-07&toDate=2025-11-07",
+   "react_date": "2025-11-10"
+  },
+  {
+   "date": "2026-02-20",
+   "time": "20:30",
+   "kind": "set_fs",
+   "title": "งบการเงิน ประจำปี 2568",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2026-02-20&toDate=2026-02-20",
+   "react_date": "2026-02-23"
+  },
+  {
+   "date": "2026-05-21",
+   "time": "08:00",
+   "kind": "set_news",
+   "title": "หุ้นเพิ่มทุนของ DOHOME เริ่มซื้อขายวันที่ 22 พ.ค. 2569",
+   "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2026-05-21&toDate=2026-05-21",
+   "react_date": "2026-05-21"
+  },
+  {
+   "date": "2022-03-04",
+   "kind": "xd",
+   "src": "Yahoo dividends",
+   "amount": 0.018362
+  },
+  {
+   "date": "2023-03-08",
+   "kind": "xd",
+   "src": "Yahoo dividends",
+   "amount": 0.006097
+  },
+  {
+   "date": "2024-03-04",
+   "kind": "xd",
+   "src": "Yahoo dividends",
+   "amount": 0.004636
+  },
+  {
+   "date": "2025-03-04",
+   "kind": "xd",
+   "src": "Yahoo dividends",
+   "amount": 0.005088
+  },
+  {
+   "date": "2026-03-05",
+   "kind": "xd",
+   "src": "Yahoo dividends",
+   "amount": 0.004444
+  },
+  {
+   "date": "2022-03-04",
+   "kind": "xd_stock",
+   "src": "Yahoo splits",
+   "ratio": "6:5"
+  },
+  {
+   "date": "2023-03-08",
+   "kind": "xd_stock",
+   "src": "Yahoo splits",
+   "ratio": "17:16"
+  },
+  {
+   "date": "2024-03-04",
+   "kind": "xd_stock",
+   "src": "Yahoo splits",
+   "ratio": "23:22"
+  },
+  {
+   "date": "2025-03-04",
+   "kind": "xd_stock",
+   "src": "Yahoo splits",
+   "ratio": "22:21"
+  },
+  {
+   "date": "2026-03-05",
+   "kind": "xd_stock",
+   "src": "Yahoo splits",
+   "ratio": "26:25"
   }
  ],
  "matches": [
   {
+   "event_date": "2026-05-19",
+   "rel": "R+1",
+   "item": {
+    "date": "2026-05-18",
+    "kind": "oppday",
+    "src": "Earning Call/2026Q1_Earningcall_YouTube_DOHOME.txt",
+    "react_date": "2026-05-18"
+   }
+  },
+  {
+   "event_date": "2023-05-08",
+   "rel": "R",
+   "item": {
+    "date": "2023-05-08",
+    "time": "06:47",
+    "kind": "set_fs",
+    "title": "งบการเงิน ไตรมาสที่ 1/2566",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2023-05-08&toDate=2023-05-08",
+    "react_date": "2023-05-08"
+   }
+  },
+  {
+   "event_date": "2023-07-11",
+   "rel": "R+1",
+   "item": {
+    "date": "2023-07-10",
+    "time": "08:48",
+    "kind": "set_news",
+    "title": "หุ้นเพิ่มทุนของ DOHOME เริ่มซื้อขายวันที่ 11 ก.ค. 2566",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2023-07-10&toDate=2023-07-10",
+    "react_date": "2023-07-10"
+   }
+  },
+  {
+   "event_date": "2023-08-09",
+   "rel": "R",
+   "item": {
+    "date": "2023-08-08",
+    "time": "21:02",
+    "kind": "set_fs",
+    "title": "งบการเงิน ไตรมาสที่ 2/2566",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2023-08-08&toDate=2023-08-08",
+    "react_date": "2023-08-09"
+   }
+  },
+  {
    "event_date": "2024-02-21",
-   "rel": "T-1",
+   "rel": "R",
    "item": {
     "date": "2024-02-20",
-    "kind": "audit_signed",
-    "src": "Financial statement/2023Q4_AuditReport_DOHOME.doc.extracted.md"
+    "time": "20:47",
+    "kind": "set_fs",
+    "title": "งบการเงิน ประจำปี 2566",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2024-02-20&toDate=2024-02-20",
+    "react_date": "2024-02-21"
    }
   },
   {
-   "event_date": "2024-08-05",
-   "rel": "T+1",
+   "event_date": "2024-02-21",
+   "rel": "R",
    "item": {
-    "date": "2024-08-06",
-    "kind": "audit_signed",
-    "src": "Financial statement/2024Q2_AuditReport_DOHOME.doc.extracted.md"
+    "date": "2024-02-20",
+    "time": "20:49",
+    "kind": "set_news",
+    "title": "การจ่ายปันผล การเพิ่มทุนจดทะเบียน และการออกใบสำคัญแสดงสิทธิ ESOP",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2024-02-20&toDate=2024-02-20",
+    "react_date": "2024-02-21"
    }
   },
   {
-   "event_date": "2025-02-19",
-   "rel": "T",
+   "event_date": "2024-05-21",
+   "rel": "R+1",
    "item": {
-    "date": "2025-02-19",
-    "kind": "audit_signed",
-    "src": "Financial statement/2024Q4_AuditReport_DOHOME.doc.extracted.md"
+    "date": "2024-05-20",
+    "time": "08:27",
+    "kind": "set_news",
+    "title": "หุ้นเพิ่มทุนของ DOHOME เริ่มซื้อขายวันที่ 21 พ.ค. 2567",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2024-05-20&toDate=2024-05-20",
+    "react_date": "2024-05-20"
    }
   },
   {
    "event_date": "2025-02-20",
-   "rel": "T-1",
+   "rel": "R",
    "item": {
     "date": "2025-02-19",
-    "kind": "audit_signed",
-    "src": "Financial statement/2024Q4_AuditReport_DOHOME.doc.extracted.md"
+    "time": "21:27",
+    "kind": "set_fs",
+    "title": "งบการเงิน ประจำปี 2567",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-02-19&toDate=2025-02-19",
+    "react_date": "2025-02-20"
    }
   },
   {
-   "event_date": "2025-05-08",
-   "rel": "T",
+   "event_date": "2025-02-21",
+   "rel": "R+1",
    "item": {
-    "date": "2025-05-08",
-    "kind": "audit_signed",
-    "src": "Financial statement/2025Q1_AuditReport_DOHOME.doc.extracted.md"
+    "date": "2025-02-19",
+    "time": "21:27",
+    "kind": "set_fs",
+    "title": "งบการเงิน ประจำปี 2567",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-02-19&toDate=2025-02-19",
+    "react_date": "2025-02-20"
+   }
+  },
+  {
+   "event_date": "2025-02-20",
+   "rel": "R",
+   "item": {
+    "date": "2025-02-19",
+    "time": "21:33",
+    "kind": "set_news",
+    "title": "การจ่ายปันผล เพิ่มทุน ESOP และแต่งตั้งกรรมการใหม่",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-02-19&toDate=2025-02-19",
+    "react_date": "2025-02-20"
+   }
+  },
+  {
+   "event_date": "2025-02-21",
+   "rel": "R+1",
+   "item": {
+    "date": "2025-02-19",
+    "time": "21:33",
+    "kind": "set_news",
+    "title": "การจ่ายปันผล เพิ่มทุน ESOP และแต่งตั้งกรรมการใหม่",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-02-19&toDate=2025-02-19",
+    "react_date": "2025-02-20"
    }
   },
   {
    "event_date": "2025-05-09",
-   "rel": "T-1",
+   "rel": "R",
    "item": {
     "date": "2025-05-08",
-    "kind": "audit_signed",
-    "src": "Financial statement/2025Q1_AuditReport_DOHOME.doc.extracted.md"
+    "time": "17:40",
+    "kind": "set_fs",
+    "title": "งบการเงิน ไตรมาสที่ 1/2568",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-05-08&toDate=2025-05-08",
+    "react_date": "2025-05-09"
    }
   },
   {
-   "event_date": "2025-08-06",
-   "rel": "T",
+   "event_date": "2025-05-13",
+   "rel": "R+1",
    "item": {
-    "date": "2025-08-06",
-    "kind": "audit_signed",
-    "src": "Financial statement/2025Q2_AuditReport_DOHOME.doc.extracted.md"
+    "date": "2025-05-08",
+    "time": "17:40",
+    "kind": "set_fs",
+    "title": "งบการเงิน ไตรมาสที่ 1/2568",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-05-08&toDate=2025-05-08",
+    "react_date": "2025-05-09"
+   }
+  },
+  {
+   "event_date": "2025-05-21",
+   "rel": "R",
+   "item": {
+    "date": "2025-05-21",
+    "time": "08:33",
+    "kind": "set_news",
+    "title": "แจ้งกรรมการตรวจสอบลาออก",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-05-21&toDate=2025-05-21",
+    "react_date": "2025-05-21"
+   }
+  },
+  {
+   "event_date": "2025-05-22",
+   "rel": "R+1",
+   "item": {
+    "date": "2025-05-21",
+    "time": "08:33",
+    "kind": "set_news",
+    "title": "แจ้งกรรมการตรวจสอบลาออก",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-05-21&toDate=2025-05-21",
+    "react_date": "2025-05-21"
+   }
+  },
+  {
+   "event_date": "2025-06-25",
+   "rel": "R+1",
+   "item": {
+    "date": "2025-06-24",
+    "time": "12:37",
+    "kind": "set_news",
+    "title": "ชี้แจงกรณี เจ้าหน้าที่ สมอ. เข้าตรวจสอบ สาขาบางบัวทอง",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-06-24&toDate=2025-06-24",
+    "react_date": "2025-06-24"
    }
   },
   {
    "event_date": "2025-08-07",
-   "rel": "T-1",
+   "rel": "R",
    "item": {
     "date": "2025-08-06",
-    "kind": "audit_signed",
-    "src": "Financial statement/2025Q2_AuditReport_DOHOME.doc.extracted.md"
+    "time": "17:24",
+    "kind": "set_fs",
+    "title": "งบการเงิน ไตรมาสที่ 2/2568",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-08-06&toDate=2025-08-06",
+    "react_date": "2025-08-07"
    }
   },
   {
-   "event_date": "2026-05-19",
-   "rel": "T-1",
+   "event_date": "2025-11-10",
+   "rel": "R",
    "item": {
-    "date": "2026-05-18",
-    "kind": "oppday",
-    "src": "Earning Call/2026Q1_Earningcall_YouTube_DOHOME.txt"
+    "date": "2025-11-07",
+    "time": "17:59",
+    "kind": "set_fs",
+    "title": "งบการเงิน ไตรมาสที่ 3/2568",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-11-07&toDate=2025-11-07",
+    "react_date": "2025-11-10"
+   }
+  },
+  {
+   "event_date": "2025-11-10",
+   "rel": "R",
+   "item": {
+    "date": "2025-11-07",
+    "time": "18:00",
+    "kind": "set_news",
+    "title": "แจ้งอนุมัติการเพิ่มทุนในบริษัทย่อย",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2025-11-07&toDate=2025-11-07",
+    "react_date": "2025-11-10"
+   }
+  },
+  {
+   "event_date": "2026-02-23",
+   "rel": "R",
+   "item": {
+    "date": "2026-02-20",
+    "time": "20:30",
+    "kind": "set_fs",
+    "title": "งบการเงิน ประจำปี 2568",
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=DOHOME&securityType=S&fromDate=2026-02-20&toDate=2026-02-20",
+    "react_date": "2026-02-23"
    }
   }
  ]

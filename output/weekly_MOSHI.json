@@ -1,0 +1,151 @@
+{
+ "ticker": "MOSHI",
+ "threshold": 10.0,
+ "weeks_total": 202,
+ "weeks": [
+  {
+   "week": "2023-W09",
+   "start": "2023-02-27",
+   "end": "2023-03-03",
+   "prev_close": 39.32,
+   "close": 43.86,
+   "ret": 11.55,
+   "dir": "up",
+   "mkt": -1.37,
+   "residual": 12.92,
+   "vol_ratio": 0.97,
+   "kind": "spike",
+   "days": [
+    {
+     "date": "2023-02-28",
+     "ret": 8.82,
+     "status": "found",
+     "type": "earnings"
+    }
+   ],
+   "market": false,
+   "status": "found",
+   "types": [
+    "earnings"
+   ],
+   "why": "2023-02-28: งบปี 2565 ออก 27 ก.พ. 20:20 น. กำไร 253.2 ล้านบาท เพิ่ม 92.9% YoY และรายได้เพิ่ม 50%"
+  },
+  {
+   "week": "2024-W38",
+   "start": "2024-09-16",
+   "end": "2024-09-20",
+   "prev_close": 41.5,
+   "close": 46.0,
+   "ret": 10.84,
+   "dir": "up",
+   "mkt": 0.0,
+   "residual": 10.84,
+   "vol_ratio": 1.01,
+   "kind": "spike",
+   "days": [
+    {
+     "date": "2024-09-19",
+     "ret": 5.36,
+     "status": "unknown",
+     "type": null
+    }
+   ],
+   "market": false,
+   "status": "unknown",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2025-W05",
+   "start": "2025-01-27",
+   "end": "2025-01-31",
+   "prev_close": 40.75,
+   "close": 35.5,
+   "ret": -12.88,
+   "dir": "down",
+   "mkt": -6.19,
+   "residual": -6.7,
+   "vol_ratio": 1.61,
+   "kind": "drift",
+   "days": [],
+   "market": false,
+   "status": "unknown",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2025-W08",
+   "start": "2025-02-17",
+   "end": "2025-02-21",
+   "prev_close": 37.75,
+   "close": 42.0,
+   "ret": 11.26,
+   "dir": "up",
+   "mkt": -3.66,
+   "residual": 14.92,
+   "vol_ratio": 0.61,
+   "kind": "drift",
+   "days": [],
+   "market": false,
+   "status": "unknown",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2025-W16",
+   "start": "2025-04-16",
+   "end": "2025-04-18",
+   "prev_close": 37.0,
+   "close": 43.0,
+   "ret": 16.22,
+   "dir": "up",
+   "mkt": 2.0,
+   "residual": 14.22,
+   "vol_ratio": 0.64,
+   "kind": "spike",
+   "days": [
+    {
+     "date": "2025-04-16",
+     "ret": 5.41,
+     "status": "unknown",
+     "type": null
+    },
+    {
+     "date": "2025-04-18",
+     "ret": 6.83,
+     "status": "unknown",
+     "type": null
+    }
+   ],
+   "market": false,
+   "status": "unknown",
+   "types": [],
+   "why": null
+  },
+  {
+   "week": "2025-W23",
+   "start": "2025-06-04",
+   "end": "2025-06-06",
+   "prev_close": 38.0,
+   "close": 42.0,
+   "ret": 10.53,
+   "dir": "up",
+   "mkt": -1.51,
+   "residual": 12.03,
+   "vol_ratio": 0.72,
+   "kind": "spike",
+   "days": [
+    {
+     "date": "2025-06-05",
+     "ret": 7.95,
+     "status": "unknown",
+     "type": null
+    }
+   ],
+   "market": false,
+   "status": "unknown",
+   "types": [],
+   "why": null
+  }
+ ]
+}

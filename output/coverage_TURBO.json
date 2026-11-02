@@ -2,7 +2,7 @@
  "coverage": {
   "ticker": "TURBO",
   "raw_dir": "(นอก repo) AllCompany/TURBO",
-  "files_scanned": 155,
+  "files_scanned": 190,
   "files_skipped": 15,
   "skipped": [
    {
@@ -79,9 +79,11 @@
    "Jump.txt": 1,
    "MANIFEST.md": 1,
    "News": 5,
-   "OneReport": 8
+   "OneReport": 8,
+   "_knowledge": 9,
+   "_output": 26
   },
-  "events": 20,
+  "events": 21,
   "events_with_local_evidence": 8
  }
 }

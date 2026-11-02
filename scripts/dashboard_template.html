@@ -65,14 +65,22 @@ document.getElementById('overview').innerHTML='<h2>ภาพรวม 4 หุ�
 let cur=Object.keys(S)[0],flt='high_volume';
 
 function chart(s){
- const P=s.prices,E=s.events,W=1000,H=330,L=44,R=12,T=14,B=28;
+ const P=s.prices,E=s.events,B=s.bars||[],W=1000,H=330,L=44,R=12,T=14,Bt=28,PH=150,H2=H+PH;
  const ps=P.map(r=>r.p),lo=Math.min(...ps)*0.97,hi=Math.max(...ps)*1.03;
- const X=i=>L+i/(P.length-1)*(W-L-R),Y=v=>T+(1-(v-lo)/(hi-lo))*(H-T-B);
+ const X=i=>L+i/(P.length-1)*(W-L-R),Y=v=>T+(1-(v-lo)/(hi-lo))*(H-T-Bt);
  const idx={};P.forEach((r,i)=>idx[r.d]=i);
- let o=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="กราฟราคาปิดรายวัน ${esc(s.ticker)}">`;
+ const at=d=>{let k=P.findIndex(r=>r.d>=d);return k<0?P.length-1:k;};
+ let o=`<svg viewBox="0 0 ${W} ${H2}" role="img" aria-label="กราฟราคาปิดรายวันและกำไรสุทธิรายไตรมาส ${esc(s.ticker)}">`;
  for(let k=0;k<=4;k++){const v=lo+(hi-lo)*k/4,y=Y(v);o+=`<line x1="${L}" x2="${W-R}" y1="${y}" y2="${y}" stroke="var(--bd)"/><text x="${L-6}" y="${y+4}" text-anchor="end" font-size="11" fill="var(--mut)">${v>=10?v.toFixed(0):v.toFixed(1)}</text>`;}
- let lastY='';P.forEach((r,i)=>{const y=r.d.slice(0,4),m=+r.d.slice(5,7);const key=y+(m<=6?'a':'b');if(key!==lastY&&(m===1||m===7||i===0)){lastY=key;o+=`<text x="${X(i)}" y="${H-8}" font-size="11" fill="var(--mut)" text-anchor="start">${MON[m-1]} ${y}</text>`;}});
+ let lastY='';P.forEach((r,i)=>{const y=r.d.slice(0,4),m=+r.d.slice(5,7);const key=y+(m<=6?'a':'b');if(key!==lastY&&(m===1||m===7)){lastY=key;o+=`<text x="${X(i)}" y="${H2-6}" font-size="11" fill="var(--mut)" text-anchor="start">${MON[m-1]} ${y}</text>`;}});
  o+=`<polyline fill="none" stroke="var(--mut)" stroke-width="1.2" points="${P.map((r,i)=>X(i).toFixed(1)+','+Y(r.p).toFixed(1)).join(' ')}"/>`;
+ // แผงกำไรสุทธิรายไตรมาส (ใต้กราฟราคา แกน x ร่วมกัน)
+ const top=H-Bt+10,bot=H2-22,nps=B.map(b=>b.np),mx=Math.max(0,...nps),mn=Math.min(0,...nps),Yb=v=>top+(1-(v-mn)/((mx-mn)||1))*(bot-top),y0=Yb(0);
+ o+=`<line x1="${L}" x2="${W-R}" y1="${y0}" y2="${y0}" stroke="var(--bd)"/><text x="${L-6}" y="${y0+4}" text-anchor="end" font-size="11" fill="var(--mut)">0</text>`;
+ E.filter(e=>e.status==='found'&&e.type==='earnings').forEach(e=>{const i=idx[e.date];if(i!=null)o+=`<line x1="${X(i)}" x2="${X(i)}" y1="${T}" y2="${bot}" stroke="var(--ac)" stroke-width="1" stroke-dasharray="3 3" opacity=".55"/>`;});
+ B.forEach(b=>{const x=X(at(b.x)),yv=Yb(b.np),c=b.yoy==null?'var(--lo)':b.yoy>=0?'var(--up)':'var(--dn)';
+  o+=`<rect x="${x-5}" y="${Math.min(yv,y0)}" width="10" height="${Math.max(1,Math.abs(yv-y0))}" fill="${c}" fill-opacity="${b.est?.35:.85}"${b.est?` stroke="${c}" stroke-dasharray="2 2"`:''}><title>${esc(b.q)} กำไรสุทธิ ${b.np.toFixed(1)} ล้านบาท (ปีก่อน ${b.prior==null?'–':b.prior.toFixed(1)}) YoY ${b.yoy==null?'–':f1(b.yoy)} · ${b.est?'ตำแหน่งประมาณ (สิ้นไตรมาส+45 วัน)':'ตำแหน่ง = วันยื่นงบ '+fd(b.x)}</title></rect>`;
+  o+=`<text x="${x}" y="${(b.np>=0?yv:y0)-3}" text-anchor="middle" font-size="10" fill="var(--tx)">${b.yoy==null?'':(b.yoy>0?'+':'')+Math.round(b.yoy)+'%'}</text>`;});
  E.forEach(e=>{const i=idx[e.date];if(i==null)return;const c=e.dir==='up'?'var(--up)':'var(--dn)',big=e.status==='found';
   o+=`<circle cx="${X(i)}" cy="${Y(e.close)}" r="${big?7:3.2}" fill="${c}" fill-opacity="${big?1:.45}" stroke="var(--card)" stroke-width="1"><title>${fd(e.date)} ${f1(e.ret)} · ${esc(e.why)}</title></circle>`;});
  return o+'</svg>';
@@ -87,7 +95,7 @@ function hist(s,key){
 
 function limits(s){
  const c=s.coverage,items=[];
- items.push('ราคา '+s.bars+' แท่ง '+fd(s.first)+' – '+fd(s.last)+(s.bars<1200?' (ไม่ถึง 5 ปี เพราะเข้าตลาดทีหลัง)':' (5 ปี)')+' · Yahoo แหล่งเดียว ยังไม่ได้ตรวจกับ TradingView · close ปรับหุ้นปันผลแต่ไม่ปรับปันผลเงินสด');
+ items.push('ราคา '+s.bars+' แท่ง '+fd(s.first)+' – '+fd(s.last)+(s.bars<1200?' (ไม่ถึง 5 ปี เพราะเข้าตลาดทีหลัง)':' (5 ปี)')+(s.ticker==='TURBO'?' · ตรวจ Yahoo เทียบ TradingView แล้ว: 20 จาก 20 วันที่ขยับเกิน 5% ตรงกัน แต่ Yahoo ขาด 4 วันแรกหลังเข้าตลาด (มี 1 วันเกิน 5%) และค้างราคา 1 วัน จึงเติม/แก้จาก TradingView (tv_overlay_TURBO.csv)':' · Yahoo แหล่งเดียว ยังไม่ได้ตรวจกับ TradingView')+' · close ปรับหุ้นปันผลแต่ไม่ปรับปันผลเงินสด');
  items.push('ตัวแทนตลาดคือ TDEX (กองทุน SET50) เพราะ Yahoo ไม่มีดัชนี SET ย้อนหลัง จึงอาจไม่สะท้อนหุ้นขนาดกลาง-เล็ก · beta '+s.beta);
  items.push('สแกนเอกสาร '+c.files_scanned+' ไฟล์จาก AllCompany (ข้าม '+c.files_skipped+') และดูข่าว SET รอบวันเกิดเหตุ ไม่ได้ครบทุกข่าวใน 5 ปี · เวลาในชื่อไฟล์งบอาจไม่ตรงกับ SET จึงใช้เวลาจาก SET ก่อน');
  items.push('งบเทียบ YoY เท่านั้น ยังไม่ได้เทียบกับที่ตลาดคาด ราคาจึงอาจขยับสวนกำไรได้ · ไม่มีข้อมูลเงินต่างชาติ short sale NVDR และ big lot ย้อนหลังจึงยังตอบไม่ได้ว่าใครซื้อขาย');
@@ -141,7 +149,7 @@ function render(){
  h+=weeklyCard(s);
  h+=qCard(s);
  h+='<div class="card"><h2>ปัจจัยธุรกิจ: กระทบตรงไหน และต้องดูตัวเลขอะไร</h2><p class="sub">จัดตาม 5 Forces และ SWOT เฉพาะปัจจัยที่ผูกกับตัวเลขได้</p><div class="tw"><table><thead><tr><th>ปัจจัย</th><th>5 Forces</th><th>SWOT</th><th>กระทบงบตรงไหน</th><th>ตัวเลขที่ดู</th><th>ลักษณะ</th><th>หลักฐาน</th></tr></thead><tbody>'+(FAC[s.ticker]||[]).map(f=>`<tr><td>${esc(f.f)}</td><td>${esc(f.force)}</td><td>${esc(f.swot)}</td><td>${esc(f.channel)}</td><td>${esc(f.metric)}</td><td>${esc(f.nature)}</td><td><span class="tag ${f.level}">${LEVEL[f.level]}</span><div class="pg">${esc(f.src)}</div></td></tr>`).join('')+'</tbody></table></div></div>';
- h+=`<div class="card"><h2>ราคาปิดรายวัน</h2><p class="sub"><span class="up">●</span> ขึ้นแรง · <span class="dn">●</span> ลงแรง · จุดใหญ่ = พบสาเหตุ · จุดเล็ก = ยังไม่ยืนยัน</p>${chart(s)}</div>`;
+ h+=`<div class="card"><h2>ราคาปิดรายวัน คู่กับกำไรสุทธิรายไตรมาส</h2><p class="sub"><span class="up">●</span> ขึ้นแรง · <span class="dn">●</span> ลงแรง · จุดใหญ่ = พบสาเหตุ · จุดเล็ก = ยังไม่ยืนยัน · แท่งล่าง = กำไรสุทธิรายไตรมาส (ล้านบาท) วางที่วันยื่นงบ สีเขียว/แดง = สูง/ต่ำกว่าไตรมาสเดียวกันปีก่อน ตัวเลข = YoY · แท่งจาง/เส้นประ = ประมาณตำแหน่งจากสิ้นไตรมาส+45 วัน · เส้นประฟ้า = วันที่พบสาเหตุจากงบ · เป็นกำไรสุทธิตามงบ ยังไม่ตัดรายการพิเศษ</p>${chart(s)}</div>`;
  h+='<div class="card"><h2>ยังไม่ยืนยันสาเหตุ</h2><p class="sub">แยกจากกลุ่มที่พบสาเหตุ · ไม่พบไม่ได้แปลว่าไม่มีสาเหตุ · เรียง volume มากไปน้อย</p><div class="tools">'+[['high_volume','volume ≥3 เท่า (ค้นก่อน)'],['lead','มีเบาะแส'],['mid_volume','volume 1.5–3 เท่า'],['low_volume','volume ปกติ'],['reversal','เด้งกลับ'],['all','ทั้งหมด']].map(b=>`<button data-f="${b[0]}" aria-pressed="${b[0]===flt}">${b[1]}</button>`).join('')+'</div><div class="tw"><table id="tb"></table></div><p class="sub" id="tbnote"></p></div>';
  const op=OPP[s.ticker];
  if(op)h+=`<div class="grid2"><div class="card"><h2>ตัวขับเคลื่อนตามเอกสารบริษัท</h2><p class="sub">${esc(op.file)}</p><ul>${op.drivers.map(d=>`<li>${esc(d.t)} <span class="pg">[${esc(d.pg)}]</span></li>`).join('')}</ul></div><div class="card"><h2>ความเสี่ยง</h2><p class="sub">${esc(op.risk_note||'')}</p><ul>${op.risks.map(d=>`<li>${esc(d.t)} <span class="pg">[${esc(d.pg)}]</span></li>`).join('')}</ul></div></div>${op.guidance&&op.guidance.length?`<div class="card"><h2>เป้าหมายปี 2026 เทียบผลจริง</h2><div class="tw"><table><thead><tr><th>หัวข้อ</th><th>เป้าหมาย</th><th>ผลจริง</th></tr></thead><tbody>${op.guidance.map(r=>'<tr><td>'+r.map(esc).join('</td><td>')+'</td></tr>').join('')}</tbody></table></div></div>`:''}`;

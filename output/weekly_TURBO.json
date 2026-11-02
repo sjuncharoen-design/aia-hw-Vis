@@ -1,7 +1,7 @@
 {
  "ticker": "TURBO",
  "threshold": 10.0,
- "weeks_total": 56,
+ "weeks_total": 57,
  "weeks": [
   {
    "week": "2025-W52",

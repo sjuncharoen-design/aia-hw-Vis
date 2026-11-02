@@ -3,6 +3,7 @@ usage: python scripts/build_dashboard.py
 ตัวเลขทุกตัวในหน้ามาจากข้อมูลที่ฝังเป็น JSON ไม่ได้พิมพ์ลงใน markup
 """
 import csv, json, os
+from datetime import date, timedelta
 
 OUT = os.path.join(os.path.dirname(__file__), '..', 'output')
 stocks = json.load(open(os.path.join(OUT, 'events_all.json'), encoding='utf-8'))
@@ -181,6 +182,18 @@ for t, v in stocks.items():
             e['pnl_follow'] = [{**lines_of(t, pnl_for(t, q)), 'quarter': q} for q in ('2025Q2', '2025Q3') if pnl_for(t, q)] if t == 'DOHOME' else []
     qs = sorted(pj['quarters'])[-8:]
     v['quarters'] = [dict(q=q, **{k: pj['quarters'][q]['cur'].get(k) for k in ('rev', 'gpm', 'sell_pct', 'admin_pct', 'fin', 'ecl', 'np')}, yoy_np=(pj['quarters'][q]['yoy'].get('np') or {}).get('pct')) for q in qs]
+    cal = json.load(open(os.path.join(OUT, f'calendar_{t}.json'), encoding='utf-8'))
+    filed = sorted({i['date'] for i in cal['items'] if i['kind'] in ('set_fs', 'fs_filed')})
+    bars = []
+    for q in sorted(pj['quarters']):
+        y, n = int(q[:4]), int(q[5])
+        qe = date(y, n * 3, (31, 30, 30, 31)[n - 1])
+        known = next((f for f in filed if qe + timedelta(days=15) <= date.fromisoformat(f) <= qe + timedelta(days=100)), None)
+        x = known or (qe + timedelta(days=45)).isoformat()
+        c = pj['quarters'][q]
+        if v['first'] <= x <= v['last'] and c['cur'].get('np') is not None:
+            bars.append(dict(q=q, x=x, est=known is None, np=c['cur']['np'], prior=c['prior'].get('np'), yoy=(c['yoy'].get('np') or {}).get('pct')))
+    v['bars'] = bars
     v['weekly'] = json.load(open(os.path.join(OUT, f'weekly_{t}.json'), encoding='utf-8'))
 
 data = dict(stocks=stocks, oppday=OPPDAY, watch=WATCH, next=NEXT, factors=FACTORS, steel=steel)

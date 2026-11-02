@@ -14,6 +14,11 @@ r = o['chart']['result'][0]
 q = r['indicators']['quote'][0]
 day = lambda ts: datetime.fromtimestamp(int(ts), BKK).date().isoformat()
 rows = [(day(t), q['close'][i], q['open'][i], q['high'][i], q['low'][i], q['volume'][i]) for i, t in enumerate(r['timestamp']) if q['close'][i]]
+overlay = os.path.join(OUT, f'tv_overlay_{T}.csv')  # แถวจาก TradingView ที่ตรวจแล้วว่า Yahoo ขาดหรือค้าง (แทน/เติมตามวันที่)
+if os.path.exists(overlay):
+    fix = {r['date']: (float(r['close']), float(r['open']), float(r['high']), float(r['low']), float(r['volume'])) for r in csv.DictReader(open(overlay, encoding='utf-8'))}
+    rows = [(d, *fix.pop(d)) if d in fix else (d, c, o, h, l, v) for d, c, o, h, l, v in rows]
+    rows = sorted(rows + [(d, *v) for d, v in fix.items()])
 ev = r.get('events', {})
 divs = {day(k): v['amount'] for k, v in (ev.get('dividends') or {}).items()}
 splits = {day(k): f"{v['numerator']:g}:{v['denominator']:g}" for k, v in (ev.get('splits') or {}).items()}

@@ -1,0 +1,670 @@
+[
+ {
+  "id": "2023-05-16_day",
+  "conf": "mid",
+  "direction_match": true,
+  "what": "งบ Q1/66 ออก 15 พ.ค. 17:03 น. กำไร 108.8 ล้านบาท ลด 30.7% YoY",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "outlook": "ตีความ: ตรวจว่างวดถัดไปยืนยันแนวโน้มเดิมหรือไม่ ไม่ใช่คำแนะนำซื้อขาย",
+  "next_check": "ไม่มีเอกสารใดบอกตรง ๆ ว่าราคาขยับเพราะงบ · ยังไม่ได้เทียบกับที่ตลาดคาด",
+  "driver": "earnings_miss",
+  "pnl_quarter": "2023Q1",
+  "why": "ราคาลง 9.95% ในวันทำการแรกหลังงบออก ทิศเดียวกับกำไรเทียบปีก่อน (ดูตัวเลขในกรอบงบ) เป็นการอนุมานจากเวลา เพราะไม่มีเอกสารบอกตรง ๆ",
+  "evidence": [
+   {
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=PR9&securityType=S&fromDate=2023-05-15&toDate=2023-05-15",
+    "tier": "A",
+    "date": "2023-05-15",
+    "time": "17:03",
+    "accessed": "2026-11-02",
+    "note": "เวลาและหัวข้อจากหน้าข่าว SET"
+   },
+   {
+    "src": "AllCompany/PR9/Financial statement/2023Q1_FS_PR9",
+    "tier": "A",
+    "date": "2023-05-15",
+    "time": "17:03",
+    "note": "ไฟล์งบในเครื่องผู้เรียน ไม่ได้นำขึ้น repo"
+   }
+  ],
+  "pnl_links": [
+   {
+    "line": "rev",
+    "factor": "ผู้ป่วยต่างชาติ และความขัดแย้งตะวันออกกลาง",
+    "force": "อำนาจลูกค้า",
+    "swot": "Opportunity / Threat",
+    "level": "hypothesis",
+    "note": "รายได้ต่างชาติ"
+   },
+   {
+    "line": "rev",
+    "factor": "ปริมาณผู้ป่วยนอกลดลง",
+    "force": "การแข่งขัน",
+    "swot": "Weakness",
+    "level": "hypothesis",
+    "note": "รายได้"
+   },
+   {
+    "line": "gpm",
+    "factor": "ปริมาณผู้ป่วยนอกลดลง",
+    "force": "การแข่งขัน",
+    "swot": "Weakness",
+    "level": "hypothesis",
+    "note": "รายได้"
+   },
+   {
+    "line": "sell",
+    "factor": "การแข่งขันโรงพยาบาลและเทคโนโลยี AI",
+    "force": "การแข่งขันในอุตสาหกรรม",
+    "swot": "Threat",
+    "level": "company",
+    "note": "ส่วนแบ่งตลาด, คุณภาพบริการ"
+   }
+  ]
+ },
+ {
+  "id": "2025-02-19_day",
+  "conf": "mid",
+  "direction_match": true,
+  "what": "งบปี 2567 ออกก่อนเปิดตลาด 19 ก.พ. 07:59 น. กำไรปี 712.7 ล้านบาท เพิ่ม 27.8% YoY เฉพาะ Q4 เพิ่ม 9.9% พร้อมมติปันผล",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "outlook": "ตีความ: ตรวจว่างวดถัดไปยืนยันแนวโน้มเดิมหรือไม่ ไม่ใช่คำแนะนำซื้อขาย",
+  "next_check": "ไม่มีเอกสารใดบอกตรง ๆ ว่าราคาขยับเพราะงบ · ยังไม่ได้เทียบกับที่ตลาดคาด",
+  "driver": "earnings_beat",
+  "pnl_quarter": "2024Q4",
+  "why": "ราคาขึ้น 6.79% ในวันทำการแรกหลังงบออก ทิศเดียวกับกำไรเทียบปีก่อน (ดูตัวเลขในกรอบงบ) เป็นการอนุมานจากเวลา เพราะไม่มีเอกสารบอกตรง ๆ",
+  "evidence": [
+   {
+    "src": "https://www.set.or.th/th/market/news-and-alert/news?source=company&symbol=PR9&securityType=S&fromDate=2025-02-19&toDate=2025-02-19",
+    "tier": "A",
+    "date": "2025-02-19",
+    "time": "07:59",
+    "accessed": "2026-11-02",
+    "note": "เวลาและหัวข้อจากหน้าข่าว SET"
+   },
+   {
+    "src": "AllCompany/PR9/Financial statement/2024Q4_FS_PR9",
+    "tier": "A",
+    "date": "2025-02-19",
+    "time": "07:59",
+    "note": "ไฟล์งบในเครื่องผู้เรียน ไม่ได้นำขึ้น repo"
+   }
+  ],
+  "pnl_links": [
+   {
+    "line": "rev",
+    "factor": "ผู้ป่วยต่างชาติ และความขัดแย้งตะวันออกกลาง",
+    "force": "อำนาจลูกค้า",
+    "swot": "Opportunity / Threat",
+    "level": "hypothesis",
+    "note": "รายได้ต่างชาติ"
+   },
+   {
+    "line": "rev",
+    "factor": "ปริมาณผู้ป่วยนอกลดลง",
+    "force": "การแข่งขัน",
+    "swot": "Weakness",
+    "level": "hypothesis",
+    "note": "รายได้"
+   },
+   {
+    "line": "gpm",
+    "factor": "ปริมาณผู้ป่วยนอกลดลง",
+    "force": "การแข่งขัน",
+    "swot": "Weakness",
+    "level": "hypothesis",
+    "note": "รายได้"
+   },
+   {
+    "line": "sell",
+    "factor": "การแข่งขันโรงพยาบาลและเทคโนโลยี AI",
+    "force": "การแข่งขันในอุตสาหกรรม",
+    "swot": "Threat",
+    "level": "company",
+    "note": "ส่วนแบ่งตลาด, คุณภาพบริการ"
+   }
+  ]
+ },
+ {
+  "id": "2025-04-10_day",
+  "conf": "mid",
+  "direction_match": true,
+  "what": "ตลาดทั้งตลาดฟื้นหลังสหรัฐฯ ประกาศชะลอภาษีนำเข้า 90 วัน ดัชนี SET ปิด +4.21%",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "outlook": "ตีความ: ตรวจว่างวดถัดไปยืนยันแนวโน้มเดิมหรือไม่ ไม่ใช่คำแนะนำซื้อขาย",
+  "next_check": "ยังไม่ได้เทียบกับที่ตลาดคาด",
+  "driver": "market",
+  "pnl_note": "เหตุจากตลาดรวม ไม่ใช่ตัวเลขงบของบริษัท",
+  "why": "ตลาดทั้งตลาดฟื้นหลังสหรัฐฯ ประกาศชะลอภาษีนำเข้า 90 วัน ดัชนี SET ปิด +4.21% (คำนวณจากดัชนี SET +4.21%)",
+  "evidence": [
+   {
+    "src": "https://www.set.or.th/api/set/index/SET/chart-quotation",
+    "tier": "A",
+    "date": "2025-04-10",
+    "accessed": "2026-11-02",
+    "note": "ดัชนี SET ปิดรายวัน +4.21% ไฟล์ data/set_index_history.json"
+   }
+  ],
+  "context": [
+   {
+    "src": "https://www.mitihoon.com/?p=536085",
+    "tier": "B",
+    "date": "2025-04-10",
+    "accessed": "2026-11-02",
+    "note": "อ่านจากผลค้นหา ยังไม่ได้เปิดหน้าเต็ม"
+   }
+  ]
+ },
+ {
+  "id": "2022-05-17_day",
+  "driver": "unknown",
+  "conf": "low",
+  "direction_match": null,
+  "why": "พบเบาะแสแต่ยังยืนยันไม่ได้: วันที่ 2 หลังงบ Q1/65 (13 พ.ค. 07:41 น.) กำไร 157.1 ล้านบาท จาก 38.5 ล้านบาท แต่ไม่ใช่วันแรกที่ตลาดตอบสนองได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": {
+   "scope": "company",
+   "text": "วันที่ 2 หลังงบ Q1/65 (13 พ.ค. 07:41 น.) กำไร 157.1 ล้านบาท จาก 38.5 ล้านบาท แต่ไม่ใช่วันแรกที่ตลาดตอบสนองได้"
+  },
+  "next_check": "หาเอกสารหรือข่าวที่ระบุเหตุ และเทียบกับที่ตลาดคาด"
+ },
+ {
+  "id": "2026-03-02_day",
+  "driver": "unknown",
+  "conf": "low",
+  "direction_match": null,
+  "why": "พบเบาะแสแต่ยังยืนยันไม่ได้: ตลาดลงแรงวันเดียวกัน (TDEX −3.66%) แต่หักผลตลาดแล้วยังลงเกิน 5% · วันเดียวกันมีเพียงข่าวผลประกอบการปี 2568 ที่ออกตั้งแต่ 18 ก.พ.",
+  "sources_checked": [
+   "set",
+   "fs",
+   "web"
+  ],
+  "hypothesis": {
+   "scope": "company",
+   "text": "ตลาดลงแรงวันเดียวกัน (TDEX −3.66%) แต่หักผลตลาดแล้วยังลงเกิน 5% · วันเดียวกันมีเพียงข่าวผลประกอบการปี 2568 ที่ออกตั้งแต่ 18 ก.พ."
+  },
+  "next_check": "หาเอกสารหรือข่าวที่ระบุเหตุ และเทียบกับที่ตลาดคาด"
+ },
+ {
+  "id": "2022-03-18_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2022-04-20_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2022-04-25_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2022-05-12_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2022-05-18_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2022-05-26_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2022-10-03_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2022-11-28_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2022-12-27_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2023-04-10_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ค้นเว็บข่าวสื่อการเงินวันที่ 2026-11-03 ไม่พบข่าวหรือเอกสารที่ระบุสาเหตุของวันนี้",
+  "sources_checked": [
+   "fs",
+   "set",
+   "web"
+  ],
+  "hypothesis": null,
+  "next_check": "เปิดหน้าข่าว SET ของวันนั้นผ่าน browser และดูเอกสารบริษัทช่วงนั้นเพิ่ม"
+ },
+ {
+  "id": "2023-05-19_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2023-08-28_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2023-10-19_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2023-11-17_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2024-10-25_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2024-11-14_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2025-01-21_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2025-05-22_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2026-01-12_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ค้นเว็บข่าวสื่อการเงินวันที่ 2026-11-03 ไม่พบข่าวหรือเอกสารที่ระบุสาเหตุของวันนี้",
+  "sources_checked": [
+   "fs",
+   "set",
+   "web"
+  ],
+  "hypothesis": null,
+  "next_check": "เปิดหน้าข่าว SET ของวันนั้นผ่าน browser และดูเอกสารบริษัทช่วงนั้นเพิ่ม"
+ },
+ {
+  "id": "2026-07-08_day",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2022-04-08_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2022-05-13_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2022-06-24_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2022-12-27_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2023-02-24_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2023-04-03_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2023-05-10_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2023-11-03_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2023-11-14_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2024-08-14_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2024-09-03_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2024-10-17_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2024-11-07_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2025-01-21_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2025-04-03_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2025-05-19_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2026-01-05_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2026-01-13_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ },
+ {
+  "id": "2026-02-23_window",
+  "driver": "unknown",
+  "conf": "low",
+  "why": "ยังไม่พบสาเหตุที่ยืนยันได้",
+  "sources_checked": [
+   "set",
+   "fs"
+  ],
+  "hypothesis": null,
+  "next_check": "ค้นข่าวสื่อการเงินช่วงนี้เพิ่ม"
+ }
+]

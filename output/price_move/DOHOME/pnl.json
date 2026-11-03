@@ -1,0 +1,3760 @@
+{
+ "ticker": "DOHOME",
+ "unit": "ล้านบาท",
+ "finance": false,
+ "missing": [
+  "2018Q4"
+ ],
+ "quarters": {
+  "2019Q1": {
+   "cur": {
+    "rev": 4949.72,
+    "cogs": 4139.24,
+    "gp": 810.47,
+    "sell": 361.34,
+    "admin": 92.09,
+    "fin": 76.47,
+    "ecl": null,
+    "np": 246.68,
+    "gpm": 16.37,
+    "sell_pct": 7.3,
+    "admin_pct": 1.86
+   },
+   "prior": {
+    "rev": 4924.67,
+    "cogs": 4186.13,
+    "gp": 738.54,
+    "sell": 353.95,
+    "admin": 91.63,
+    "fin": 71.86,
+    "ecl": null,
+    "np": 185.63,
+    "gpm": 15.0,
+    "sell_pct": 7.19,
+    "admin_pct": 1.86
+   },
+   "yoy": {
+    "rev": {
+     "delta": 25.04,
+     "pct": 0.51
+    },
+    "cogs": {
+     "delta": -46.89,
+     "pct": -1.12
+    },
+    "gp": {
+     "delta": 71.93,
+     "pct": 9.74
+    },
+    "sell": {
+     "delta": 7.38,
+     "pct": 2.09
+    },
+    "admin": {
+     "delta": 0.45,
+     "pct": 0.5
+    },
+    "fin": {
+     "delta": 4.6,
+     "pct": 6.41
+    },
+    "np": {
+     "delta": 61.05,
+     "pct": 32.89
+    },
+    "gpm": {
+     "delta": 1.38,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 0.11,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": -0.0,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 3.76
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 68.18
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -7.38
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -0.45
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": -4.6
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": 1.54
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": 61.05
+    }
+   ],
+   "drivers": [
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 68.18
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -7.38
+    }
+   ],
+   "filed": {
+    "date": "2019-05-15",
+    "time": null,
+    "est": true,
+    "src": null
+   }
+  },
+  "2019Q2": {
+   "cur": {
+    "rev": 4476.61,
+    "cogs": 3736.52,
+    "gp": 740.08,
+    "sell": 358.22,
+    "admin": 97.24,
+    "fin": 75.93,
+    "ecl": null,
+    "np": 192.49,
+    "gpm": 16.53,
+    "sell_pct": 8.0,
+    "admin_pct": 2.17
+   },
+   "prior": {
+    "rev": 4653.38,
+    "cogs": 3978.47,
+    "gp": 674.91,
+    "sell": 407.2,
+    "admin": 81.49,
+    "fin": 73.27,
+    "ecl": null,
+    "np": 108.81,
+    "gpm": 14.5,
+    "sell_pct": 8.75,
+    "admin_pct": 1.75
+   },
+   "yoy": {
+    "rev": {
+     "delta": -176.77,
+     "pct": -3.8
+    },
+    "cogs": {
+     "delta": -241.95,
+     "pct": -6.08
+    },
+    "gp": {
+     "delta": 65.18,
+     "pct": 9.66
+    },
+    "sell": {
+     "delta": -48.97,
+     "pct": -12.03
+    },
+    "admin": {
+     "delta": 15.75,
+     "pct": 19.33
+    },
+    "fin": {
+     "delta": 2.66,
+     "pct": 3.63
+    },
+    "np": {
+     "delta": 83.68,
+     "pct": 76.9
+    },
+    "gpm": {
+     "delta": 2.03,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": -0.75,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": 0.42,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": -25.64
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 90.81
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": 48.97
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -15.75
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": -2.66
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": -12.05
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": 83.68
+    }
+   ],
+   "drivers": [
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 90.81
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": 48.97
+    }
+   ],
+   "filed": {
+    "date": "2019-08-14",
+    "time": null,
+    "est": true,
+    "src": null
+   }
+  },
+  "2019Q3": {
+   "cur": {
+    "rev": 4117.8,
+    "cogs": 3442.03,
+    "gp": 675.77,
+    "sell": 369.92,
+    "admin": 114.4,
+    "fin": 75.16,
+    "ecl": null,
+    "np": 133.97,
+    "gpm": 16.41,
+    "sell_pct": 8.98,
+    "admin_pct": 2.78
+   },
+   "prior": {
+    "rev": 4431.69,
+    "cogs": 3754.42,
+    "gp": 677.27,
+    "sell": 396.94,
+    "admin": 101.72,
+    "fin": 87.24,
+    "ecl": null,
+    "np": 91.61,
+    "gpm": 15.28,
+    "sell_pct": 8.96,
+    "admin_pct": 2.3
+   },
+   "yoy": {
+    "rev": {
+     "delta": -313.89,
+     "pct": -7.08
+    },
+    "cogs": {
+     "delta": -312.39,
+     "pct": -8.32
+    },
+    "gp": {
+     "delta": -1.51,
+     "pct": -0.22
+    },
+    "sell": {
+     "delta": -27.01,
+     "pct": -6.81
+    },
+    "admin": {
+     "delta": 12.69,
+     "pct": 12.47
+    },
+    "fin": {
+     "delta": -12.09,
+     "pct": -13.85
+    },
+    "np": {
+     "delta": 42.36,
+     "pct": 46.25
+    },
+    "gpm": {
+     "delta": 1.13,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 0.03,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": 0.48,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": -47.97
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 46.46
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": 27.01
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -12.69
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": 12.09
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": 17.46
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": 42.36
+    }
+   ],
+   "drivers": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": -47.97
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 46.46
+    }
+   ],
+   "filed": {
+    "date": "2019-11-14",
+    "time": null,
+    "est": true,
+    "src": null
+   }
+  },
+  "2019Q4": {
+   "cur": {
+    "rev": 4324.58,
+    "cogs": 3592.94,
+    "gp": 731.63,
+    "sell": 383.87,
+    "admin": 102.0,
+    "fin": 70.49,
+    "ecl": null,
+    "np": 152.36,
+    "gpm": 16.92,
+    "sell_pct": 8.88,
+    "admin_pct": 2.36
+   },
+   "prior": {
+    "rev": 4435.62,
+    "cogs": 3841.84,
+    "gp": 593.77,
+    "sell": 379.28,
+    "admin": 94.79,
+    "fin": 87.82,
+    "ecl": null,
+    "np": 52.7,
+    "gpm": 13.39,
+    "sell_pct": 8.55,
+    "admin_pct": 2.14
+   },
+   "yoy": {
+    "rev": {
+     "delta": -111.04,
+     "pct": -2.5
+    },
+    "cogs": {
+     "delta": -248.9,
+     "pct": -6.48
+    },
+    "gp": {
+     "delta": 137.86,
+     "pct": 23.22
+    },
+    "sell": {
+     "delta": 4.58,
+     "pct": 1.21
+    },
+    "admin": {
+     "delta": 7.22,
+     "pct": 7.61
+    },
+    "fin": {
+     "delta": -17.33,
+     "pct": -19.74
+    },
+    "np": {
+     "delta": 99.67,
+     "pct": 189.13
+    },
+    "gpm": {
+     "delta": 3.53,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 0.33,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": 0.22,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": -14.86
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 152.72
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -4.58
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -7.22
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": 17.33
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": -43.72
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": 99.67
+    }
+   ],
+   "drivers": [
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 152.72
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": 17.33
+    }
+   ],
+   "filed": {
+    "date": "2020-02-14",
+    "time": null,
+    "est": true,
+    "src": null
+   }
+  },
+  "2020Q1": {
+   "cur": {
+    "rev": 4578.33,
+    "cogs": 3871.55,
+    "gp": 706.79,
+    "sell": 365.06,
+    "admin": 99.05,
+    "fin": 64.43,
+    "ecl": null,
+    "np": 177.3,
+    "gpm": 15.44,
+    "sell_pct": 7.97,
+    "admin_pct": 2.16
+   },
+   "prior": {
+    "rev": 4949.72,
+    "cogs": 4139.24,
+    "gp": 810.47,
+    "sell": 361.34,
+    "admin": 92.09,
+    "fin": 76.47,
+    "ecl": null,
+    "np": 246.68,
+    "gpm": 16.37,
+    "sell_pct": 7.3,
+    "admin_pct": 1.86
+   },
+   "yoy": {
+    "rev": {
+     "delta": -371.38,
+     "pct": -7.5
+    },
+    "cogs": {
+     "delta": -267.7,
+     "pct": -6.47
+    },
+    "gp": {
+     "delta": -103.69,
+     "pct": -12.79
+    },
+    "sell": {
+     "delta": 3.73,
+     "pct": 1.03
+    },
+    "admin": {
+     "delta": 6.96,
+     "pct": 7.56
+    },
+    "fin": {
+     "delta": -12.04,
+     "pct": -15.75
+    },
+    "np": {
+     "delta": -69.38,
+     "pct": -28.13
+    },
+    "gpm": {
+     "delta": -0.94,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 0.67,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": 0.3,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": -60.81
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -42.88
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -3.73
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -6.96
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": 12.04
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": 32.96
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": -69.38
+    }
+   ],
+   "drivers": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": -60.81
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -42.88
+    }
+   ],
+   "filed": {
+    "date": "2020-05-15",
+    "time": null,
+    "est": true,
+    "src": null
+   }
+  },
+  "2020Q2": {
+   "cur": {
+    "rev": 4616.09,
+    "cogs": 3926.69,
+    "gp": 689.4,
+    "sell": 383.66,
+    "admin": 90.8,
+    "fin": 57.31,
+    "ecl": null,
+    "np": 146.39,
+    "gpm": 14.93,
+    "sell_pct": 8.31,
+    "admin_pct": 1.97
+   },
+   "prior": {
+    "rev": 4476.61,
+    "cogs": 3736.52,
+    "gp": 740.08,
+    "sell": 358.22,
+    "admin": 97.24,
+    "fin": 75.93,
+    "ecl": null,
+    "np": 192.49,
+    "gpm": 16.53,
+    "sell_pct": 8.0,
+    "admin_pct": 2.17
+   },
+   "yoy": {
+    "rev": {
+     "delta": 139.48,
+     "pct": 3.12
+    },
+    "cogs": {
+     "delta": 190.16,
+     "pct": 5.09
+    },
+    "gp": {
+     "delta": -50.68,
+     "pct": -6.85
+    },
+    "sell": {
+     "delta": 25.44,
+     "pct": 7.1
+    },
+    "admin": {
+     "delta": -6.44,
+     "pct": -6.62
+    },
+    "fin": {
+     "delta": -18.62,
+     "pct": -24.52
+    },
+    "np": {
+     "delta": -46.1,
+     "pct": -23.95
+    },
+    "gpm": {
+     "delta": -1.6,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 0.31,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": -0.21,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 23.06
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -73.74
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -25.44
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": 6.44
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": 18.62
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": 4.96
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": -46.1
+    }
+   ],
+   "drivers": [
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -73.74
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -25.44
+    }
+   ],
+   "filed": {
+    "date": "2020-08-14",
+    "time": null,
+    "est": true,
+    "src": null
+   }
+  },
+  "2020Q3": {
+   "cur": {
+    "rev": 4748.82,
+    "cogs": 3951.18,
+    "gp": 797.64,
+    "sell": 422.86,
+    "admin": 112.91,
+    "fin": 58.9,
+    "ecl": null,
+    "np": 187.59,
+    "gpm": 16.8,
+    "sell_pct": 8.9,
+    "admin_pct": 2.38
+   },
+   "prior": {
+    "rev": 4117.8,
+    "cogs": 3442.03,
+    "gp": 675.77,
+    "sell": 369.92,
+    "admin": 114.4,
+    "fin": 75.16,
+    "ecl": null,
+    "np": 133.97,
+    "gpm": 16.41,
+    "sell_pct": 8.98,
+    "admin_pct": 2.78
+   },
+   "yoy": {
+    "rev": {
+     "delta": 631.02,
+     "pct": 15.32
+    },
+    "cogs": {
+     "delta": 509.15,
+     "pct": 14.79
+    },
+    "gp": {
+     "delta": 121.87,
+     "pct": 18.03
+    },
+    "sell": {
+     "delta": 52.94,
+     "pct": 14.31
+    },
+    "admin": {
+     "delta": -1.49,
+     "pct": -1.3
+    },
+    "fin": {
+     "delta": -16.26,
+     "pct": -21.63
+    },
+    "np": {
+     "delta": 53.61,
+     "pct": 40.02
+    },
+    "gpm": {
+     "delta": 0.39,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": -0.08,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": -0.4,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 103.56
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 18.31
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -52.94
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": 1.49
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": 16.26
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": -33.07
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": 53.61
+    }
+   ],
+   "drivers": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 103.56
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -52.94
+    }
+   ],
+   "filed": {
+    "date": "2020-11-14",
+    "time": null,
+    "est": true,
+    "src": null
+   }
+  },
+  "2020Q4": {
+   "cur": {
+    "rev": 4834.14,
+    "cogs": 3987.88,
+    "gp": 846.26,
+    "sell": 423.79,
+    "admin": 139.65,
+    "fin": 64.5,
+    "ecl": null,
+    "np": 215.4,
+    "gpm": 17.51,
+    "sell_pct": 8.77,
+    "admin_pct": 2.89
+   },
+   "prior": {
+    "rev": 4324.58,
+    "cogs": 3592.94,
+    "gp": 731.63,
+    "sell": 383.87,
+    "admin": 102.0,
+    "fin": 70.49,
+    "ecl": null,
+    "np": 152.36,
+    "gpm": 16.92,
+    "sell_pct": 8.88,
+    "admin_pct": 2.36
+   },
+   "yoy": {
+    "rev": {
+     "delta": 509.56,
+     "pct": 11.78
+    },
+    "cogs": {
+     "delta": 394.94,
+     "pct": 10.99
+    },
+    "gp": {
+     "delta": 114.62,
+     "pct": 15.67
+    },
+    "sell": {
+     "delta": 39.92,
+     "pct": 10.4
+    },
+    "admin": {
+     "delta": 37.64,
+     "pct": 36.9
+    },
+    "fin": {
+     "delta": -5.99,
+     "pct": -8.49
+    },
+    "np": {
+     "delta": 63.04,
+     "pct": 41.37
+    },
+    "gpm": {
+     "delta": 0.59,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": -0.11,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": 0.53,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 86.21
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 28.41
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -39.92
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -37.64
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": 5.99
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": 19.99
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": 63.04
+    }
+   ],
+   "drivers": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 86.21
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -39.92
+    }
+   ],
+   "filed": {
+    "date": "2021-02-14",
+    "time": null,
+    "est": true,
+    "src": null
+   }
+  },
+  "2021Q1": {
+   "cur": {
+    "rev": 6109.95,
+    "cogs": 4786.04,
+    "gp": 1323.9,
+    "sell": 458.86,
+    "admin": 147.04,
+    "fin": 63.51,
+    "ecl": null,
+    "np": 543.15,
+    "gpm": 21.67,
+    "sell_pct": 7.51,
+    "admin_pct": 2.41
+   },
+   "prior": {
+    "rev": 4569.24,
+    "cogs": 3871.55,
+    "gp": 697.7,
+    "sell": 355.98,
+    "admin": 99.05,
+    "fin": 64.43,
+    "ecl": null,
+    "np": 177.3,
+    "gpm": 15.27,
+    "sell_pct": 7.79,
+    "admin_pct": 2.17
+   },
+   "yoy": {
+    "rev": {
+     "delta": 1540.7,
+     "pct": 33.72
+    },
+    "cogs": {
+     "delta": 914.5,
+     "pct": 23.62
+    },
+    "gp": {
+     "delta": 626.2,
+     "pct": 89.75
+    },
+    "sell": {
+     "delta": 102.88,
+     "pct": 28.9
+    },
+    "admin": {
+     "delta": 47.99,
+     "pct": 48.45
+    },
+    "fin": {
+     "delta": -0.91,
+     "pct": -1.42
+    },
+    "np": {
+     "delta": 365.85,
+     "pct": 206.35
+    },
+    "gpm": {
+     "delta": 6.4,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": -0.28,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": 0.24,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 235.26
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 390.95
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -102.88
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -47.99
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": 0.91
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": -110.4
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": 365.85
+    }
+   ],
+   "drivers": [
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 390.95
+    },
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 235.26
+    }
+   ],
+   "filed": {
+    "date": "2021-05-15",
+    "time": null,
+    "est": true,
+    "src": null
+   }
+  },
+  "2021Q2": {
+   "cur": {
+    "rev": 6365.84,
+    "cogs": 4921.03,
+    "gp": 1444.81,
+    "sell": 525.91,
+    "admin": 148.12,
+    "fin": 65.77,
+    "ecl": null,
+    "np": 601.31,
+    "gpm": 22.7,
+    "sell_pct": 8.26,
+    "admin_pct": 2.33
+   },
+   "prior": {
+    "rev": 4603.95,
+    "cogs": 3926.69,
+    "gp": 677.26,
+    "sell": 371.52,
+    "admin": 90.8,
+    "fin": 57.31,
+    "ecl": null,
+    "np": 146.39,
+    "gpm": 14.71,
+    "sell_pct": 8.07,
+    "admin_pct": 1.97
+   },
+   "yoy": {
+    "rev": {
+     "delta": 1761.89,
+     "pct": 38.27
+    },
+    "cogs": {
+     "delta": 994.34,
+     "pct": 25.32
+    },
+    "gp": {
+     "delta": 767.55,
+     "pct": 113.33
+    },
+    "sell": {
+     "delta": 154.39,
+     "pct": 41.56
+    },
+    "admin": {
+     "delta": 57.31,
+     "pct": 63.12
+    },
+    "fin": {
+     "delta": 8.46,
+     "pct": 14.76
+    },
+    "np": {
+     "delta": 454.92,
+     "pct": 310.75
+    },
+    "gpm": {
+     "delta": 7.99,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 0.19,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": 0.35,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 259.18
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 508.37
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -154.39
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -57.31
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": -8.46
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": -92.47
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": 454.92
+    }
+   ],
+   "drivers": [
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 508.37
+    },
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 259.18
+    }
+   ],
+   "filed": {
+    "date": "2021-08-14",
+    "time": null,
+    "est": true,
+    "src": null
+   }
+  },
+  "2021Q3": {
+   "cur": {
+    "rev": 6034.6,
+    "cogs": 4850.97,
+    "gp": 1183.63,
+    "sell": 543.55,
+    "admin": 177.31,
+    "fin": 61.42,
+    "ecl": null,
+    "np": 340.39,
+    "gpm": 19.61,
+    "sell_pct": 9.01,
+    "admin_pct": 2.94
+   },
+   "prior": {
+    "rev": 4734.68,
+    "cogs": 3951.18,
+    "gp": 783.5,
+    "sell": 408.72,
+    "admin": 112.91,
+    "fin": 58.9,
+    "ecl": null,
+    "np": 187.59,
+    "gpm": 16.55,
+    "sell_pct": 8.63,
+    "admin_pct": 2.38
+   },
+   "yoy": {
+    "rev": {
+     "delta": 1299.93,
+     "pct": 27.46
+    },
+    "cogs": {
+     "delta": 899.79,
+     "pct": 22.77
+    },
+    "gp": {
+     "delta": 400.14,
+     "pct": 51.07
+    },
+    "sell": {
+     "delta": 134.82,
+     "pct": 32.99
+    },
+    "admin": {
+     "delta": 64.4,
+     "pct": 57.03
+    },
+    "fin": {
+     "delta": 2.52,
+     "pct": 4.27
+    },
+    "np": {
+     "delta": 152.81,
+     "pct": 81.46
+    },
+    "gpm": {
+     "delta": 3.07,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 0.37,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": 0.55,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 215.11
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 185.02
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -134.82
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -64.4
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": -2.52
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": -45.58
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": 152.81
+    }
+   ],
+   "drivers": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 215.11
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 185.02
+    }
+   ],
+   "filed": {
+    "date": "2021-11-14",
+    "time": null,
+    "est": true,
+    "src": null
+   }
+  },
+  "2021Q4": {
+   "cur": {
+    "rev": 7274.21,
+    "cogs": 6019.97,
+    "gp": 1254.24,
+    "sell": 643.63,
+    "admin": 191.13,
+    "fin": 67.28,
+    "ecl": null,
+    "np": 333.21,
+    "gpm": 17.24,
+    "sell_pct": 8.85,
+    "admin_pct": 2.63
+   },
+   "prior": {
+    "rev": 4818.79,
+    "cogs": 3987.88,
+    "gp": 830.9,
+    "sell": 408.44,
+    "admin": 139.65,
+    "fin": 64.5,
+    "ecl": null,
+    "np": 215.4,
+    "gpm": 17.24,
+    "sell_pct": 8.48,
+    "admin_pct": 2.9
+   },
+   "yoy": {
+    "rev": {
+     "delta": 2455.42,
+     "pct": 50.96
+    },
+    "cogs": {
+     "delta": 2032.09,
+     "pct": 50.96
+    },
+    "gp": {
+     "delta": 423.34,
+     "pct": 50.95
+    },
+    "sell": {
+     "delta": 235.2,
+     "pct": 57.58
+    },
+    "admin": {
+     "delta": 51.48,
+     "pct": 36.86
+    },
+    "fin": {
+     "delta": 2.78,
+     "pct": 4.31
+    },
+    "np": {
+     "delta": 117.81,
+     "pct": 54.69
+    },
+    "gpm": {
+     "delta": -0.0,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 0.37,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": -0.27,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 423.39
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -0.05
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -235.2
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -51.48
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": -2.78
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": -16.07
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": 117.81
+    }
+   ],
+   "drivers": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 423.39
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -235.2
+    }
+   ],
+   "filed": {
+    "date": "2022-02-17",
+    "time": "21:03",
+    "est": false,
+    "src": "set_news_browser.jsonl"
+   }
+  },
+  "2022Q1": {
+   "cur": {
+    "rev": 8317.85,
+    "cogs": 6852.9,
+    "gp": 1464.95,
+    "sell": 644.42,
+    "admin": 229.91,
+    "fin": 67.39,
+    "ecl": null,
+    "np": 459.53,
+    "gpm": 17.61,
+    "sell_pct": 7.75,
+    "admin_pct": 2.76
+   },
+   "prior": {
+    "rev": 6109.95,
+    "cogs": 4786.04,
+    "gp": 1323.9,
+    "sell": 458.86,
+    "admin": 147.04,
+    "fin": 63.51,
+    "ecl": null,
+    "np": 543.15,
+    "gpm": 21.67,
+    "sell_pct": 7.51,
+    "admin_pct": 2.41
+   },
+   "yoy": {
+    "rev": {
+     "delta": 2207.9,
+     "pct": 36.14
+    },
+    "cogs": {
+     "delta": 2066.86,
+     "pct": 43.19
+    },
+    "gp": {
+     "delta": 141.05,
+     "pct": 10.65
+    },
+    "sell": {
+     "delta": 185.56,
+     "pct": 40.44
+    },
+    "admin": {
+     "delta": 82.87,
+     "pct": 56.36
+    },
+    "fin": {
+     "delta": 3.87,
+     "pct": 6.1
+    },
+    "np": {
+     "delta": -83.62,
+     "pct": -15.4
+    },
+    "gpm": {
+     "delta": -4.06,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 0.24,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": 0.36,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 478.41
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -337.36
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -185.56
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -82.87
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": -3.87
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": 47.63
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": -83.62
+    }
+   ],
+   "drivers": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 478.41
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -337.36
+    }
+   ],
+   "filed": {
+    "date": "2022-05-05",
+    "time": "20:02",
+    "est": false,
+    "src": "set_news_browser.jsonl"
+   }
+  },
+  "2022Q2": {
+   "cur": {
+    "rev": 7884.56,
+    "cogs": 6559.17,
+    "gp": 1325.39,
+    "sell": 707.62,
+    "admin": 199.14,
+    "fin": 81.94,
+    "ecl": null,
+    "np": 315.38,
+    "gpm": 16.81,
+    "sell_pct": 8.97,
+    "admin_pct": 2.53
+   },
+   "prior": {
+    "rev": 6365.84,
+    "cogs": 4921.03,
+    "gp": 1444.81,
+    "sell": 525.91,
+    "admin": 148.12,
+    "fin": 65.77,
+    "ecl": null,
+    "np": 601.31,
+    "gpm": 22.7,
+    "sell_pct": 8.26,
+    "admin_pct": 2.33
+   },
+   "yoy": {
+    "rev": {
+     "delta": 1518.72,
+     "pct": 23.86
+    },
+    "cogs": {
+     "delta": 1638.14,
+     "pct": 33.29
+    },
+    "gp": {
+     "delta": -119.42,
+     "pct": -8.27
+    },
+    "sell": {
+     "delta": 181.7,
+     "pct": 34.55
+    },
+    "admin": {
+     "delta": 51.02,
+     "pct": 34.45
+    },
+    "fin": {
+     "delta": 16.17,
+     "pct": 24.59
+    },
+    "np": {
+     "delta": -285.93,
+     "pct": -47.55
+    },
+    "gpm": {
+     "delta": -5.89,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 0.71,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": 0.2,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 344.69
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -464.12
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -181.7
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -51.02
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": -16.17
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": 82.39
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": -285.93
+    }
+   ],
+   "drivers": [
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -464.12
+    },
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 344.69
+    }
+   ],
+   "filed": {
+    "date": "2022-08-14",
+    "time": null,
+    "est": true,
+    "src": null
+   }
+  },
+  "2022Q3": {
+   "cur": {
+    "rev": 7475.43,
+    "cogs": 6427.54,
+    "gp": 1047.89,
+    "sell": 749.56,
+    "admin": 192.45,
+    "fin": 90.2,
+    "ecl": null,
+    "np": 50.31,
+    "gpm": 14.02,
+    "sell_pct": 10.03,
+    "admin_pct": 2.57
+   },
+   "prior": {
+    "rev": 6034.6,
+    "cogs": 4850.97,
+    "gp": 1183.63,
+    "sell": 543.55,
+    "admin": 177.31,
+    "fin": 61.42,
+    "ecl": null,
+    "np": 340.39,
+    "gpm": 19.61,
+    "sell_pct": 9.01,
+    "admin_pct": 2.94
+   },
+   "yoy": {
+    "rev": {
+     "delta": 1440.83,
+     "pct": 23.88
+    },
+    "cogs": {
+     "delta": 1576.57,
+     "pct": 32.5
+    },
+    "gp": {
+     "delta": -135.74,
+     "pct": -11.47
+    },
+    "sell": {
+     "delta": 206.01,
+     "pct": 37.9
+    },
+    "admin": {
+     "delta": 15.14,
+     "pct": 8.54
+    },
+    "fin": {
+     "delta": 28.78,
+     "pct": 46.86
+    },
+    "np": {
+     "delta": -290.08,
+     "pct": -85.22
+    },
+    "gpm": {
+     "delta": -5.6,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 1.02,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": -0.36,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 282.61
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -418.35
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -206.01
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -15.14
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": -28.78
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": 95.59
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": -290.08
+    }
+   ],
+   "drivers": [
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -418.35
+    },
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 282.61
+    }
+   ],
+   "filed": {
+    "date": "2022-11-14",
+    "time": null,
+    "est": true,
+    "src": null
+   }
+  },
+  "2022Q4": {
+   "cur": {
+    "rev": 7642.78,
+    "cogs": 6594.08,
+    "gp": 1048.7,
+    "sell": 764.59,
+    "admin": 240.61,
+    "fin": 110.77,
+    "ecl": null,
+    "np": -51.15,
+    "gpm": 13.72,
+    "sell_pct": 10.0,
+    "admin_pct": 3.15
+   },
+   "prior": {
+    "rev": 7274.21,
+    "cogs": 6019.97,
+    "gp": 1254.24,
+    "sell": 643.63,
+    "admin": 191.13,
+    "fin": 67.28,
+    "ecl": null,
+    "np": 333.21,
+    "gpm": 17.24,
+    "sell_pct": 8.85,
+    "admin_pct": 2.63
+   },
+   "yoy": {
+    "rev": {
+     "delta": 368.57,
+     "pct": 5.07
+    },
+    "cogs": {
+     "delta": 574.11,
+     "pct": 9.54
+    },
+    "gp": {
+     "delta": -205.54,
+     "pct": -16.39
+    },
+    "sell": {
+     "delta": 120.95,
+     "pct": 18.79
+    },
+    "admin": {
+     "delta": 49.49,
+     "pct": 25.89
+    },
+    "fin": {
+     "delta": 43.49,
+     "pct": 64.64
+    },
+    "np": {
+     "delta": -384.36,
+     "pct": -115.35
+    },
+    "gpm": {
+     "delta": -3.52,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 1.16,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": 0.52,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 63.55
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -269.09
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -120.95
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -49.49
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": -43.49
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": 35.11
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": -384.36
+    }
+   ],
+   "drivers": [
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -269.09
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -120.95
+    }
+   ],
+   "filed": {
+    "date": "2023-02-14",
+    "time": null,
+    "est": true,
+    "src": null
+   }
+  },
+  "2023Q1": {
+   "cur": {
+    "rev": 8461.59,
+    "cogs": 7064.93,
+    "gp": 1396.66,
+    "sell": 785.88,
+    "admin": 214.8,
+    "fin": 122.47,
+    "ecl": null,
+    "np": 258.35,
+    "gpm": 16.51,
+    "sell_pct": 9.29,
+    "admin_pct": 2.54
+   },
+   "prior": {
+    "rev": 8317.85,
+    "cogs": 6852.9,
+    "gp": 1464.95,
+    "sell": 644.42,
+    "admin": 229.91,
+    "fin": 67.39,
+    "ecl": null,
+    "np": 459.53,
+    "gpm": 17.61,
+    "sell_pct": 7.75,
+    "admin_pct": 2.76
+   },
+   "yoy": {
+    "rev": {
+     "delta": 143.74,
+     "pct": 1.73
+    },
+    "cogs": {
+     "delta": 212.03,
+     "pct": 3.09
+    },
+    "gp": {
+     "delta": -68.29,
+     "pct": -4.66
+    },
+    "sell": {
+     "delta": 141.46,
+     "pct": 21.95
+    },
+    "admin": {
+     "delta": -15.11,
+     "pct": -6.57
+    },
+    "fin": {
+     "delta": 55.08,
+     "pct": 81.74
+    },
+    "np": {
+     "delta": -201.18,
+     "pct": -43.78
+    },
+    "gpm": {
+     "delta": -1.11,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 1.54,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": -0.23,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 25.32
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -93.61
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -141.46
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": 15.11
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": -55.08
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": 48.54
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": -201.18
+    }
+   ],
+   "drivers": [
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -141.46
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -93.61
+    }
+   ],
+   "filed": {
+    "date": "2023-05-08",
+    "time": "06:47",
+    "est": false,
+    "src": "set_news_browser.jsonl"
+   }
+  },
+  "2023Q2": {
+   "cur": {
+    "rev": 7994.5,
+    "cogs": 6875.76,
+    "gp": 1118.74,
+    "sell": 769.18,
+    "admin": 223.44,
+    "fin": 140.99,
+    "ecl": null,
+    "np": 39.39,
+    "gpm": 13.99,
+    "sell_pct": 9.62,
+    "admin_pct": 2.79
+   },
+   "prior": {
+    "rev": 7884.56,
+    "cogs": 6559.17,
+    "gp": 1325.39,
+    "sell": 707.62,
+    "admin": 199.14,
+    "fin": 81.94,
+    "ecl": null,
+    "np": 315.38,
+    "gpm": 16.81,
+    "sell_pct": 8.97,
+    "admin_pct": 2.53
+   },
+   "yoy": {
+    "rev": {
+     "delta": 109.94,
+     "pct": 1.39
+    },
+    "cogs": {
+     "delta": 316.59,
+     "pct": 4.83
+    },
+    "gp": {
+     "delta": -206.65,
+     "pct": -15.59
+    },
+    "sell": {
+     "delta": 61.57,
+     "pct": 8.7
+    },
+    "admin": {
+     "delta": 24.3,
+     "pct": 12.2
+    },
+    "fin": {
+     "delta": 59.05,
+     "pct": 72.07
+    },
+    "np": {
+     "delta": -275.99,
+     "pct": -87.51
+    },
+    "gpm": {
+     "delta": -2.82,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 0.65,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": 0.27,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 18.48
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -225.13
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -61.57
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -24.3
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": -59.05
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": 75.58
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": -275.99
+    }
+   ],
+   "drivers": [
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -225.13
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -61.57
+    }
+   ],
+   "filed": {
+    "date": "2023-08-08",
+    "time": "21:02",
+    "est": false,
+    "src": "set_news_browser.jsonl"
+   }
+  },
+  "2023Q3": {
+   "cur": {
+    "rev": 7430.76,
+    "cogs": 6282.54,
+    "gp": 1148.22,
+    "sell": 766.67,
+    "admin": 206.42,
+    "fin": 144.96,
+    "ecl": null,
+    "np": 90.61,
+    "gpm": 15.45,
+    "sell_pct": 10.32,
+    "admin_pct": 2.78
+   },
+   "prior": {
+    "rev": 7475.43,
+    "cogs": 6427.54,
+    "gp": 1047.89,
+    "sell": 749.56,
+    "admin": 192.45,
+    "fin": 90.2,
+    "ecl": null,
+    "np": 50.31,
+    "gpm": 14.02,
+    "sell_pct": 10.03,
+    "admin_pct": 2.57
+   },
+   "yoy": {
+    "rev": {
+     "delta": -44.67,
+     "pct": -0.6
+    },
+    "cogs": {
+     "delta": -145.0,
+     "pct": -2.26
+    },
+    "gp": {
+     "delta": 100.33,
+     "pct": 9.57
+    },
+    "sell": {
+     "delta": 17.11,
+     "pct": 2.28
+    },
+    "admin": {
+     "delta": 13.97,
+     "pct": 7.26
+    },
+    "fin": {
+     "delta": 54.76,
+     "pct": 60.71
+    },
+    "np": {
+     "delta": 40.3,
+     "pct": 80.11
+    },
+    "gpm": {
+     "delta": 1.43,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 0.29,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": 0.2,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": -6.26
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 106.59
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -17.11
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -13.97
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": -54.76
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": 25.81
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": 40.3
+    }
+   ],
+   "drivers": [
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 106.59
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": -54.76
+    }
+   ],
+   "filed": {
+    "date": "2023-11-14",
+    "time": null,
+    "est": true,
+    "src": null
+   }
+  },
+  "2023Q4": {
+   "cur": {
+    "rev": 7331.29,
+    "cogs": 6093.79,
+    "gp": 1237.51,
+    "sell": 799.24,
+    "admin": 222.1,
+    "fin": 157.95,
+    "ecl": null,
+    "np": 196.94,
+    "gpm": 16.88,
+    "sell_pct": 10.9,
+    "admin_pct": 3.03
+   },
+   "prior": {
+    "rev": 7642.78,
+    "cogs": 6594.08,
+    "gp": 1048.7,
+    "sell": 764.59,
+    "admin": 240.61,
+    "fin": 110.77,
+    "ecl": null,
+    "np": -51.15,
+    "gpm": 13.72,
+    "sell_pct": 10.0,
+    "admin_pct": 3.15
+   },
+   "yoy": {
+    "rev": {
+     "delta": -311.49,
+     "pct": -4.08
+    },
+    "cogs": {
+     "delta": -500.29,
+     "pct": -7.59
+    },
+    "gp": {
+     "delta": 188.8,
+     "pct": 18.0
+    },
+    "sell": {
+     "delta": 34.65,
+     "pct": 4.53
+    },
+    "admin": {
+     "delta": -18.52,
+     "pct": -7.7
+    },
+    "fin": {
+     "delta": 47.17,
+     "pct": 42.59
+    },
+    "np": {
+     "delta": 248.09,
+     "pct": null
+    },
+    "gpm": {
+     "delta": 3.16,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 0.9,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": -0.12,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": -42.74
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 231.54
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -34.65
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": 18.52
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": -47.17
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": 122.59
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": 248.09
+    }
+   ],
+   "drivers": [
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 231.54
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": -47.17
+    }
+   ],
+   "filed": {
+    "date": "2024-02-20",
+    "time": "20:47",
+    "est": false,
+    "src": "set_news_browser.jsonl"
+   }
+  },
+  "2024Q1": {
+   "cur": {
+    "rev": 7958.82,
+    "cogs": 6542.47,
+    "gp": 1416.35,
+    "sell": 826.56,
+    "admin": 197.5,
+    "fin": 152.89,
+    "ecl": null,
+    "np": 244.33,
+    "gpm": 17.8,
+    "sell_pct": 10.39,
+    "admin_pct": 2.48
+   },
+   "prior": {
+    "rev": 8461.59,
+    "cogs": 7064.93,
+    "gp": 1396.66,
+    "sell": 785.88,
+    "admin": 214.8,
+    "fin": 122.47,
+    "ecl": null,
+    "np": 258.35,
+    "gpm": 16.51,
+    "sell_pct": 9.29,
+    "admin_pct": 2.54
+   },
+   "yoy": {
+    "rev": {
+     "delta": -502.77,
+     "pct": -5.94
+    },
+    "cogs": {
+     "delta": -522.46,
+     "pct": -7.4
+    },
+    "gp": {
+     "delta": 19.69,
+     "pct": 1.41
+    },
+    "sell": {
+     "delta": 40.68,
+     "pct": 5.18
+    },
+    "admin": {
+     "delta": -17.3,
+     "pct": -8.05
+    },
+    "fin": {
+     "delta": 30.42,
+     "pct": 24.84
+    },
+    "np": {
+     "delta": -14.02,
+     "pct": -5.43
+    },
+    "gpm": {
+     "delta": 1.29,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 1.1,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": -0.06,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": -82.99
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 102.68
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -40.68
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": 17.3
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": -30.42
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": 20.09
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": -14.02
+    }
+   ],
+   "drivers": [
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 102.68
+    },
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": -82.99
+    }
+   ],
+   "filed": {
+    "date": "2024-05-07",
+    "time": "17:59",
+    "est": false,
+    "src": "FS_202405_1504FIN0705202417590"
+   }
+  },
+  "2024Q2": {
+   "cur": {
+    "rev": 8015.98,
+    "cogs": 6615.43,
+    "gp": 1400.55,
+    "sell": 872.47,
+    "admin": 226.16,
+    "fin": 146.2,
+    "ecl": null,
+    "np": 192.6,
+    "gpm": 17.47,
+    "sell_pct": 10.88,
+    "admin_pct": 2.82
+   },
+   "prior": {
+    "rev": 7994.5,
+    "cogs": 6875.76,
+    "gp": 1118.74,
+    "sell": 769.18,
+    "admin": 223.44,
+    "fin": 140.99,
+    "ecl": null,
+    "np": 39.39,
+    "gpm": 13.99,
+    "sell_pct": 9.62,
+    "admin_pct": 2.79
+   },
+   "yoy": {
+    "rev": {
+     "delta": 21.47,
+     "pct": 0.27
+    },
+    "cogs": {
+     "delta": -260.33,
+     "pct": -3.79
+    },
+    "gp": {
+     "delta": 281.8,
+     "pct": 25.19
+    },
+    "sell": {
+     "delta": 103.29,
+     "pct": 13.43
+    },
+    "admin": {
+     "delta": 2.72,
+     "pct": 1.22
+    },
+    "fin": {
+     "delta": 5.21,
+     "pct": 3.7
+    },
+    "np": {
+     "delta": 153.2,
+     "pct": 388.92
+    },
+    "gpm": {
+     "delta": 3.48,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 1.26,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": 0.03,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 3.0
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 278.8
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -103.29
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -2.72
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": -5.21
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": -17.38
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": 153.2
+    }
+   ],
+   "drivers": [
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 278.8
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -103.29
+    }
+   ],
+   "filed": {
+    "date": "2024-08-06",
+    "time": "20:46",
+    "est": false,
+    "src": "set_news_browser.jsonl"
+   }
+  },
+  "2024Q3": {
+   "cur": {
+    "rev": 7393.11,
+    "cogs": 6179.85,
+    "gp": 1213.25,
+    "sell": 850.66,
+    "admin": 236.73,
+    "fin": 147.23,
+    "ecl": null,
+    "np": 77.08,
+    "gpm": 16.41,
+    "sell_pct": 11.51,
+    "admin_pct": 3.2
+   },
+   "prior": {
+    "rev": 7430.76,
+    "cogs": 6282.54,
+    "gp": 1148.22,
+    "sell": 766.67,
+    "admin": 206.42,
+    "fin": 144.96,
+    "ecl": null,
+    "np": 90.61,
+    "gpm": 15.45,
+    "sell_pct": 10.32,
+    "admin_pct": 2.78
+   },
+   "yoy": {
+    "rev": {
+     "delta": -37.65,
+     "pct": -0.51
+    },
+    "cogs": {
+     "delta": -102.69,
+     "pct": -1.63
+    },
+    "gp": {
+     "delta": 65.04,
+     "pct": 5.66
+    },
+    "sell": {
+     "delta": 83.99,
+     "pct": 10.96
+    },
+    "admin": {
+     "delta": 30.31,
+     "pct": 14.68
+    },
+    "fin": {
+     "delta": 2.27,
+     "pct": 1.57
+    },
+    "np": {
+     "delta": -13.53,
+     "pct": -14.93
+    },
+    "gpm": {
+     "delta": 0.96,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 1.19,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": 0.42,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": -5.82
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 70.85
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -83.99
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -30.31
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": -2.27
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": 38.01
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": -13.53
+    }
+   ],
+   "drivers": [
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -83.99
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 70.85
+    }
+   ],
+   "filed": {
+    "date": "2024-11-05",
+    "time": "18:01",
+    "est": false,
+    "src": "FS_202411_1504FIN0511202418015"
+   }
+  },
+  "2024Q4": {
+   "cur": {
+    "rev": 7623.37,
+    "cogs": 6345.06,
+    "gp": 1278.31,
+    "sell": 817.56,
+    "admin": 227.87,
+    "fin": 136.84,
+    "ecl": null,
+    "np": 160.09,
+    "gpm": 16.77,
+    "sell_pct": 10.72,
+    "admin_pct": 2.99
+   },
+   "prior": {
+    "rev": 7331.29,
+    "cogs": 6093.79,
+    "gp": 1237.51,
+    "sell": 799.24,
+    "admin": 222.1,
+    "fin": 157.95,
+    "ecl": null,
+    "np": 196.94,
+    "gpm": 16.88,
+    "sell_pct": 10.9,
+    "admin_pct": 3.03
+   },
+   "yoy": {
+    "rev": {
+     "delta": 292.08,
+     "pct": 3.98
+    },
+    "cogs": {
+     "delta": 251.27,
+     "pct": 4.12
+    },
+    "gp": {
+     "delta": 40.81,
+     "pct": 3.3
+    },
+    "sell": {
+     "delta": 18.32,
+     "pct": 2.29
+    },
+    "admin": {
+     "delta": 5.77,
+     "pct": 2.6
+    },
+    "fin": {
+     "delta": -21.11,
+     "pct": -13.36
+    },
+    "np": {
+     "delta": -36.85,
+     "pct": -18.71
+    },
+    "gpm": {
+     "delta": -0.11,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": -0.18,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": -0.04,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 49.3
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -8.49
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -18.32
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -5.77
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": 21.11
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": -74.68
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": -36.85
+    }
+   ],
+   "drivers": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 49.3
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": 21.11
+    }
+   ],
+   "filed": {
+    "date": "2025-02-19",
+    "time": "21:27",
+    "est": false,
+    "src": "set_news_browser.jsonl"
+   }
+  },
+  "2025Q1": {
+   "cur": {
+    "rev": 8079.33,
+    "cogs": 6660.32,
+    "gp": 1419.01,
+    "sell": 819.9,
+    "admin": 226.36,
+    "fin": 124.67,
+    "ecl": null,
+    "np": 245.09,
+    "gpm": 17.56,
+    "sell_pct": 10.15,
+    "admin_pct": 2.8
+   },
+   "prior": {
+    "rev": 7958.82,
+    "cogs": 6542.47,
+    "gp": 1416.35,
+    "sell": 826.56,
+    "admin": 197.5,
+    "fin": 152.89,
+    "ecl": null,
+    "np": 244.33,
+    "gpm": 17.8,
+    "sell_pct": 10.39,
+    "admin_pct": 2.48
+   },
+   "yoy": {
+    "rev": {
+     "delta": 120.51,
+     "pct": 1.51
+    },
+    "cogs": {
+     "delta": 117.85,
+     "pct": 1.8
+    },
+    "gp": {
+     "delta": 2.66,
+     "pct": 0.19
+    },
+    "sell": {
+     "delta": -6.67,
+     "pct": -0.81
+    },
+    "admin": {
+     "delta": 28.87,
+     "pct": 14.62
+    },
+    "fin": {
+     "delta": -28.21,
+     "pct": -18.45
+    },
+    "np": {
+     "delta": 0.76,
+     "pct": 0.31
+    },
+    "gpm": {
+     "delta": -0.23,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": -0.24,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": 0.32,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 21.45
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -18.78
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": 6.67
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -28.87
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": 28.21
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": -7.92
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": 0.76
+    }
+   ],
+   "drivers": [
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -28.87
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": 28.21
+    }
+   ],
+   "filed": {
+    "date": "2025-05-08",
+    "time": "17:40",
+    "est": false,
+    "src": "set_news_browser.jsonl"
+   }
+  },
+  "2025Q2": {
+   "cur": {
+    "rev": 7282.77,
+    "cogs": 5971.71,
+    "gp": 1311.07,
+    "sell": 840.43,
+    "admin": 253.52,
+    "fin": 109.34,
+    "ecl": null,
+    "np": 157.18,
+    "gpm": 18.0,
+    "sell_pct": 11.54,
+    "admin_pct": 3.48
+   },
+   "prior": {
+    "rev": 8015.98,
+    "cogs": 6615.43,
+    "gp": 1400.55,
+    "sell": 872.47,
+    "admin": 226.16,
+    "fin": 146.2,
+    "ecl": null,
+    "np": 192.6,
+    "gpm": 17.47,
+    "sell_pct": 10.88,
+    "admin_pct": 2.82
+   },
+   "yoy": {
+    "rev": {
+     "delta": -733.2,
+     "pct": -9.15
+    },
+    "cogs": {
+     "delta": -643.72,
+     "pct": -9.73
+    },
+    "gp": {
+     "delta": -89.48,
+     "pct": -6.39
+    },
+    "sell": {
+     "delta": -32.05,
+     "pct": -3.67
+    },
+    "admin": {
+     "delta": 27.36,
+     "pct": 12.1
+    },
+    "fin": {
+     "delta": -36.86,
+     "pct": -25.21
+    },
+    "np": {
+     "delta": -35.42,
+     "pct": -18.39
+    },
+    "gpm": {
+     "delta": 0.53,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 0.66,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": 0.66,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": -128.1
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 38.62
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": 32.05
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -27.36
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": 36.86
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": 12.51
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": -35.42
+    }
+   ],
+   "drivers": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": -128.1
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 38.62
+    }
+   ],
+   "filed": {
+    "date": "2025-08-06",
+    "time": "17:24",
+    "est": false,
+    "src": "set_news_browser.jsonl"
+   }
+  },
+  "2025Q3": {
+   "cur": {
+    "rev": 6752.67,
+    "cogs": 5558.17,
+    "gp": 1194.5,
+    "sell": 844.5,
+    "admin": 211.24,
+    "fin": 100.77,
+    "ecl": null,
+    "np": 102.06,
+    "gpm": 17.69,
+    "sell_pct": 12.51,
+    "admin_pct": 3.13
+   },
+   "prior": {
+    "rev": 7393.11,
+    "cogs": 6179.85,
+    "gp": 1213.25,
+    "sell": 850.66,
+    "admin": 236.73,
+    "fin": 147.23,
+    "ecl": null,
+    "np": 77.08,
+    "gpm": 16.41,
+    "sell_pct": 11.51,
+    "admin_pct": 3.2
+   },
+   "yoy": {
+    "rev": {
+     "delta": -640.44,
+     "pct": -8.66
+    },
+    "cogs": {
+     "delta": -621.68,
+     "pct": -10.06
+    },
+    "gp": {
+     "delta": -18.75,
+     "pct": -1.55
+    },
+    "sell": {
+     "delta": -6.16,
+     "pct": -0.72
+    },
+    "admin": {
+     "delta": -25.49,
+     "pct": -10.77
+    },
+    "fin": {
+     "delta": -46.46,
+     "pct": -31.56
+    },
+    "np": {
+     "delta": 24.97,
+     "pct": 32.4
+    },
+    "gpm": {
+     "delta": 1.28,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 1.0,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": -0.07,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": -105.1
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 86.35
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": 6.16
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": 25.49
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": 46.46
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": -34.39
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": 24.97
+    }
+   ],
+   "drivers": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": -105.1
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 86.35
+    }
+   ],
+   "filed": {
+    "date": "2025-11-07",
+    "time": "17:59",
+    "est": false,
+    "src": "set_news_browser.jsonl"
+   }
+  },
+  "2025Q4": {
+   "cur": {
+    "rev": 6995.53,
+    "cogs": 5864.38,
+    "gp": 1131.15,
+    "sell": 841.57,
+    "admin": 176.58,
+    "fin": 95.92,
+    "ecl": null,
+    "np": 96.81,
+    "gpm": 16.17,
+    "sell_pct": 12.03,
+    "admin_pct": 2.52
+   },
+   "prior": {
+    "rev": 7623.37,
+    "cogs": 6345.06,
+    "gp": 1278.31,
+    "sell": 817.56,
+    "admin": 227.87,
+    "fin": 136.84,
+    "ecl": null,
+    "np": 160.09,
+    "gpm": 16.77,
+    "sell_pct": 10.72,
+    "admin_pct": 2.99
+   },
+   "yoy": {
+    "rev": {
+     "delta": -627.84,
+     "pct": -8.24
+    },
+    "cogs": {
+     "delta": -480.68,
+     "pct": -7.58
+    },
+    "gp": {
+     "delta": -147.17,
+     "pct": -11.51
+    },
+    "sell": {
+     "delta": 24.01,
+     "pct": 2.94
+    },
+    "admin": {
+     "delta": -51.29,
+     "pct": -22.51
+    },
+    "fin": {
+     "delta": -40.92,
+     "pct": -29.9
+    },
+    "np": {
+     "delta": -63.28,
+     "pct": -39.53
+    },
+    "gpm": {
+     "delta": -0.6,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 1.31,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": -0.46,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": -105.28
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": -41.89
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -24.01
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": 51.29
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": 40.92
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": 15.69
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": -63.28
+    }
+   ],
+   "drivers": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": -105.28
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": 51.29
+    }
+   ],
+   "filed": {
+    "date": "2026-02-20",
+    "time": "20:30",
+    "est": false,
+    "src": "set_news_browser.jsonl"
+   }
+  },
+  "2026Q1": {
+   "cur": {
+    "rev": 8098.45,
+    "cogs": 6673.88,
+    "gp": 1424.57,
+    "sell": 867.82,
+    "admin": 234.68,
+    "fin": 82.02,
+    "ecl": null,
+    "np": 250.73,
+    "gpm": 17.59,
+    "sell_pct": 10.72,
+    "admin_pct": 2.9
+   },
+   "prior": {
+    "rev": 8079.33,
+    "cogs": 6660.32,
+    "gp": 1419.01,
+    "sell": 819.9,
+    "admin": 226.36,
+    "fin": 124.67,
+    "ecl": null,
+    "np": 245.09,
+    "gpm": 17.56,
+    "sell_pct": 10.15,
+    "admin_pct": 2.8
+   },
+   "yoy": {
+    "rev": {
+     "delta": 19.12,
+     "pct": 0.24
+    },
+    "cogs": {
+     "delta": 13.57,
+     "pct": 0.2
+    },
+    "gp": {
+     "delta": 5.56,
+     "pct": 0.39
+    },
+    "sell": {
+     "delta": 47.92,
+     "pct": 5.84
+    },
+    "admin": {
+     "delta": 8.32,
+     "pct": 3.68
+    },
+    "fin": {
+     "delta": -42.65,
+     "pct": -34.21
+    },
+    "np": {
+     "delta": 5.65,
+     "pct": 2.3
+    },
+    "gpm": {
+     "delta": 0.03,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 0.57,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": 0.1,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 3.36
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 2.2
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -47.92
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": -8.32
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": 42.65
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": 13.68
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": 5.65
+    }
+   ],
+   "drivers": [
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -47.92
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": 42.65
+    }
+   ],
+   "filed": {
+    "date": "2026-05-11",
+    "time": "18:48",
+    "est": false,
+    "src": "FS_202605_1504FIN1105202618485"
+   }
+  },
+  "2026Q2": {
+   "cur": {
+    "rev": 7793.65,
+    "cogs": 6252.78,
+    "gp": 1540.87,
+    "sell": 921.88,
+    "admin": 231.78,
+    "fin": 76.13,
+    "ecl": null,
+    "np": 305.38,
+    "gpm": 19.77,
+    "sell_pct": 11.83,
+    "admin_pct": 2.97
+   },
+   "prior": {
+    "rev": 7282.77,
+    "cogs": 5971.71,
+    "gp": 1311.07,
+    "sell": 840.43,
+    "admin": 253.52,
+    "fin": 109.34,
+    "ecl": null,
+    "np": 157.18,
+    "gpm": 18.0,
+    "sell_pct": 11.54,
+    "admin_pct": 3.48
+   },
+   "yoy": {
+    "rev": {
+     "delta": 510.88,
+     "pct": 7.01
+    },
+    "cogs": {
+     "delta": 281.07,
+     "pct": 4.71
+    },
+    "gp": {
+     "delta": 229.81,
+     "pct": 17.53
+    },
+    "sell": {
+     "delta": 81.45,
+     "pct": 9.69
+    },
+    "admin": {
+     "delta": -21.73,
+     "pct": -8.57
+    },
+    "fin": {
+     "delta": -33.22,
+     "pct": -30.38
+    },
+    "np": {
+     "delta": 148.21,
+     "pct": 94.29
+    },
+    "gpm": {
+     "delta": 1.77,
+     "pct": null
+    },
+    "sell_pct": {
+     "delta": 0.29,
+     "pct": null
+    },
+    "admin_pct": {
+     "delta": -0.51,
+     "pct": null
+    }
+   },
+   "bridge": [
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 91.97
+    },
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 137.84
+    },
+    {
+     "line": "sell",
+     "name": "ค่าใช้จ่ายขาย",
+     "delta": -81.45
+    },
+    {
+     "line": "admin",
+     "name": "ค่าใช้จ่ายบริหาร",
+     "delta": 21.73
+    },
+    {
+     "line": "fin",
+     "name": "ต้นทุนการเงิน",
+     "delta": 33.22
+    },
+    {
+     "line": "other",
+     "name": "รายการอื่น ภาษี รายได้อื่น",
+     "delta": -55.1
+    },
+    {
+     "line": "np",
+     "name": "Δ กำไรสุทธิ",
+     "delta": 148.21
+    }
+   ],
+   "drivers": [
+    {
+     "line": "gpm",
+     "name": "ผลจากมาร์จิ้น (GPM)",
+     "delta": 137.84
+    },
+    {
+     "line": "rev",
+     "name": "ผลจากรายได้",
+     "delta": 91.97
+    }
+   ],
+   "filed": {
+    "date": "2026-08-11",
+    "time": "19:30",
+    "est": false,
+    "src": "set_news_2026-08-12.jsonl"
+   }
+  }
+ }
+}

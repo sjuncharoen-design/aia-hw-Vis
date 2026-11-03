@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Architecture ของ Homework: หาสาเหตุหุ้นขยับเกิน 5%</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--tx:#1a1d24;--mut:#5f6673;--bd:#e2e5ea;--soft:#f3f5f8;--blue:#2563eb;--ok:#15803d;--okb:#e8f6ec;--warn:#b45309;--warnb:#fff4e0;--idle:#4b5563;--idleb:#eceff3;--bad:#b91c1c;--badb:#fde8e8;--ai:#7c3aed}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#13151a;--card:#1c1f26;--tx:#eceef2;--mut:#a4abb8;--bd:#2f343e;--soft:#252932;--blue:#6ea0ff;--ok:#4ade80;--okb:#173324;--warn:#fbbf24;--warnb:#3a2c10;--idle:#b4bac6;--idleb:#2a2e37;--bad:#f87171;--badb:#3a1a1a;--ai:#c4a1ff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 "IBM Plex Sans Thai","Noto Sans Thai",system-ui,sans-serif}
+main{max-width:1240px;margin:0 auto;padding:22px 16px 60px}
+h1{font-size:23px;margin:0 0 4px}h2{font-size:20px;margin:30px 0 4px}
+.sub{color:var(--mut);margin:0 0 14px}.pg{color:var(--mut);font-size:12.5px}
+code{font-family:ui-monospace,Consolas,monospace;font-size:12.5px;background:var(--soft);padding:2px 8px;border-radius:999px;overflow-wrap:anywhere;display:inline-block}
+a{color:var(--blue)}
+.rail{display:flex;align-items:stretch;overflow-x:auto;padding:4px 2px 14px;scroll-snap-type:x proximity}
+.stage{flex:0 0 290px;scroll-snap-align:start;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px 14px}
+.arrow{flex:0 0 28px;display:flex;align-items:flex-start;justify-content:center;padding-top:26px;color:var(--blue);font-size:18px}
+.sh{display:flex;gap:10px;align-items:center;margin:0 0 6px}.num{flex:0 0 28px;height:28px;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;display:grid;place-items:center;font-size:14px}
+.sh h3{font-size:17px;margin:0}.sd{color:var(--mut);font-size:13px;margin:6px 0 10px}
+.item{width:100%;text-align:left;font:inherit;color:inherit;background:var(--soft);border:1px solid transparent;border-radius:10px;padding:9px 11px;margin:0 0 8px;cursor:pointer;display:block}
+.item:hover{border-color:var(--bd)}.item[aria-expanded=true]{border-color:var(--blue);background:var(--card)}
+.it{display:flex;gap:8px;align-items:flex-start;font-weight:600;font-size:14.5px;line-height:1.35}.ic{flex:0 0 18px;margin-top:1px;font-size:14px;text-align:center}
+.item .cm{margin:5px 0 0 26px}
+.note{display:none;margin:8px 0 0;padding:9px 10px;border-radius:8px;background:var(--card);border:1px dashed var(--bd);font-size:13px;font-weight:400}.item[aria-expanded=true] .note{display:block}
+.note p{margin:0 0 6px}.note .is{margin-top:6px;padding:6px 8px;border-radius:6px;font-size:12.5px;background:var(--warnb);color:var(--warn)}
+.kind-script .ic{color:var(--blue)}.kind-ai .ic{color:var(--ai)}.kind-human .ic{color:var(--warn)}.kind-check .ic{color:var(--ok)}.kind-data .ic{color:var(--idle)}.kind-src .ic{color:#0e7490}
+.kind-ai{border-left:3px solid var(--ai)}.kind-human{border-left:3px solid var(--warn)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin:6px 0 12px;font-size:13px}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:2px 11px;font-size:13px;font-weight:600;border:1px solid}
+.st-ok{color:var(--ok);background:var(--okb);border-color:color-mix(in srgb,var(--ok) 35%,transparent)}.st-warn{color:var(--warn);background:var(--warnb);border-color:color-mix(in srgb,var(--warn) 35%,transparent)}.st-idle{color:var(--idle);background:var(--idleb);border-color:var(--bd)}.st-bad{color:var(--bad);background:var(--badb);border-color:color-mix(in srgb,var(--bad) 35%,transparent)}
+.strip{display:flex;align-items:stretch;overflow-x:auto;padding:2px 2px 10px}
+.tile{flex:0 0 160px;background:var(--card);border:1px solid var(--bd);border-top:4px solid var(--ok);border-radius:10px;padding:9px 11px;text-decoration:none;color:inherit;display:block}
+.tile.warn{border-top-color:var(--warn)}.tile.idle{border-top-color:var(--idle)}.tile.bad{border-top-color:var(--bad)}
+.tile .r{display:flex;justify-content:space-between;font-size:13px;color:var(--mut)}.tile b{display:block;font-size:14.5px;margin:3px 0 1px}.tile .s{font-size:12.5px;color:var(--mut)}
+.chev{flex:0 0 22px;display:grid;place-items:center;color:var(--mut);font-size:18px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;margin:0 0 14px}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--bd);text-align:left;vertical-align:top}th{color:var(--mut);font-weight:500;font-size:13px}td.n,th.n{text-align:right;white-space:nowrap}
+.issue{border:1px solid var(--bd);border-left:4px solid var(--bad);border-radius:8px;padding:10px 12px;margin:0 0 9px;background:var(--card)}.issue.mid{border-left-color:var(--warn)}.issue.low{border-left-color:var(--idle)}
+.issue .t{font-weight:600}
+.imp{border:1px dashed var(--warn);background:var(--warnb);border-radius:12px;padding:12px 14px;margin:8px 0 0}
+pre{margin:0;white-space:pre-wrap;font:12.5px/1.6 ui-monospace,Consolas,monospace;background:var(--soft);padding:12px;border-radius:8px;overflow-x:auto}
+@media(max-width:700px){.rail{flex-direction:column;overflow:visible}.stage{flex:none}.arrow{flex:none;padding:2px 0;transform:rotate(90deg);height:28px}.strip{flex-direction:column;overflow:visible}.tile{flex:none}.chev{transform:rotate(90deg);flex:none;height:22px}}
+</style>
+</head>
+<body>
+<main>
+<h1>Architecture ของ Homework: หาสาเหตุหุ้นขยับเกิน 5%</h1>
+<p class="sub">สภาพจริง ณ <span id="asof"></span> (หลังย้าย skill <code>/price-move</code> เข้า Homework ยังไม่ commit) · เริ่มจากซ้ายไปขวา กดงานเพื่อดูโน้ต · ใต้ชื่องานคือสคริปต์หรือไฟล์ที่เกี่ยวข้อง · หน้านี้อธิบายเฉพาะ <b>สิ่งที่อยู่ใน repo <code>aia-hw-Vis</code></b> และรันด้วยสคริปต์ใน <code>.claude/skills/price-move/scripts/</code> เท่านั้น</p>
+<div class="legend" id="kinds"></div>
+
+<h2>1. ภาพรวม: ลำดับงานทั้ง Homework</h2>
+<p class="sub">Homework คืองานของคอร์ส AI Investor Alpha ผู้สอนอ่าน repo เพื่อดูว่าผู้เรียนคิดและทำงานอย่างไร ไม่ใช่ดูแค่ผลงาน (ตามกติกาใน <code>AGENTS.md</code>) · โจทย์: หาสาเหตุ Key driver / Risk ในวันที่ราคาหุ้นปิดขยับเกิน 5% ของ TURBO, DOHOME, MOSHI, PR9</p>
+<div class="rail" id="master"></div>
+<div class="imp" id="imp"></div>
+
+<h2>2. สถานะแต่ละขั้น</h2>
+<div class="legend"><span class="pill st-ok">✓ ปกติ</span><span>ทำงานถูกต้องตามที่ตั้งไว้</span><span class="pill st-warn">⚠ ควรตรวจสอบ</span><span>ใช้ได้แต่ยังมีข้อจำกัด — <b>ไม่ใช่ error</b></span><span class="pill st-idle">? ยังว่าง</span><span>ยังไม่มีขั้นนี้</span><span class="pill st-bad">✕ ล้มเหลว</span><span>รันแล้วพัง (ตอนนี้ไม่มี)</span></div>
+<div class="strip" id="strip"></div>
+
+<h2>3. ข้อมูลไหลอย่างไร (ไฟล์เข้า → สคริปต์ → ไฟล์ออก)</h2>
+<p class="sub">ลำดับที่ต้องรันจริง (สคริปต์รันทีละตัว ขั้นอ่านเอกสารให้ AI ในเซสชันทำตาม SKILL.md) · <code>T</code> = TURBO, DOHOME, MOSHI, PR9</p>
+<div class="card"><pre id="order"></pre></div>
+<div class="card tw"><table id="tflow"></table></div>
+
+<h2>4. ใครอ่าน: สคริปต์ หรือ AI หรือคน</h2><div class="card tw"><table id="twho"></table></div>
+<h2>5. แหล่งข้อมูลและความน่าเชื่อ</h2><div class="card tw"><table id="tsrc"></table></div>
+<h2>6. จุดตรวจที่มีอยู่จริง</h2><div class="card tw"><table id="tchk"></table></div>
+<h2>7. ตัวเลขผลปัจจุบัน (จาก 4 หน้าใน <code>output/price_move/</code>)</h2><div class="card tw"><table id="tnum"></table></div>
+<h2>8. ไฟล์ใน repo</h2><div class="card tw"><table id="tfile"></table></div>
+<h2>9. จุดที่ยังเหลือ / ข้อจำกัด</h2><p class="sub" id="isum"></p><div id="isl"></div>
+<p class="sub">เอกสารประกอบการเรียน ไม่ใช่คำแนะนำการลงทุน</p>
+</main>
+<script>
+const AS_OF='3 พ.ย. 2026';
+const KIND={script:{i:'⚙',t:'สคริปต์'},ai:{i:'✦',t:'AI (เขียนผลเป็นไฟล์)'},human:{i:'☞',t:'คน / browser'},check:{i:'✓',t:'จุดตรวจ'},data:{i:'▤',t:'ไฟล์'},src:{i:'⬇',t:'แหล่งข้อมูล'}};
+const ST={ok:['✓','ปกติ'],warn:['⚠','ควรตรวจสอบ'],idle:['?','ยังว่าง'],bad:['✕','ล้มเหลว']};
+const STAGES=[
+ {n:'โจทย์และกติกา',st:'warn',sub:'spec ยังเป็น draft',d:'อ่านโจทย์และกติกาก่อนลงมือ ทุกรอบ',items:[
+  {k:'data',t:'กติกาของ repo',c:'AGENTS.md · CLAUDE.md',x:'repo เป็น Public: ห้ามใส่ key, ข้อมูลพอร์ตจริง, ข้อมูลที่ซื้อมา, เนื้อหาโบรก · ทุกตัวเลขต้องมีที่มา · ตอบเป็นภาษาไทย'},
+  {k:'data',t:'โจทย์และแหล่งข้อมูลที่ใช้ได้',c:'spec.md',x:'คำถามหลัก Trust sources และเกณฑ์ผ่านงาน · ไฟล์ยังเป็น draft',is:8},
+  {k:'data',t:'บันทึกกฎและขั้นตอน',c:'PROJECT_MEMORY.md · prompts.md',x:'ผู้สอนอ่านสองไฟล์นี้เพื่อดูวิธีคิด ทุกรอบมี ทำอะไร / prompt / ผลที่ได้ / ตัดสินใจเพราะอะไร / ขั้นต่อไป'}]},
+ {n:'ดึงข้อมูล',st:'warn',sub:'ราคา 2 แหล่งครบ 4 หุ้น',d:'ราคา ดัชนี ข่าว และเอกสาร มาจากหลายทาง',items:[
+  {k:'src',t:'Yahoo Finance',c:'price_daily.py',x:'ดึงราคาปิด open volume ย้อนหลัง 5 ปี (ปรับ split และปันผลแล้ว) เขียน <code>price_daily.json</code> และ <code>price_recon.json</code> · ได้ volume เทียบ 20 วัน (<code>vol_ratio</code>) และ gap เปิดด้วย',is:6},
+  {k:'src',t:'ราคาแหล่งที่สอง (TradingView)',c:'tv.json → price_daily.py --tv',x:'เก็บราคา SET:T จาก TradingView ทั้ง 4 หุ้น สคริปต์เทียบ return รายวันสองแหล่ง ไม่ตรงบางวัน: TURBO 2, DOHOME 44, MOSHI 24, PR9 32 วัน วันไม่ตรงถูกแจ้งในหน้า และทำให้ conf high ลดเป็น mid',is:6},
+  {k:'src',t:'ดัชนี SET จริง',c:'data/set_index_history.json',x:'ปิดรายวันจาก set.or.th ใช้คำนวณ "เทียบตลาด" (แทน TDEX ที่เคยใช้) ไฟล์นี้เป็นข้อมูลสาธารณะ จึงอยู่ใน repo ได้'},
+  {k:'human',t:'จดข่าว SET จากหน้าเว็บ',c:'output/price_move/T/set_news_browser.jsonl',x:'เปิดหน้าข่าวสาธารณะของ SET ผ่าน browser แล้วจดเวลาและหัวข้อ ครอบเฉพาะช่วงรอบวันเกิดเหตุ รวม 69 รายการ ไม่ครบ 5 ปี สคริปต์ใช้หาเวลายื่นงบ',is:5},
+  {k:'src',t:'เอกสารบริษัทใน AllCompany (นอก repo)',c:'ตัวแปรแวดล้อม PRICE_MOVE_RAW',x:'งบ MD&A Oppday One Report ที่แปลงเป็น <code>.extracted.md</code> อยู่นอก repo (ส่วนตัว) ตั้ง path ผ่าน <code>PRICE_MOVE_RAW</code> ไม่ได้ฝังใน repo · ผู้สอนรันขั้นนี้ซ้ำไม่ได้ แต่รันขั้นสร้างหน้าซ้ำได้จากไฟล์ที่ commit',is:4},
+  {k:'src',t:'วัน XD และเงินปันผล',c:'corp_actions.py → corp_actions.json',x:'อ่านไฟล์ปันผลที่ซื้อจาก SETSMART (ไม่ขึ้น repo) แล้วเขียนเฉพาะวัน XD และจำนวนเงินเป็น JSON · XD เป็นบริบทของเหตุการณ์ ไม่ใช่สาเหตุในตัวเอง'}]},
+ {n:'วิเคราะห์ด้วยสคริปต์',st:'ok',sub:'เกณฑ์ถูกต้อง มี test',d:'สคริปต์คำนวณวันที่ ตัวเลข และบริบท ไม่อ่านความหมาย',items:[
+  {k:'script',t:'หาเหตุการณ์ที่ขยับเกินเกณฑ์',c:'detect_events.py --mode both',x:'ปิดรายวันมากกว่า 5% และปิดเทียบ 5 หรือ 6 วันทำการก่อนมากกว่า 10% (พอดีไม่นับ ปัดที่ 6 ตำแหน่งกันค่า 5.000000000000004) รอบที่ขยับทิศเดียวกันและซ้อนกันรวมเป็นเหตุการณ์เดียว วันรายวันที่อยู่ในรอบถูกโยงกัน และใส่ XD ถ้ามีในช่วง'},
+  {k:'script',t:'แยกงบรายไตรมาส',c:'pnl_breakdown.py',x:'รายได้ GPM COGS ค่าขาย ค่าบริหาร ต้นทุนการเงิน (และ ECL ของบริษัทการเงิน) และสะพานกำไรเทียบปีก่อน (Q4 = ทั้งปีลบ 9 เดือน) · อ่านหน่วยจากป้ายในไฟล์ ไม่เดา · หาวันยื่นงบจากข่าว SET ก่อน'},
+  {k:'script',t:'รวมหลักฐานเป็น pack',c:'build_evidence_pack.py',x:'ต่อเหตุการณ์สร้างไฟล์ pack ชี้ว่าเอกสารไหนพูดถึงช่วงวันนั้น (ข้ามที่รู้สาเหตุแล้ว) ไม่อ่านโฟลเดอร์โบรกโดยปริยาย · pack ไม่ขึ้น repo'},
+  {k:'check',t:'ผลต่อเหตุการณ์ครบหรือไม่',c:'merge_research.py',x:'รวมผลของ AI เข้าเหตุการณ์ ใส่ tier A/B/C ให้หลักฐานที่ไม่มี และรายงานเหตุการณ์ที่ยังไม่มีผล'}]},
+ {n:'ตัดสินสาเหตุด้วย AI',st:'warn',sub:'AI เขียนผลเป็นไฟล์ JSON ตามรูปแบบ',d:'AI อ่านหลักฐานแล้วเขียน results.json ต่อเหตุการณ์',items:[
+  {k:'ai',t:'สรุปสาเหตุรายเหตุการณ์',c:'output/price_move/T/results.json · assets/result_schema.json',x:'AI อ่านงบ MD&A หน้าข่าว SET แล้วเขียน driver, conf, ทิศสอดคล้องกับราคาไหม, what/why, หลักฐานพร้อมวันที่และเวลา, สมมติฐานและสิ่งที่ต้องตรวจต่อ · ผลของ 4 หุ้นนี้ย้ายมาจากรายการที่เคยเขียนมือในโค้ด ผลจึงเป็นไฟล์ที่ตรวจซ้ำได้',is:1},
+  {k:'script',t:'ตัดสินสถานะ',c:'build_page.py · status_of',x:'<b>รู้สาเหตุ</b> = conf high/mid + ทิศสอดคล้อง + มีหลักฐานที่ไม่ใช่โบรกออกก่อนหรือระหว่างเหตุการณ์ (ไม่เกิน 7 วันก่อน, งบหลัง 16:30 นับวันถัดไป) · ที่เหลือเป็น <b>Draft</b> · รอบที่วันรู้สาเหตุอธิบายได้อย่างน้อยครึ่งของการขยับ รับสาเหตุต่อ'},
+  {k:'ai',t:'สรุป Catalyst / Risk และส่วนเสริม',c:'takeaways.json · extras.json',x:'takeaways อ้างเฉพาะเหตุการณ์ที่รู้สาเหตุ · extras คือ driver/risk จาก Oppday พร้อมเลขหน้า, หัวข้อติดตาม, เหตุการณ์ถัดไป, ปัจจัย SWOT/5 Forces พร้อมระดับหลักฐาน (บริษัทระบุเอง / ทดสอบแล้ว / สมมติฐาน)',is:3}]},
+ {n:'สร้างหน้า',st:'ok',sub:'1 หน้าต่อหุ้น ใช้ซ้ำได้',d:'สคริปต์ฝังข้อมูลเป็น JSON ในหน้าเดียว',items:[
+  {k:'script',t:'สร้างหน้า Public',c:'build_page.py --public --extras',x:'ตัดเนื้อหาโบรกทั้งหมด เหลือเฉพาะมุมมองรวมที่ไม่ระบุชื่อ · รัน <code>check_page</code> ก่อน แล้วสแกนคำต้องห้าม (ชื่อโบรก โดเมนโบรก ราคาเป้าหมาย ประมาณการ) ถ้าเจอจะหยุดและไม่เขียนไฟล์ · ข้อความทุกตัวผ่าน escape'},
+  {k:'script',t:'สร้างหน้าสรุปรวม',c:'build_index.py',x:'อ่าน JSON ที่ฝังในหน้า Price Move ทั้ง 4 แล้วสร้าง <code>output/dashboard.html</code>: การ์ดรายหุ้น ตารางเทียบ Catalyst/Risk รวมพร้อมลิงก์ไปยังเหตุการณ์ และข้อจำกัดของข้อมูล · หยุดถ้าพบชื่อโบรกหรือคำต้องห้าม'},
+  {k:'data',t:'หน้า Price Move 4 หน้า',c:'output/price_move/TURBO|DOHOME|MOSHI|PR9.html',x:'กราฟราคาปิดคู่กำไรสุทธิรายไตรมาส (เลื่อนเมาส์เห็นสาเหตุ) · Key takeaway · การ์ดสาเหตุเจาะลึกตอบ 5 คำถาม · ตาราง Draft · ข้อมูลประกอบการติดตาม · Reference'}]},
+ {n:'ตรวจก่อนส่ง',st:'ok',sub:'มีสคริปต์ตรวจและ test',d:'ตรวจด้วยสคริปต์ก่อนคนเปิดดู',items:[
+  {k:'check',t:'ตรวจหน้า',c:'check_page.py',x:'เหตุการณ์ครบตามเกณฑ์ · การ์ดที่รู้สาเหตุครบทุกหัวข้อ · key takeaway อ้างเฉพาะที่รู้สาเหตุ · แหล่งทุกตัวอยู่ใน Reference และ URL มีวันที่เข้าถึง · สะพานกำไรรวมตรง · ปัจจัย/เหตุการณ์ถัดไปมีที่มา · ไม่ผ่านจะ exit 1'},
+  {k:'check',t:'test อัตโนมัติ',c:'tests/test_price_move.py',x:'98 ข้อ: เกณฑ์ 5%/10% รวมรอบ การอ่านงบ หน่วย สถานะ ตัวหยุด --public และสแกน repo ว่าไม่มีไฟล์ .xlsx/.csv, โฟลเดอร์ Broker/pack, ชื่อโบรก, path ส่วนตัว'},
+  {k:'human',t:'เปิดหน้าใน browser',c:'ทำมือ',x:'ตรวจ JS error และหน้าล้นจอ 390px ของทั้ง 4 หน้า (ผ่านรอบนี้)'}]},
+ {n:'บันทึกและส่ง',st:'ok',sub:'/save ทำงานครบ',d:'พิมพ์ /save แล้วบันทึกตามขั้นตอนเดียวกันทุกรอบ',items:[
+  {k:'human',t:'/save',c:'.claude/commands/save.md',x:'ทำตามลำดับ: ดู git status → ตรวจความปลอดภัย → หาเลขรอบ → เขียน entry ใน prompts.md → บันทึกบทเรียนใน PROJECT_MEMORY.md → commit ภาษาไทย <code>รอบ N: ...</code> → push · commit และ push เฉพาะเมื่อผู้เรียนสั่ง'},
+  {k:'data',t:'GitHub (Public)',c:'sjuncharoen-design/aia-hw-Vis',x:'ผู้สอนอ่านจาก repo นี้'}]}
+];
+const IMPORTED='<b>โค้ดชุดนี้คือสำเนาของ skill <code>/price-move</code> จากเครื่องส่วนตัว ณ 3 พ.ย. 2026</b> ย้ายมาอยู่ใน <code>.claude/skills/price-move/</code> เพื่อให้ Homework รันได้เอง · ไม่ได้ก๊อปโฟลเดอร์ Broker/, ไฟล์ .xlsx/.csv ของ SETSMART และ path ส่วนตัว · สองสำเนาไม่ซิงก์กันอัตโนมัติ <span class="pg">— pipeline เดิม (<code>scripts/</code> 9 ตัว และ <code>dashboard.html</code>) ถูกแทนที่แล้ว ย้อนดูได้จาก git commit รอบ 5 (<code>b4c7b79</code>)</span>';
+const ORDER=`# รันจากโฟลเดอร์ aia-hw-Vis · M=.claude/skills/price-move/scripts · D=output/price_move/T
+export PRICE_MOVE_RAW=<โฟลเดอร์ AllCompany ของคุณ>      # เฉพาะขั้นที่ต้องอ่านเอกสารบริษัท
+python $M/price_daily.py T $D --single-source --market-file data/set_index_history.json   # 1 ราคา (TURBO ใช้ --tv)
+python $M/corp_actions.py <T-Dividends.xlsx> $D/corp_actions.json                        # 2 วัน XD
+python $M/detect_events.py $D/price_daily.json $D/events_raw.json --mode both --recon $D/price_recon.json --years 5 --xd $D/corp_actions.json
+python $M/pnl_breakdown.py T $D/pnl.json --quarterly $D/quarterly.json --browser-news $D/set_news_browser.jsonl
+python $M/build_evidence_pack.py T $D/events_raw.json $D/quarterly.json <pack_dir>        # 3 pack (ไม่ขึ้น repo)
+# AI อ่าน pack แล้วเขียน results.json → python $M/merge_research.py ... → events.json
+python $M/build_page.py T --events $D/events.json --takeaways $D/takeaways.json --pnl $D/pnl.json --price-dir $D --out-dir $D --extras $D/extras.json --public --out output/price_move/T.html
+python $M/check_page.py <price_move.json>                                                  # ต้อง exit 0`;
+const FLOW=[
+ ['Yahoo Finance (+ tv.json ของ TURBO) · data/set_index_history.json','price_daily.py','price_daily.json · price_recon.json'],
+ ['T-Dividends.xlsx (ไม่ขึ้น repo)','corp_actions.py','corp_actions.json (เฉพาะวัน XD และจำนวนเงิน)'],
+ ['price_daily.json · price_recon.json · corp_actions.json','detect_events.py','events_raw.json'],
+ ['งบใน AllCompany · set_news_browser.jsonl','pnl_breakdown.py','pnl.json · quarterly.json'],
+ ['events_raw.json · quarterly.json · AllCompany','build_evidence_pack.py','pack (ไม่ขึ้น repo)'],
+ ['pack + เอกสารที่ pack ชี้ + ข่าว SET','AI (Claude) อ่านเอง','results.json'],
+ ['events_raw.json · results.json','merge_research.py','events.json'],
+ ['events.json · takeaways.json · pnl.json · price_* · extras.json','build_page.py --public + check_page.py','output/price_move/T.html'],
+ ['output/price_move/*.html','build_index.py','output/dashboard.html']
+];
+const WHO=[
+ ['คำนวณราคา เหตุการณ์ งบ XD ตัดสินสถานะ ตรวจหน้า','สคริปต์ (Python)','ผลเหมือนเดิมทุกครั้งถ้าข้อมูลเข้าเหมือนเดิม มี test 98 ข้อ'],
+ ['อ่านงบ MD&A Oppday หน้า SET สื่อ แล้วสรุปสาเหตุ เบาะแส driver ปัจจัย','AI (Claude) ในเซสชัน ไม่ใช้ sub-agent','เขียนผลเป็น results.json / takeaways.json / extras.json ตามรูปแบบ จึงตรวจย้อนได้ว่าตัดสินจากอะไร'],
+ ['ค้นเว็บข่าวสื่อการเงิน','AI (Claude)','ใส่ลิงก์ วันที่ และวันที่เข้าถึงในหลักฐาน'],
+ ['จดข่าว SET ลงไฟล์ · เก็บราคา TURBO จาก TradingView','คน / browser','ทำนอกสคริปต์ ห้ามเรียก API หรือเลี่ยง bot check'],
+ ['ตรวจหน้าใน browser · /save','คน + AI','ตรวจความปลอดภัยก่อน commit ด้วย test สแกน repo และตัว --public']
+];
+const SRC=[
+ ['Yahoo Finance','ราคา volume open','B','ฟรี ปรับ split และปันผลแล้ว ไม่มีรอยกระโดดจากปันผล','ใช้อยู่ (แหล่งหลัก)'],
+ ['TradingView','ราคาแหล่งที่สอง','B','ดึงผ่าน MCP ไม่ขึ้น repo (เก็บเฉพาะผลเทียบ)','ใช้ครบ 4 หุ้น'],
+ ['ดัชนี SET (set.or.th)','ตัวแทนตลาดจริง','A','ปิดรายวัน 5 ปี ข้อมูลสาธารณะ','ใช้อยู่'],
+ ['หน้าข่าว SET (สาธารณะ)','เวลายื่นงบและหัวข้อประกาศ','A','จดมือเฉพาะช่วงใกล้เหตุการณ์','ใช้อยู่ ไม่ครบ'],
+ ['AllCompany (นอก repo)','งบ MD&A Oppday One Report','A','ส่วนตัว ผู้สอนไม่เห็น ตั้งผ่าน PRICE_MOVE_RAW','ใช้อยู่'],
+ ['SETSMART (ซื้อมา)','วัน XD และเงินปันผล','A','ไฟล์ไม่ขึ้น repo เก็บเฉพาะวันและจำนวนเงิน','ใช้อยู่'],
+ ['สื่อการเงินไทยผ่านค้นเว็บ','ข่าวสาเหตุ','B','ใส่ลิงก์และวันที่เข้าถึง','ใช้ไม่กี่เหตุการณ์'],
+ ['สรุปบทวิเคราะห์โบรก','มุมมองตลาด','—','ห้ามขึ้น repo Public ไม่คัดลอกเนื้อหา ไม่ใช้ยืนยันสาเหตุ','ไม่ใช้ในผลงาน']
+];
+const CHK=[
+ ['เกณฑ์ 5% / 10% (พอดีไม่นับ)','detect_events.py','ปัดที่ 6 ตำแหน่ง เทียบ 5 และ 6 วันก่อน รวมรอบซ้อน','มี test'],
+ ['ราคาสองแหล่ง','price_daily.py','เทียบ return รายวัน แจ้งวันที่ไม่ตรงและวันตรวจไม่ได้ · ราคาไม่ตรงทำให้ conf high ลดเป็น mid','ใช้ได้ (ครบ 4 หุ้น)'],
+ ['งบรายไตรมาส','pnl_breakdown.py','อ่านหน่วยจากป้าย · บล็อก 3 เดือนต้องเล็กกว่าสะสม · สะพานกำไรรวมต้องตรง','มี test'],
+ ['กฎสถานะรู้สาเหตุ','build_page.py','conf + ทิศ + หลักฐานไม่ใช่โบรกในช่วง 7 วันก่อน · โบรกไม่ยืนยันสาเหตุ','มี test'],
+ ['ตรวจหน้า','check_page.py','เหตุการณ์ครบ การ์ดครบ แหล่งอยู่ใน Reference ปัจจัยมีที่มา','exit 1 ถ้าไม่ผ่าน'],
+ ['ตัวหยุด repo Public','build_page.py --public','ตัดโบรก สแกนคำต้องห้าม ไม่ผ่านไม่เขียนไฟล์','มี test'],
+ ['สแกนไฟล์ที่ commit','tests/test_price_move.py','ไม่มี .xlsx/.csv, Broker/, pack/, ชื่อโบรก, path ส่วนตัว','มี test'],
+ ['ข้อมูลในหน้าไม่พิมพ์ใน markup','build_page.py','JSON ใน &lt;script&gt; แทน <code>&lt;</code> เป็น <code>\\u003c</code> และ escape ข้อความทุกตัว','มี test']
+];
+const FILES=[
+ ['AGENTS.md · CLAUDE.md · GEMINI.md','กติกาสำหรับ AI ทุกค่าย'],
+ ['spec.md','โจทย์ (ร่าง)'],
+ ['prompts.md · PROJECT_MEMORY.md','บันทึกขั้นตอนและบทเรียน (ผู้สอนอ่าน)'],
+ ['help.md · README.md · output/README.md','แม่แบบของคอร์ส (help.md ยังไม่ได้กรอก)'],
+ ['.claude/commands/save.md','ขั้นตอน /save'],
+ ['.claude/skills/price-move/ (SKILL.md · scripts 9 ตัว · assets 3 ไฟล์)','skill /price-move ใช้เมื่อเปิด session ที่โฟลเดอร์ aia-hw-Vis'],
+ ['tests/test_price_move.py','test 98 ข้อ'],
+ ['data/set_index_history.json','ดัชนี SET รายวัน'],
+ ['output/dashboard.html','หน้าสรุปรวมทุกหุ้น'],
+ ['output/price_move/T.html (4 ไฟล์)','ผลลัพธ์หลัก ต่อหุ้น'],
+ ['output/price_move/T/ (price_daily, price_recon, corp_actions, events_raw, events, results, pnl, takeaways, extras, set_news_browser)','ข้อมูลระหว่างทางที่ปลอดภัย ใช้สร้างหน้าซ้ำได้'],
+ ['output/architecture.html','หน้านี้']
+];
+const ISSUES=[
+ {l:'mid',t:'ผลของ AI ยังไม่เคยรันครบตั้งแต่ต้นจนจบบน pack จริง',d:'ผลของ 4 หุ้นถูกย้ายมาจากข้อสรุปที่เขียนไว้เดิม (FOUND/LEADS) ส่วนที่เหลือเป็น "ยังไม่พบสาเหตุ" แบบเริ่มต้น สร้าง pack ครบ 267 เหตุการณ์แล้ว ค้นเว็บเพิ่ม 8 เหตุการณ์ที่ขยับแรงที่สุดและไม่มีเบาะแส ไม่พบข่าวที่ระบุสาเหตุ (เป็น Draft พร้อมวันที่ค้น) ส่วนที่เหลืออ่านครบทีละชุดไม่ได้ในรอบนี้ เพราะ pack รวมเกิน 1 MB'},
+ {l:'mid',t:'รู้สาเหตุ 12 จาก 166 เหตุการณ์รายวัน (และ 7 จาก 101 รอบ)',d:'ตัวเลขเท่าของเดิมเพราะใช้ข้อสรุปชุดเดียวกัน · กฎสถานะเข้มกว่าเดิม (ต้องมีหลักฐานไม่ใช่โบรกที่มีวันที่ และทิศสอดคล้อง) ที่เหลือเป็น Draft ไม่ได้แปลว่าไม่มีสาเหตุ'},
+ {l:'mid',t:'ข้อมูลส่วนเสริม (extras) ย้ายมาตามเดิม',d:'driver/risk หัวข้อติดตาม ปัจจัย SWOT ยังเป็นข้อความชุดเดิม ไม่ได้อ่านเอกสารใหม่ · ตัวเลขในส่วนนี้ที่ติดป้าย [ยังไม่ยืนยัน] ยังไม่ได้ยืนยัน'},
+ {l:'mid',t:'รันขั้นอ่านเอกสารซ้ำไม่ได้โดยผู้สอน',d:'ต้องมี AllCompany ในเครื่องและตั้ง <code>PRICE_MOVE_RAW</code> · ผู้สอนรันได้ตั้งแต่ขั้นสร้างหน้าและตรวจหน้าจากไฟล์ที่ commit'},
+ {l:'mid',t:'ข่าว SET จดมือและไม่ครบ',d:'69 รายการเฉพาะช่วงรอบวันเกิดเหตุ ผล "ยังไม่พบสาเหตุ" จึงไม่ได้แปลว่าไม่มีข่าว · ต้องรอเก็บเพิ่มผ่าน browser'},
+ {l:'mid',t:'ราคาสองแหล่งไม่ตรงกันบางวัน',d:'ตรวจสองแหล่งครบ 4 หุ้น แต่ DOHOME ไม่ตรง 44 วัน, PR9 32, MOSHI 24, TURBO 2 · จำนวนเหตุการณ์ไม่เปลี่ยนจากความต่างนี้ · แท่งราคาวันล่าสุด (3 พ.ย.) อาจยังไม่ปิดตลาด'},
+ {l:'low',t:'สำเนาสองที่ไม่ซิงก์กัน',d:'โค้ดใน Homework คือสำเนาของ skill ในเครื่อง ณ 3 พ.ย. 2026 แก้ที่ใดที่หนึ่งต้องย้ายเองอีกที่'},
+ {l:'low',t:'เอกสารแม่แบบยังไม่ได้กรอก',d:'<code>help.md</code> ยังเป็นแม่แบบ · <code>output/README.md</code> ยังไม่มีลิงก์ผลงาน · <code>spec.md</code> ยังเป็น draft และ owner เป็น <code>[ชื่อเล่น]</code>'},
+ {l:'low',t:'spec.md ยังอ้างไฟล์ของ pipeline เดิม',d:'บรรทัดไฟล์ที่ต้องได้ยังพูดถึง <code>output/dashboard.html</code> และ <code>scripts/</code> ซึ่งถูกแทนที่แล้ว ต้องให้ผู้เรียนตัดสินใจแก้โจทย์เอง'}
+];
+const NUMS=[['TURBO',21,2,19,12,1,11,263,'30 ก.ย. 2025 – 2 พ.ย. 2026'],['DOHOME',75,5,70,45,4,41,1211,'3 พ.ย. 2021 – 3 พ.ย. 2026'],['MOSHI',45,2,43,25,1,24,937,'22 ธ.ค. 2022 – 3 พ.ย. 2026'],['PR9',25,3,22,19,1,18,1211,'3 พ.ย. 2021 – 3 พ.ย. 2026']];
+const $=id=>document.getElementById(id),esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+$('asof').textContent=AS_OF;
+$('kinds').innerHTML=Object.values(KIND).map(k=>`<span class="pill st-idle"><span>${k.i}</span>${k.t}</span>`).join('');
+function itemHtml(it){const is=it.is?ISSUES[it.is-1]:null;
+ return `<button class="item kind-${it.k}" aria-expanded="false"><div class="it"><span class="ic">${KIND[it.k].i}</span><span>${esc(it.t)}</span></div>${it.c?`<div class="cm"><code>${esc(it.c)}</code></div>`:''}<div class="note"><p>${it.x}</p>${is?`<div class="is">⚠ จุดที่ต้องแก้ #${it.is}: ${is.t}</div>`:''}</div></button>`;}
+$('master').innerHTML=STAGES.map((s,i)=>`${i?'<div class="arrow" aria-hidden="true">→</div>':''}<section class="stage" id="s${i+1}"><div class="sh"><span class="num">${i+1}</span><h3>${esc(s.n)}</h3></div><span class="pill st-${s.st}">${ST[s.st][0]} ${ST[s.st][1]}</span><p class="sd">${esc(s.d)}</p>${s.items.map(itemHtml).join('')}</section>`).join('');
+document.querySelectorAll('.item').forEach(b=>b.addEventListener('click',()=>b.setAttribute('aria-expanded',b.getAttribute('aria-expanded')!=='true')));
+$('imp').innerHTML=IMPORTED;
+$('strip').innerHTML=STAGES.map((s,i)=>`${i?'<div class="chev" aria-hidden="true">›</div>':''}<a class="tile ${s.st==='ok'?'':s.st}" href="#s${i+1}"><div class="r"><span>${i+1}</span><span class="pill st-${s.st}" style="padding:0 7px">${ST[s.st][0]}</span></div><b>${esc(s.n)}</b><div class="s">${ST[s.st][1]} · ${esc(s.sub)}</div></a>`).join('');
+$('order').textContent=ORDER;
+const tbl=(id,head,rows,right)=>$(id).innerHTML='<thead><tr>'+head.map((h,i)=>`<th class="${right&&right.includes(i)?'n':''}">${h}</th>`).join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.map((c,i)=>`<td class="${right&&right.includes(i)?'n':''}">${c}</td>`).join('')+'</tr>').join('')+'</tbody>';
+tbl('tflow',['ไฟล์เข้า','สคริปต์','ไฟล์ออก'],FLOW.map(r=>r.map(esc)));
+tbl('twho',['งาน','ใครทำ','หมายเหตุ'],WHO);
+tbl('tsrc',['แหล่ง','ให้อะไร','Tier','หมายเหตุ','สถานะ'],SRC);
+tbl('tchk',['จุดตรวจ','อยู่ที่','ตรวจอะไร','สถานะ'],CHK);
+const sm=i=>NUMS.reduce((a,r)=>a+r[i],0);
+tbl('tnum',['หุ้น','วันเกิน 5%','รู้สาเหตุ','Draft','รอบ &gt;10%','รู้สาเหตุ','Draft','แท่งราคา','ช่วงราคา'],NUMS.map(r=>r.slice(0,9)).concat([['รวม',sm(1),sm(2),sm(3),sm(4),sm(5),sm(6),sm(7),'']].map(r=>r.map(x=>`<b>${x}</b>`))),[1,2,3,4,5,6,7]);
+tbl('tfile',['ไฟล์','คืออะไร'],FILES.map(r=>[`<code>${esc(r[0])}</code>`,r[1]]));
+$('isum').textContent=`${ISSUES.length} ข้อ · เรียงตามผลกระทบต่อความถูกต้อง · เป็นข้อจำกัดที่รู้อยู่ ณ วันที่ย้าย`;
+$('isl').innerHTML=ISSUES.map((s,i)=>({s,i})).sort((a,b)=>({high:0,mid:1,low:2}[a.s.l]-{high:0,mid:1,low:2}[b.s.l])||a.i-b.i).map(({s,i})=>`<div class="issue ${s.l}"><span class="pill ${s.l==='high'?'st-bad':s.l==='mid'?'st-warn':'st-idle'}" style="padding:0 8px">${{high:'ผลกระทบสูง',mid:'กลาง',low:'ต่ำ'}[s.l]}</span> <b>#${i+1}</b> <span class="t">${s.t}</span><div class="pg">${s.d}</div></div>`).join('');
+</script>
+</body>
+</html>

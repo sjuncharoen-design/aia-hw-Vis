@@ -23,3 +23,7 @@ __pycache__/
 venv/
 node_modules/
 .claude/settings.local.json
+
+# Python cache
+__pycache__/
+.pytest_cache/

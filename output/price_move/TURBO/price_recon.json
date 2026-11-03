@@ -1,0 +1,41 @@
+{
+ "compare": "returns",
+ "tol_pct": 0.5,
+ "ret_tol_pp": 0.5,
+ "n_tv": 263,
+ "n_yahoo": 260,
+ "n_both": 259,
+ "verified_from": "2025-10-06",
+ "verified_to": "2026-11-02",
+ "level_ratio": {
+  "median": 1.0,
+  "min": 1.0,
+  "max": 1.0428
+ },
+ "mismatches": [
+  {
+   "d": "2025-10-07",
+   "tv": 1.95,
+   "yahoo": 1.8700000047683716,
+   "diff_pct": 4.28,
+   "ret_diff_pp": 4.28
+  },
+  {
+   "d": "2025-10-08",
+   "tv": 1.91,
+   "yahoo": 1.909999966621399,
+   "diff_pct": 0.0,
+   "ret_diff_pp": 4.19
+  }
+ ],
+ "only_tv": [],
+ "only_yahoo": [],
+ "status": "mismatch",
+ "primary": "tv",
+ "secondary": "yahoo",
+ "window_from": "2021-11-03",
+ "covers_window": false,
+ "bars_in_window": 263,
+ "market_source": "set_index_history.json",
+ "only_other": []
+}

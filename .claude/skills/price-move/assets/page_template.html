@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Price Move</title>
+<style>
+:root{--bg:#f7f6f2;--card:#fff;--tx:#1d1d1b;--mut:#6b6a63;--bd:#e3e1d8;--up:#0f7b4f;--dn:#c0392b;--ac:#2a5db0;--wn:#9a7200}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#15161a;--card:#1e2026;--tx:#ecebe6;--mut:#a3a29a;--bd:#2f323a;--up:#3ecf8e;--dn:#ff7a6b;--ac:#7aa7ff;--wn:#e0b23c}}
+:root[data-theme=dark]{--bg:#15161a;--card:#1e2026;--tx:#ecebe6;--mut:#a3a29a;--bd:#2f323a;--up:#3ecf8e;--dn:#ff7a6b;--ac:#7aa7ff;--wn:#e0b23c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 "IBM Plex Sans Thai","Noto Sans Thai",system-ui,sans-serif}
+main{max-width:1080px;margin:0 auto;padding:20px 16px 48px}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:18px;margin:0 0 8px}h3{font-size:15px;margin:0 0 4px}h4{font-size:13px;color:var(--mut);font-weight:500;margin:12px 0 2px}
+.sub{color:var(--mut);margin:0 0 14px}.pg{color:var(--mut);font-size:12px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:16px;margin:0 0 16px;scroll-margin-top:12px}
+.ev{border:1px solid var(--bd);border-radius:8px;padding:14px;margin:0 0 12px;scroll-margin-top:12px}.ev:target{border-color:var(--ac)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:720px){.grid2{grid-template-columns:1fr}}
+.up{color:var(--up)}.dn,.down{color:var(--dn)}
+.tag{display:inline-block;font-size:12px;border:1px solid var(--bd);border-radius:6px;padding:0 6px;color:var(--mut);margin:0 4px 2px 0}
+.tag.high,.tag.tested{color:var(--up);border-color:var(--up)}.tag.mid,.tag.company{color:var(--ac);border-color:var(--ac)}.tag.hypothesis,.tag.interp{color:var(--wn);border-color:var(--wn)}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:560px}
+th,td{padding:7px 9px;border-bottom:1px solid var(--bd);text-align:left;vertical-align:top}
+th{color:var(--mut);font-weight:500;font-size:13px}td.n,th.n{text-align:right;white-space:nowrap}
+ul{margin:6px 0 0;padding-left:20px}li{margin:0 0 8px}a{color:var(--ac);overflow-wrap:anywhere}
+svg{width:100%;height:auto;display:block}svg [data-id]{cursor:pointer}
+#tip{position:fixed;z-index:9;max-width:340px;background:var(--card);color:var(--tx);border:1px solid var(--ac);border-radius:8px;padding:9px 11px;font-size:13px;box-shadow:0 4px 18px rgba(0,0,0,.2);display:none}
+</style>
+</head>
+<body>
+<main>
+<h1 id="ttl"></h1>
+<p class="sub" id="sub"></p>
+<section class="card"><h2>กราฟราคาปิดรายวัน คู่กำไรสุทธิรายไตรมาส</h2><p class="sub">จุดเข้ม = รู้สาเหตุ · จุดจาง = Draft · แถบแรเงา = รอบ 5–6 วันทำการเกิน 10% · แท่งล่าง = กำไรสุทธิ (ล้านบาท) วางที่วันยื่นงบ เขียว/แดง = สูง/ต่ำกว่าปีก่อน แท่งจาง = ประมาณวันยื่น · เลื่อนเมาส์หรือแตะเพื่อดูสาเหตุ คลิกเพื่อไปที่รายละเอียด</p><div id="chart"></div></section>
+<section class="card"><h2>Key takeaway</h2><p class="sub">นับเฉพาะเหตุการณ์ที่รู้สาเหตุ</p><div class="grid2"><div><h3 class="up">Catalyst</h3><div id="cat"></div></div><div><h3 class="dn">Risk</h3><div id="risk"></div></div></div></section>
+<section class="card"><h2>สาเหตุเจาะลึก</h2><div id="cards"></div></section>
+<section class="card"><h2>Draft: ยังไม่แน่ใจ รอวิเคราะห์ต่อ</h2><p class="sub">ยังไม่พบไม่ได้แปลว่าไม่มีสาเหตุ</p><div class="tw"><table id="draft"></table></div></section>
+<section class="card" id="xtra" hidden><h2>ข้อมูลประกอบการติดตาม</h2><p class="sub">สรุปจากเอกสารบริษัทและการวิเคราะห์ของผู้เรียน เป็นหัวข้อให้ตรวจสอบต่อ ไม่ใช่คำแนะนำซื้อขาย</p><div id="xbody"></div></section>
+<section class="card"><h2>Reference</h2><div id="refs"></div></section>
+<p class="sub">ข้อมูลเพื่อการเรียนรู้ ไม่ใช่คำแนะนำการลงทุน ไม่มีคำสั่งซื้อขาย ผู้ใช้เป็นผู้ตัดสินใจเอง</p>
+</main>
+<div id="tip" role="tooltip"></div>
+<script id="data" type="application/json">/*DATA*/null</script>
+<script>
+const D=JSON.parse(document.getElementById('data').textContent),$=id=>document.getElementById(id);
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const fd=s=>{const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(s||'');return m?(+m[3])+' '+MON[+m[2]-1]+' '+m[1]:esc(s||'–')};
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const pct=v=>v==null?'–':(v>0?'+':'')+Number(v).toFixed(2)+'%',sg=v=>v==null?'–':(v>0?'+':'')+Number(v).toFixed(1);
+const num=v=>v==null?'–':Number(v).toLocaleString('en-US',{maximumFractionDigits:1});
+const E=D.events,byId=Object.fromEntries(E.map(e=>[e.id,e])),CONF={high:'มั่นใจสูง',mid:'มั่นใจปานกลาง',low:'ต่ำ'},LEVEL={company:'บริษัทระบุเอง',tested:'ทดสอบกับข้อมูลแล้ว',hypothesis:'สมมติฐาน'};
+const span=e=>e.kind==='day'?fd(e.date):fd(e.date)+' – '+fd(e.end);
+const rc=D.price.recon||{},rows=D.price.rows;
+document.title=D.ticker+' Price Move';
+$('ttl').textContent=D.ticker+': ราคาขยับแรงเพราะอะไร';
+const nK=E.filter(e=>e.status==='known').length;
+const nW=E.filter(e=>e.kind==='window'),nWK=nW.filter(e=>e.status==='known').length;
+$('sub').textContent=`ราคา ${fd(rows[0].d)} – ${fd(rows[rows.length-1].d)} · เหตุการณ์ ${E.length} (รู้สาเหตุ ${nK} · Draft ${E.length-nK} · ในนี้เป็นรอบ 5–6 วัน ${nW.length} รู้สาเหตุ ${nWK}) · แหล่งราคา ${rc.primary||'–'}${rc.status==='single_source'?' แหล่งเดียว ยังไม่ได้ตรวจกับแหล่งที่สอง':''}${rc.market_source?' · เทียบตลาดด้วย '+rc.market_source:''}${D.missing_quarters.length?' · อ่านงบไม่ได้: '+D.missing_quarters.join(', '):''}`;
+
+function chart(){
+ const W=1000,H=330,PH=140,H2=H+PH,L=44,R=12,T=14,Bt=26,P=rows,B=D.bars;
+ const ps=P.map(r=>r.p),lo=Math.min(...ps)*.97,hi=Math.max(...ps)*1.03;
+ const X=i=>L+i/Math.max(1,P.length-1)*(W-L-R),Y=v=>T+(1-(v-lo)/((hi-lo)||1))*(H-T-Bt);
+ const at=d=>{const k=P.findIndex(r=>r.d>=d);return k<0?P.length-1:k};
+ const idx=Object.fromEntries(P.map((r,i)=>[r.d,i]));
+ let o=`<svg viewBox="0 0 ${W} ${H2}" role="img" aria-label="กราฟราคาและกำไรของ ${esc(D.ticker)}">`;
+ for(let k=0;k<=4;k++){const v=lo+(hi-lo)*k/4,y=Y(v);o+=`<line x1="${L}" x2="${W-R}" y1="${y}" y2="${y}" stroke="var(--bd)"/><text x="${L-6}" y="${y+4}" text-anchor="end" font-size="11" fill="var(--mut)">${v>=10?v.toFixed(0):v.toFixed(2)}</text>`}
+ let last='';P.forEach((r,i)=>{const y=r.d.slice(0,4),m=+r.d.slice(5,7),key=y+(m<=6?'a':'b');if(key!==last&&(m===1||m===7)){last=key;o+=`<text x="${X(i)}" y="${H2-6}" font-size="11" fill="var(--mut)">${MON[m-1]} ${y}</text>`}});
+ E.filter(e=>(e.kind==='window'||(e.kind==='manual'&&e.end>e.date))&&e.date>=P[0].d).forEach(e=>{const a=X(at(e.date)),b=X(at(e.end)),c=e.dir==='up'?'var(--up)':'var(--dn)';o+=`<rect data-id="${esc(e.id)}" x="${a-2}" y="${T}" width="${Math.max(4,b-a+4)}" height="${H-T-Bt}" fill="${c}" fill-opacity="${e.status==='known'?.14:.06}"/>`});
+ o+=`<polyline fill="none" stroke="var(--mut)" stroke-width="1.2" points="${P.map((r,i)=>X(i).toFixed(1)+','+Y(r.p).toFixed(1)).join(' ')}"/>`;
+ if(B.length){const top=H-Bt+12,bot=H2-22,nps=B.map(b=>b.np),mx=Math.max(0,...nps),mn=Math.min(0,...nps),Yb=v=>top+(1-(v-mn)/((mx-mn)||1))*(bot-top),y0=Yb(0);
+  o+=`<line x1="${L}" x2="${W-R}" y1="${y0}" y2="${y0}" stroke="var(--bd)"/>`;
+  B.forEach(b=>{const x=X(at(b.x)),yv=Yb(b.np),c=b.yoy==null?'var(--mut)':b.yoy>=0?'var(--up)':'var(--dn)';
+   o+=`<rect x="${x-5}" y="${Math.min(yv,y0)}" width="10" height="${Math.max(1,Math.abs(yv-y0))}" fill="${c}" fill-opacity="${b.est?.35:.85}"><title>${esc(b.q)} กำไร ${num(b.np)} ล้านบาท · YoY ${b.yoy==null?'–':pct(b.yoy)}${b.est?' · วันยื่นเป็นค่าประมาณ':' · ยื่น '+fd(b.x)}</title></rect><text x="${x}" y="${(b.np>=0?yv:y0)-3}" text-anchor="middle" font-size="10" fill="var(--tx)">${b.yoy==null?'':(b.yoy>0?'+':'')+Math.round(b.yoy)+'%'}</text>`})}
+ E.filter(e=>(e.kind==='day'||(e.kind==='manual'&&e.end===e.date))&&idx[e.date]!=null).forEach(e=>{const i=idx[e.date],c=e.dir==='up'?'var(--up)':'var(--dn)',k=e.status==='known';o+=`<circle data-id="${esc(e.id)}" cx="${X(i)}" cy="${Y(P[i].p)}" r="${k?7:4}" fill="${c}" fill-opacity="${k?1:.4}" stroke="var(--card)"/>`});
+ $('chart').innerHTML=o+'</svg>';
+}
+function tipHtml(e,link){return `<b>${span(e)}</b> <span class="${e.dir}">${pct(e.ret)}</span> <span class="tag">${esc(e.kind_th)}</span><br>${e.status==='known'?'<span class="tag '+esc(e.conf)+'">'+esc(CONF[e.conf]||'')+'</span>':'<span class="tag">Draft</span>'}<div>${esc(e.tip)}</div>${link?`<a href="#ev-${esc(e.id)}">ดูรายละเอียด</a>`:''}`}
+let pType='mouse';const tip=$('tip');
+function showTip(e,x,y,link){tip.innerHTML=tipHtml(e,link);tip.style.display='block';const w=tip.offsetWidth,h=tip.offsetHeight;tip.style.left=Math.max(8,Math.min(innerWidth-w-8,x+12))+'px';tip.style.top=Math.max(8,y+h+20>innerHeight?y-h-12:y+12)+'px'}
+function hookChart(){const c=$('chart');
+ c.addEventListener('pointerdown',ev=>{pType=ev.pointerType});
+ c.addEventListener('pointermove',ev=>{if(ev.pointerType!=='mouse')return;const t=ev.target.closest('[data-id]');if(t)showTip(byId[t.dataset.id],ev.clientX,ev.clientY,false);else tip.style.display='none'});
+ c.addEventListener('pointerleave',()=>{if(pType==='mouse')tip.style.display='none'});
+ c.addEventListener('click',ev=>{const t=ev.target.closest('[data-id]');if(!t){tip.style.display='none';return}const e=byId[t.dataset.id];if(pType==='mouse'){tip.style.display='none';goTo(e.id)}else showTip(e,ev.clientX,ev.clientY,true)});
+ tip.addEventListener('click',ev=>{if(ev.target.tagName==='A')tip.style.display='none'});
+}
+function goTo(id){const el=$('ev-'+id);if(el){location.hash='ev-'+id;el.scrollIntoView({behavior:'smooth',block:'start'})}}
+function evLink(i){const e=byId[i];return `<a href="#ev-${esc(i)}">${e?span(e):esc(i)}</a>`}
+function take(list){if(!list||!list.length)return '<p class="pg">ยังไม่มีเหตุการณ์ที่รู้สาเหตุในด้านนี้</p>';return '<ul>'+list.map(t=>`<li>${esc(t.text)} <span class="tag">${t.ids.length} ครั้ง</span><div class="pg">${t.ids.map(evLink).join(' · ')}</div>${t.watch?`<div class="pg">ติดตาม: ${esc(t.watch)}</div>`:''}</li>`).join('')+'</ul>'}
+function links(ls,line){const m=(ls||[]).filter(x=>x.line===line);if(!m.length)return '<span class="pg">–</span>';return m.map(x=>`<div>${esc(x.factor)} <span class="tag">${esc(x.swot)}</span>${x.force?`<span class="tag">${esc(x.force)}</span>`:''}<span class="tag ${esc(x.level)}">${esc(LEVEL[x.level]||x.level)}</span>${x.note?`<div class="pg">${esc(x.note)}</div>`:''}</div>`).join('')}
+function pnlTable(e){const p=e.pnl,c=p.cur,q=p.prior,y=p.yoy,eff=Object.fromEntries((p.bridge||[]).map(b=>[b.line,b.delta]));
+ const row=(k,name,vk,pc)=>c[vk]==null?'':`<tr><td>${name}</td><td class="n">${pc?Number(c[vk]).toFixed(2)+'%':num(c[vk])}</td><td class="n">${pc?(q[vk]==null?'–':Number(q[vk]).toFixed(2)+'%'):num(q[vk])}</td><td class="n">${y[vk]?(pc?sg(y[vk].delta)+' pp':(y[vk].pct==null?sg(y[vk].delta):sg(y[vk].pct)+'%')):'–'}</td><td class="n ${eff[k]>0?'up':eff[k]<0?'dn':''}">${eff[k]==null?'–':sg(eff[k])}</td><td>${links(e.pnl_links,k)}</td></tr>`;
+ return `<div class="pg">งวด ${esc(e.pnl_quarter)} · ล้านบาท · ผลต่อกำไรเทียบปีก่อน</div><div class="tw"><table><thead><tr><th>บรรทัดงบ</th><th class="n">งวดนี้</th><th class="n">ปีก่อน</th><th class="n">เปลี่ยน</th><th class="n">ผลต่อกำไร</th><th>SWOT / 5 Forces</th></tr></thead><tbody>${row('rev','รายได้','rev')}${row('gpm','GPM','gpm',1)}${row('cogs','COGS','cogs')}${row('sell','ค่าขาย','sell')}${row('admin','ค่าบริหาร','admin')}${row('ecl','ผลขาดทุนเครดิต','ecl')}${row('fin','ต้นทุนการเงิน','fin')}${row('np','กำไรสุทธิ','np')}</tbody></table></div>`}
+function srcList(a){return (a||[]).map(x=>`<li>${/^https?:/.test(x.src)?`<a href="${esc(x.src)}" target="_blank" rel="noopener">${esc(x.src.replace(/^https?:\/\/(www\.)?/,'').slice(0,60))}</a>`:esc(x.src)} <span class="tag">${esc(x.tier||'')}</span>${x.date?`<span class="pg">${fd(x.date)}${x.time?' '+esc(x.time):''}</span>`:''}${x.note?`<div class="pg">${esc(x.note)}</div>`:''}</li>`).join('')}
+function card(e){const head=`<h3>${span(e)} <span class="${e.dir}">${pct(e.ret)}</span> <span class="tag">${esc(e.kind_th)}</span><span class="tag ${esc(e.conf)}">${esc(CONF[e.conf]||'')}</span></h3>`+`<div class="pg">${[e.set_ret!=null?'ตลาด '+pct(e.set_ret)+' · เทียบตลาด '+sg(e.rel)+' จุด':'',e.vol_ratio!=null?'volume '+e.vol_ratio+' เท่าของ 20 วันก่อน':'',e.gap!=null?'gap เปิด '+pct(e.gap):'',...(e.xd||[]).map(x=>x.text)].filter(Boolean).map(esc).join(' · ')}</div>`;
+ if(e.inherited_from)return `<article class="ev" id="ev-${esc(e.id)}">${head}<p>ใช้สาเหตุจาก: ${e.inherited_from.map(evLink).join(' · ')}</p></article>`;
+ const unlinked=(e.pnl_links||[]).length&&!e.pnl?`<div>${e.pnl_links.map(x=>`${esc(x.factor)} <span class="tag">${esc(x.swot)}</span><span class="tag ${esc(x.level)}">${esc(LEVEL[x.level]||x.level)}</span>`).join('<br>')}</div>`:'';
+ return `<article class="ev" id="ev-${esc(e.id)}">${head}<h4>1. เกิดอะไร และทำไมราคาขยับ</h4><p>${esc(e.what)}</p><p>${esc(e.why)}</p><h4>2. กระทบงบตรงไหน และโยง SWOT / 5 Forces</h4>${e.pnl?pnlTable(e):''}${e.pnl_note?`<p>${esc(e.pnl_note)}</p>`:''}${unlinked}<h4>3. ตลาดมองยังไง</h4><p>${esc(e.market_view)}</p>${e.market_view_src&&e.market_view_src.length?`<ul>${srcList(e.market_view_src)}</ul>`:''}<h4>4. ทำให้มองอนาคตยังไง <span class="tag interp">การตีความ</span></h4><p>${esc(e.outlook)}</p><h4>5. มาจากแหล่งไหน</h4><ul>${srcList(e.evidence)}${srcList(e.context)}</ul></article>`}
+function sections(){
+ $('cat').innerHTML=take(D.takeaways.catalysts);$('risk').innerHTML=take(D.takeaways.risks);
+ const known=E.filter(e=>e.status==='known').sort((a,b)=>b.date.localeCompare(a.date));
+ $('cards').innerHTML=known.length?known.map(card).join(''):'<p>ยังไม่มีเหตุการณ์ที่รู้สาเหตุ</p>';
+ const dr=E.filter(e=>e.status==='draft').sort((a,b)=>Math.abs(b.ret)-Math.abs(a.ret));
+ $('draft').innerHTML='<thead><tr><th>เหตุการณ์</th><th class="n">เปลี่ยน</th><th class="n">เทียบตลาด</th><th>ตรวจอะไรแล้ว</th><th>สมมติฐาน</th><th>ต้องตรวจต่อ</th></tr></thead><tbody>'+(dr.length?dr.map(e=>`<tr id="ev-${esc(e.id)}"><td>${span(e)}<div class="pg">${esc(e.kind_th)}</div></td><td class="n ${e.dir}">${pct(e.ret)}</td><td class="n">${e.rel==null?'–':sg(e.rel)}</td><td>${esc((e.sources_checked||[]).join(', ')||'ยังไม่ได้ตรวจ')}${e.why&&e.why!=='ยังไม่พบสาเหตุที่ยืนยันได้'?`<div class="pg">${esc(e.why)}</div>`:''}</td><td>${e.hypothesis?`<span class="tag hypothesis">${esc({big_picture:'ภาพใหญ่',industry:'อุตสาหกรรม',company:'บริษัท'}[e.hypothesis.scope]||e.hypothesis.scope)}</span>${esc(e.hypothesis.text)}`:'–'}</td><td>${esc(e.next_check||'–')}</td></tr>`).join(''):'<tr><td colspan="6">ไม่มีรายการ</td></tr>')+'</tbody>';
+ const refs=D.references;
+ $('refs').innerHTML=(refs.length?'<div class="tw"><table><thead><tr><th>แหล่ง</th><th>Tier</th><th>เข้าถึง</th><th>ใช้กับ</th></tr></thead><tbody>'+refs.map(r=>`<tr><td>${/^https?:/.test(r.src)?`<a href="${esc(r.src)}" target="_blank" rel="noopener">${esc(r.src)}</a>`:esc(r.src)}${r.broker?' <span class="tag">สรุปโบรก</span>':''}</td><td>${esc(r.tier||'–')}</td><td class="n">${fd(r.accessed)}</td><td>${r.events.map(evLink).join(' · ')}</td></tr>`).join('')+'</tbody></table></div>':'<p class="pg">ยังไม่มีแหล่งอ้างอิง</p>')+(D.conflicts.length?'<h3 style="margin-top:12px">ข้อมูลที่ขัดกัน</h3><ul>'+D.conflicts.map(c=>`<li>${esc(c.topic)}: ${esc(c.a)} / ${esc(c.b)} → เชื่อ ${esc(c.chosen)} <span class="pg">${evLink(c.event)}</span></li>`).join('')+'</ul>':'');
+}
+function extras(){const x=D.extras||{};if(!Object.keys(x).length)return;let h='';
+ const li=(a,f)=>a&&a.length?'<ul>'+a.map(f).join('')+'</ul>':'';
+ const o=x.oppday;if(o)h+=`<h4>ปัจจัยหนุน/เสี่ยงที่บริษัทระบุเอง</h4><p class="pg">${esc(o.file)}</p><div class="grid2"><div><b>หนุน</b>${li(o.drivers,d=>`<li>${esc(d.t)} <span class="pg">${esc(d.pg||'')}</span></li>`)}</div><div><b>เสี่ยง</b>${li(o.risks,d=>`<li>${esc(d.t)} <span class="pg">${esc(d.pg||'')}</span></li>`)}</div></div>`;
+ if((x.watch||[]).length)h+='<h4>หัวข้อที่ต้องติดตาม</h4><div class="tw"><table><thead><tr><th>หัวข้อ</th><th>ล่าสุด</th><th>เป้าบริษัท</th><th>สัญญาณที่ต้องตรวจ</th></tr></thead><tbody>'+x.watch.map(w=>`<tr><td>${esc(w.t)}</td><td>${esc(w.latest)}</td><td>${esc(w.target||'–')}</td><td>${esc(w.signal)}</td></tr>`).join('')+'</tbody></table></div>';
+ if((x.next||[]).length)h+='<h4>เหตุการณ์ถัดไป</h4>'+li(x.next,n=>`<li>${esc(n.t)} <b>${esc(n.d)}</b> <span class="pg">${esc(n.basis)}</span></li>`);
+ if((x.factors||[]).length)h+='<h4>ปัจจัยตาม SWOT / 5 Forces</h4><div class="tw"><table><thead><tr><th>ปัจจัย</th><th>Force</th><th>SWOT</th><th>ช่องทางกระทบ</th><th>ระดับหลักฐาน</th><th>ที่มา</th></tr></thead><tbody>'+x.factors.map(f=>`<tr><td>${esc(f.f)}</td><td>${esc(f.force)}</td><td>${esc(f.swot)}</td><td>${esc(f.channel||'–')}</td><td><span class="tag ${esc(f.level)}">${esc(f.level)}</span></td><td>${esc(f.src)}</td></tr>`).join('')+'</tbody></table></div>';
+ $('xbody').innerHTML=h;$('xtra').hidden=false}
+chart();hookChart();sections();extras();
+</script>
+</body>
+</html>

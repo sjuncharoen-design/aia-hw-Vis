@@ -1,0 +1,28 @@
+{
+ "_doc": "ผลของ sub-agent: <K>/result_<N>.json = list ของ object ตาม example · เขียนด้วย python เท่านั้น · ข้อไหนไม่มีข้อมูลให้เขียนว่าไม่มี ห้ามเดา",
+ "conf": {"high": "tier A >=1 หรือ tier B >=2 แหล่งอิสระ", "mid": "แหล่งเดียว หรือการโยงกับราคาเป็นการอนุมาน", "low": "ไม่มีหลักฐานเนื้อหา"},
+ "scope": ["big_picture", "industry", "company"],
+ "swot": ["Strength", "Weakness", "Opportunity", "Threat"],
+ "level": {"company": "บริษัทระบุเอง", "tested": "ทดสอบกับข้อมูลแล้ว", "hypothesis": "สมมติฐาน"},
+ "example": [{
+  "id": "<date>_<kind>",
+  "driver": "margin",
+  "conf": "mid",
+  "direction_match": true,
+  "what": "เกิดอะไร 1-2 ประโยค",
+  "why": "ทำไมราคาขยับ และวิเคราะห์จากอะไร 1-3 ประโยค",
+  "pnl_quarter": "2025Q2",
+  "pnl_note": "ใช้เมื่อไม่เกี่ยวกับงบโดยตรง เช่น เรื่องตลาด",
+  "pnl_links": [{"line": "gpm", "factor": "ราคาเหล็กผันผวน", "force": "อำนาจซัพพลายเออร์", "swot": "Threat", "level": "tested", "note": "เชื่อมกันอย่างไร"}],
+  "market_view": "ตลาดมองยังไง สรุปเป็นคำของเราเอง ระบุชื่อโบรกและวันที่ได้",
+  "market_view_public": "มุมมองแบบรวม ไม่มีชื่อโบรก ราคาเป้าหมาย หรือประมาณการ",
+  "market_view_src": [{"src": "path หรือ URL", "tier": "B", "date": "YYYY-MM-DD", "broker": true, "accessed": "YYYY-MM-DD", "note": "สั้น ๆ"}],
+  "outlook": "การตีความ: เขียนเป็นเงื่อนไขที่ตรวจได้ ไม่มีคำแนะนำซื้อขาย",
+  "evidence": [{"src": "path หรือ URL", "tier": "A", "loc": "L123 / หน้า", "date": "YYYY-MM-DD", "time": "17:24", "accessed": "YYYY-MM-DD", "note": "สั้น ๆ"}],
+  "context": [{"src": "URL", "tier": "B", "date": "YYYY-MM-DD", "accessed": "YYYY-MM-DD", "note": "ปัจจัยแวดล้อม ไม่ใช่สาเหตุ"}],
+  "conflicts": [{"topic": "เวลายื่นงบ", "a": "ชื่อไฟล์ 08:56", "b": "SET 17:54", "chosen": "SET"}],
+  "sources_checked": ["set", "mda", "earningcall", "fs", "onereport", "broker", "web"],
+  "hypothesis": {"scope": "industry", "text": "สมมติฐานเมื่อยังไม่แน่ใจ"},
+  "next_check": "ต้องตรวจอะไรต่อ"
+ }]
+}

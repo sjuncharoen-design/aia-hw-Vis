@@ -1,0 +1,44 @@
+[
+ {
+  "date": "2023-05-02",
+  "kind": "cash",
+  "price_before": 49.0,
+  "price_on": 42.25,
+  "amount": 0.1
+ },
+ {
+  "date": "2023-05-02",
+  "kind": "stock",
+  "price_before": 49.0,
+  "price_on": 42.25,
+  "ratio": "10:1"
+ },
+ {
+  "date": "2024-05-02",
+  "kind": "cash",
+  "price_before": 51.0,
+  "price_on": 49.5,
+  "amount": 0.6
+ },
+ {
+  "date": "2025-04-30",
+  "kind": "cash",
+  "price_before": 42.5,
+  "price_on": 42.5,
+  "amount": 0.8
+ },
+ {
+  "date": "2026-04-29",
+  "kind": "cash",
+  "price_before": 36.0,
+  "price_on": 35.75,
+  "amount": 1.22
+ },
+ {
+  "date": "2026-08-28",
+  "kind": "cash",
+  "price_before": 39.0,
+  "price_on": 38.25,
+  "amount": 0.64
+ }
+]

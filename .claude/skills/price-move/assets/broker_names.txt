@@ -1,0 +1,39 @@
+# ชื่อโบรกที่ต้องไม่ปรากฏในหน้า --public (ตรงตัวพิมพ์ คำเต็ม)
+ASL
+ASP
+BYD
+FSS
+GLOBLEX
+Globlex
+โกลเบล็ก
+InnovestX
+KGI
+KSS
+KSec
+LHS
+MST
+PI
+Pi
+PST
+SBITO
+TRINITY
+Trinity
+YUANTA
+Yuanta
+หยวนต้า
+ธนชาต
+DAOL
+Bualuang
+บัวหลวง
+Kasikorn Securities
+หลักทรัพย์กสิกร
+SCBS
+Asia Plus
+Maybank
+Krungsri Securities
+Phillip
+Finansia
+Kiatnakin
+Liberator
+Land and Houses Securities
+CGS

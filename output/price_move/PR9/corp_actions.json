@@ -1,0 +1,79 @@
+[
+ {
+  "date": "2019-05-07",
+  "kind": "cash",
+  "price_before": 10.5,
+  "price_on": 10.4,
+  "amount": 0.14
+ },
+ {
+  "date": "2020-04-20",
+  "kind": "cash",
+  "price_before": 6.7,
+  "price_on": 6.6,
+  "amount": 0.14
+ },
+ {
+  "date": "2021-04-30",
+  "kind": "cash",
+  "price_before": 10.5,
+  "price_on": 10.4,
+  "amount": 0.11
+ },
+ {
+  "date": "2022-05-05",
+  "kind": "cash",
+  "price_before": 13.8,
+  "price_on": 13.2,
+  "amount": 0.14
+ },
+ {
+  "date": "2023-05-02",
+  "kind": "cash",
+  "price_before": 19.5,
+  "price_on": 18.7,
+  "amount": 0.29
+ },
+ {
+  "date": "2024-05-02",
+  "kind": "cash",
+  "price_before": 19.4,
+  "price_on": 19.4,
+  "amount": 0.3
+ },
+ {
+  "date": "2024-11-22",
+  "kind": "cash",
+  "price_before": 25.5,
+  "price_on": 25.5,
+  "amount": 0.15
+ },
+ {
+  "date": "2025-05-07",
+  "kind": "cash",
+  "price_before": 24.6,
+  "price_on": 24.8,
+  "amount": 0.25
+ },
+ {
+  "date": "2025-11-20",
+  "kind": "cash",
+  "price_before": 20.3,
+  "price_on": 19.6,
+  "amount": 0.2
+ },
+ {
+  "date": "2026-04-30",
+  "kind": "cash",
+  "price_before": 16.5,
+  "price_on": 16.2,
+  "amount": 0.3
+ },
+ {
+  "date": "2026-08-24",
+  "kind": "cash",
+  "price_before": null,
+  "price_on": null,
+  "amount": 0.2
+ }
+]

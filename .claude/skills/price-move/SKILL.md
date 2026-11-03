@@ -24,6 +24,7 @@ disable-model-invocation: true
 - อ่านเอกสารผ่าน `.extracted.md` เท่านั้น เขียน JSON ด้วย python เท่านั้น ห้ามแก้ชั้นเอกสารใน `AllCompany` ห้ามเดาตัวเลข
 
 ## 1. เตรียมข้อมูล
+ทำเรื่องข่าว SET ให้เสร็จก่อนรัน `pnl_breakdown.py` เพราะใช้หาวันยื่นงบ (ดูหัวข้อข่าว SET ด้านล่าง)
 ```bash
 # TradingView ใช้ได้: เซฟผล get_ohlcv(symbol="SET:[T]", interval="1D", count=1300) เป็น $D/tv.json
 python $S/price_daily.py [T] $D --tv $D/tv.json --market-symbol TDEX.BK

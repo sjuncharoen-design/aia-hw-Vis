@@ -75,7 +75,7 @@ def quarter_label(pnl):
     return max(pnl['quarters']) if pnl.get('quarters') else 'NA'
 
 
-def assemble(ticker, events, takeaways, pnl, prices, recon, extras=None):
+def assemble(ticker, events, takeaways, pnl, prices, recon, extras=None, series=None):
     if not prices:
         sys.exit('หยุด: ไม่มีราคา (price_daily.json ว่าง) รันขั้นราคาใหม่ก่อน')
     events = [dict(e) for e in events]
@@ -110,15 +110,18 @@ def assemble(ticker, events, takeaways, pnl, prices, recon, extras=None):
             bars.append(dict(q=q, x=x['filed']['date'], est=x['filed']['est'], np=x['cur']['np'], prior=x['prior'].get('np'), yoy=(x['yoy'].get('np') or {}).get('pct')))
     refs = {}
     for e in events:
-        for key in ('evidence', 'context', 'market_view_src'):
-            for s in e.get(key) or []:
-                if s.get('src'):
-                    r = refs.setdefault(s['src'], dict(src=s['src'], tier=s.get('tier'), accessed=s.get('accessed'), broker=is_broker(s), events=[]))
-                    if e['id'] not in r['events']:
-                        r['events'].append(e['id'])
+        for s in [x for key in ('evidence', 'context', 'market_view_src') for x in e.get(key) or []] + list((e.get('vs_consensus') or {}).get('src') or []):
+            if s.get('src'):
+                r = refs.setdefault(s['src'], dict(src=s['src'], tier=s.get('tier'), accessed=s.get('accessed'), broker=is_broker(s), events=[]))
+                if e['id'] not in r['events']:
+                    r['events'].append(e['id'])
+    for sr in series or []:
+        for s in sr.get('src') or []:
+            r = refs.setdefault(s['src'], dict(src=s['src'], tier=s.get('tier'), accessed=s.get('accessed'), broker=False, events=[]))
+            r['events'].append('series:' + sr['id']) if 'series:' + sr['id'] not in r['events'] else None
     conflicts = [dict(c, event=e['id']) for e in events for c in e.get('conflicts') or []]
     return dict(ticker=ticker, label=quarter_label(pnl), finance=pnl.get('finance', False), missing_quarters=pnl.get('missing', []), public=False,
-                price=dict(rows=[dict(d=r['d'], p=r['p']) for r in prices], recon=recon), bars=bars, events=events, takeaways=takeaways, extras=extras or {},
+                price=dict(rows=[dict(d=r['d'], p=r['p']) for r in prices], recon=recon), bars=bars, events=events, takeaways=takeaways, extras=extras or {}, series=series or [],
                 references=sorted(refs.values(), key=lambda r: (r['tier'] or 'Z', r['src'])), conflicts=conflicts)
 
 
@@ -131,6 +134,8 @@ def to_public(page):
         e.pop('market_view_src', None)
         for key in ('evidence', 'context'):
             e[key] = [x for x in e.get(key) or [] if not is_broker(x)]
+        if e.get('vs_consensus'):
+            e['vs_consensus']['src'] = [x for x in e['vs_consensus'].get('src') or [] if not is_broker(x)]
     page['references'] = [r for r in page['references'] if not r['broker']]
     return page
 
@@ -153,13 +158,14 @@ if __name__ == '__main__':
     ap.add_argument('ticker')
     for f in ('--events', '--takeaways', '--pnl', '--price-dir', '--out-dir'):
         ap.add_argument(f, required=True)
+    ap.add_argument('--series', action='append', default=[], help='ไฟล์ซีรีส์เสริม (series_import.py) ใช้ซ้ำได้')
     ap.add_argument('--extras', help='JSON ส่วนเสริม: oppday/watch/next/factors (ไม่บังคับ)')
     ap.add_argument('--public', action='store_true'); ap.add_argument('--out')
     a = ap.parse_args()
     if a.public and not a.out:
         ap.error('--public ต้องระบุ --out')
     rd = lambda p: json.load(open(p, encoding='utf-8'))
-    page = assemble(a.ticker, rd(a.events), rd(a.takeaways), rd(a.pnl), rd(os.path.join(a.price_dir, 'price_daily.json')), rd(os.path.join(a.price_dir, 'price_recon.json')), rd(a.extras) if a.extras else None)
+    page = assemble(a.ticker, rd(a.events), rd(a.takeaways), rd(a.pnl), rd(os.path.join(a.price_dir, 'price_daily.json')), rd(os.path.join(a.price_dir, 'price_recon.json')), rd(a.extras) if a.extras else None, [rd(f) for f in a.series])
     if a.public:
         page = to_public(page)
         sys.path.insert(0, HERE)

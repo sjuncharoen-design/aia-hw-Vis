@@ -10,7 +10,7 @@ Prints events still missing a result — the main model must research those itse
 import glob, json, os, re, sys
 
 FIELDS = ('driver', 'cat', 'metric_move', 'why', 'evidence', 'sources_checked', 'conf', 'context', 'from_deepdive',
-          'what', 'direction_match', 'pnl_quarter', 'pnl_note', 'pnl_links', 'market_view', 'market_view_public', 'market_view_src', 'outlook', 'hypothesis', 'next_check', 'conflicts')
+          'what', 'direction_match', 'pnl_quarter', 'pnl_note', 'pnl_links', 'market_view', 'market_view_public', 'vs_consensus', 'market_view_src', 'outlook', 'hypothesis', 'next_check', 'conflicts')
 CAT_OF = {'earnings_beat': 'earnings', 'earnings_miss': 'earnings', 'margin': 'earnings', 'revenue_volume': 'earnings',
           'guidance': 'earnings', 'dividend_xd': 'news', 'capital_action': 'news', 'insider_biglot': 'news',
           'broker': 'broker', 'commodity': 'commodity', 'policy': 'policy', 'sector': 'market', 'market': 'market', 'unknown': 'unknown'}

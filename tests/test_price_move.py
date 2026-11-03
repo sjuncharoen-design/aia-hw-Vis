@@ -144,6 +144,16 @@ def test_merge_keeps_new_fields():
     assert not missing and out[0]['outlook'] == 'ดู GPM' and out[0]['market_view'] == 'บวก' and out[0]['direction_match'] is True
 
 
+def test_merge_and_carry_keep_vs_consensus():
+    vc = {'verdict': 'above', 'pct': 15, 'note': 'x', 'src': []}
+    ev = [{'date': '2025-01-01', 'end': '2025-01-01', 'kind': 'day'}]
+    out, _ = mr.merge(ev, [{'id': '2025-01-01_day', 'driver': 'margin', 'conf': 'mid', 'why': 'x', 'vs_consensus': vc}])
+    assert out[0]['vs_consensus'] == vc
+    new = [{'date': '2025-01-01', 'end': '2025-01-01', 'kind': 'day', 'ret': 6.0}]
+    de.carry_over(new, [dict(out[0], ret=6.0)])
+    assert new[0]['vs_consensus'] == vc
+
+
 # ---- price_daily single source ---------------------------------------------------------------------
 
 def yahoo_file(tmp_path, n=30):
@@ -386,8 +396,13 @@ def test_check_fails_when_takeaway_cites_draft_event(tmp_path):
     assert any('Key takeaway' in x for x in cp().check(pg))
 
 
-def test_check_fails_when_known_card_missing_a_question(tmp_path):
-    assert any('outlook' in x for x in cp().check(page_of(tmp_path, events=[known_event(outlook='')])))
+def test_check_fails_when_known_card_missing_what_or_why(tmp_path):
+    assert any('what' in x for x in cp().check(page_of(tmp_path, events=[known_event(what='')])))
+    assert any('why' in x for x in cp().check(page_of(tmp_path, events=[known_event(why='')])))
+
+
+def test_check_allows_known_card_without_market_view_or_outlook(tmp_path):
+    assert cp().check(page_of(tmp_path, events=[known_event(outlook='', market_view='')])) == []
 
 
 def test_check_fails_when_known_has_no_pnl_answer(tmp_path):
@@ -848,3 +863,100 @@ def test_index_aborts_on_broker_name(tmp_path):
 def test_index_with_no_pages_fails(tmp_path):
     (tmp_path / 'empty').mkdir()
     assert run_index(tmp_path / 'empty', tmp_path / 'd.html').returncode != 0
+
+
+# ---- ซีรีส์เสริม (ดัชนีเหล็ก สนค.) และคำตัดสินเทียบตลาดคาด ----
+STEEL = {'id': 'steel_cmi', 'name': 'ดัชนีราคาเหล็ก (สนค.)', 'unit': 'ดัชนี', 'freq': 'monthly', 'note': 'ทดสอบ',
+         'src': [{'src': 'https://index.tpso.go.th/api/cmi/filter', 'tier': 'A', 'accessed': '2026-11-03'}],
+         'rows': [{'d': '2025-06-30', 'p': 99.9, 'yoy': -3.5}, {'d': '2025-07-31', 'p': 100.0, 'yoy': -2.2}]}
+
+
+def with_series(tmp_path, *series):
+    paths = []
+    for i, sr in enumerate(series):
+        p = tmp_path / f's{i}.json'
+        p.write_text(json.dumps(sr, ensure_ascii=False), encoding='utf-8')
+        paths += ['--series', str(p)]
+    return paths
+
+
+def test_page_embeds_series(tmp_path):
+    write_inputs(tmp_path, [known_event()])
+    assert run_build(tmp_path, *with_series(tmp_path, STEEL)).returncode == 0
+    assert embedded_json(built_html(tmp_path))['series'][0]['rows'][1]['p'] == 100.0
+
+
+def test_page_builds_without_series(tmp_path):
+    write_inputs(tmp_path, [known_event()])
+    assert run_build(tmp_path).returncode == 0
+    assert embedded_json(built_html(tmp_path)).get('series') in (None, [])
+
+
+def test_check_fails_when_series_has_no_source(tmp_path):
+    pg = page_of(tmp_path)
+    pg['series'] = [dict(STEEL, src=[])]
+    assert any('ซีรีส์' in x for x in cp().check(pg))
+
+
+def test_check_fails_when_series_url_has_no_access_date(tmp_path):
+    pg = page_of(tmp_path)
+    pg['series'] = [dict(STEEL, src=[{'src': 'https://x.go.th', 'tier': 'A'}])]
+    assert any('วันที่เข้าถึง' in x for x in cp().check(pg))
+
+
+def test_check_fails_when_series_has_duplicate_dates(tmp_path):
+    pg = page_of(tmp_path)
+    pg['series'] = [dict(STEEL, rows=STEEL['rows'] + [STEEL['rows'][0]])]
+    assert any('ซ้ำ' in x for x in cp().check(pg))
+
+
+def run_import(tmp_path, raw, **extra):
+    r = tmp_path / 'raw.json'
+    r.write_text(json.dumps(raw), encoding='utf-8')
+    out = tmp_path / 'series.json'
+    args = ['--id', 'steel_cmi', '--name', 'ดัชนีเหล็ก', '--unit', 'ดัชนี', '--freq', 'monthly', '--note', 'n', '--src', 'https://index.tpso.go.th/api/cmi/filter', '--tier', 'A', '--accessed', '2026-11-03']
+    return subprocess.run([sys.executable, os.path.join(PM, 'series_import.py'), str(r), str(out), *args], capture_output=True, text=True), out
+
+
+def test_series_import_uses_month_end_dates(tmp_path):
+    r, out = run_import(tmp_path, [{'y': 2025, 'm': 2, 'index': 98.6, 'yoy': -3.2}, {'y': 2024, 'm': 2, 'index': 101.9, 'yoy': -3.6}])
+    assert r.returncode == 0, r.stderr
+    s = json.loads(out.read_text(encoding='utf-8'))
+    assert [x['d'] for x in s['rows']] == ['2024-02-29', '2025-02-28'] and s['rows'][0]['p'] == 101.9 and s['src'][0]['accessed'] == '2026-11-03'
+
+
+def test_series_import_rejects_duplicate_month(tmp_path):
+    r, out = run_import(tmp_path, [{'y': 2025, 'm': 2, 'index': 98.6}, {'y': 2025, 'm': 2, 'index': 98.7}])
+    assert r.returncode != 0 and not out.exists()
+
+
+def test_series_import_rejects_missing_value(tmp_path):
+    r, out = run_import(tmp_path, [{'y': 2025, 'm': 2, 'index': None}])
+    assert r.returncode != 0 and not out.exists()
+
+
+def test_check_fails_when_consensus_verdict_has_no_source(tmp_path):
+    pg = page_of(tmp_path, events=[known_event(vs_consensus={'verdict': 'above', 'pct': 15, 'note': 'x', 'src': []})])
+    assert any('ตลาดคาด' in x for x in cp().check(pg))
+
+
+def test_check_fails_when_consensus_verdict_is_unknown_word(tmp_path):
+    pg = page_of(tmp_path, events=[known_event(vs_consensus={'verdict': 'great', 'note': 'x', 'src': [dict(GOOD_EV)]})])
+    assert any('ตลาดคาด' in x for x in cp().check(pg))
+
+
+def test_check_allows_consensus_without_verdict_when_noted(tmp_path):
+    pg = page_of(tmp_path, events=[known_event(vs_consensus={'verdict': None, 'note': '[ยังไม่ยืนยัน] ไม่พบรายงาน', 'src': []})])
+    assert cp().check(pg) == []
+
+
+def test_public_aborts_when_consensus_note_has_estimate_word(tmp_path):
+    write_inputs(tmp_path, [known_event(vs_consensus={'verdict': 'above', 'pct': 5, 'note': 'ประมาณการกำไร 100 ล้านบาท', 'src': [dict(GOOD_EV)]})])
+    out = tmp_path / 'pub.html'
+    assert run_build(tmp_path, '--public', '--out', str(out)).returncode != 0 and not out.exists()
+
+
+def test_bars_carry_quarter_label(tmp_path):
+    pnl_ = {'ticker': 'XYZ', 'finance': False, 'missing': [], 'quarters': {'2025Q2': {'filed': {'date': '2025-08-06', 'est': False}, 'cur': {'np': 157.0}, 'prior': {'np': 192.0}, 'yoy': {'np': {'pct': -18.4}}, 'bridge': []}}}
+    pg = page_of(tmp_path, pnl_q=pnl_)
+    assert [b['q'] for b in pg['bars']] == ['2025Q2']

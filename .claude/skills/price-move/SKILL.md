@@ -79,6 +79,10 @@ python $M/build_page.py [T] ... --public --out output/price_move/[T].html
 - ก่อน commit ให้รัน `python -m pytest tests -q` (มี test สแกนไฟล์ที่ commit)
 - รายงานผู้ใช้: จำนวนรู้สาเหตุ/Draft, ราคาตรวจกี่แหล่ง, งวดงบที่อ่านไม่ได้, สิ่งที่ยังไม่ได้ตรวจ
 
+### ส่วนเสริมของหน้า (ไม่บังคับ)
+- **ซีรีส์เสริมใต้กราฟราคา** (เช่น ดัชนีราคาเหล็ก สนค. ของ DOHOME): `python $M/series_import.py RAW.json $D/<ชื่อ>.json --id ... --name ... --unit ... --freq monthly --note ... --src <URL> --tier A --accessed YYYY-MM-DD` แล้วใส่ `--series $D/<ชื่อ>.json` ตอน build (ใช้ซ้ำได้) · RAW รายเดือน = `[{y,m,index,yoy?,mom?}]` จุดวางที่วันสิ้นเดือน · หยุดถ้าเดือนซ้ำ/ค่าว่าง · แหล่งต้องมีวันที่เข้าถึง · ดัชนีเหล็ก สนค.: เปิด `https://index.tpso.go.th` ใน browser แล้วเรียก POST `/api/cmi/filter` (API ที่หน้าเว็บของ สนค. ใช้เอง ระบุใน API Document) ด้วย `{YearBase:2564,TimeOption:true,Categories:["4"],Period:{StartYear:<พ.ศ.>,StartMonth,EndYear,EndMonth}}` (หมวด 4 = เหล็กและผลิตภัณฑ์เหล็ก) และตรวจกับรายงาน PDF รายเดือนของ สนค. อย่างน้อย 1 เดือน
+- **เทียบตลาดคาด:** ต่อเหตุการณ์งบใส่ `vs_consensus: {verdict: above|inline|below|null, pct, note, src[]}` เก็บเฉพาะคำตัดสินและ % ที่สื่อรายงาน เป็นคำของเราเอง ไม่ใส่ตัวเลขประมาณการ ชื่อโบรก หรือลิงก์รายงานโบรก ถ้าหาไม่ได้ให้ `verdict=null` และ note ขึ้นต้น `[ยังไม่ยืนยัน]` ไม่เดา · `check_page` บังคับให้ verdict มีที่มา
+
 ## 5. หน้าสรุปรวม
 ```bash
 python $M/build_index.py --pages-dir output/price_move --out output/dashboard.html

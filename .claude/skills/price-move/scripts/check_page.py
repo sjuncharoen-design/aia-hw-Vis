@@ -24,7 +24,7 @@ def check(page):
         if not e.get('tip') and e['status'] == 'known':
             err.append(f"{e['id']} ไม่มีข้อความในกล่องเมื่อเลื่อนเมาส์")
         if e['status'] == 'known' and not e.get('inherited_from'):
-            for f in ('what', 'why', 'market_view', 'outlook'):
+            for f in ('what', 'why'):
                 if not str(e.get(f) or '').strip():
                     err.append(f"{e['id']} การ์ดขาด {f}")
             if not e.get('pnl') and not e.get('pnl_note'):
@@ -43,6 +43,28 @@ def check(page):
             for i in t.get('ids') or []:
                 if i not in known:
                     err.append(f'Key takeaway อ้าง {i} ซึ่งไม่ใช่เหตุการณ์ที่รู้สาเหตุ')
+    for sr in page.get('series') or []:
+        if not [s for s in sr.get('src') or [] if s.get('src')]:
+            err.append(f"ซีรีส์ {sr.get('id')} ไม่มีที่มา")
+        for s in sr.get('src') or []:
+            if str(s.get('src') or '').startswith('http') and not s.get('accessed'):
+                err.append(f"ซีรีส์ {sr.get('id')}: {s['src']} ไม่มีวันที่เข้าถึง")
+        ds = [r['d'] for r in sr.get('rows') or []]
+        if len(ds) != len(set(ds)):
+            err.append(f"ซีรีส์ {sr.get('id')} มีวันที่ซ้ำ")
+    for e in page['events']:
+        c = e.get('vs_consensus')
+        if not c:
+            continue
+        if c.get('verdict') not in (None, 'above', 'inline', 'below'):
+            err.append(f"{e['id']} คำตัดสินเทียบตลาดคาดไม่ถูกต้อง: {c.get('verdict')}")
+        elif c.get('verdict'):
+            ok = [s for s in c.get('src') or [] if s.get('src')]
+            if not ok:
+                err.append(f"{e['id']} คำตัดสินเทียบตลาดคาดไม่มีที่มา")
+            for s in ok:
+                if s['src'].startswith('http') and not s.get('accessed'):
+                    err.append(f"{e['id']} ตลาดคาด: {s['src']} ไม่มีวันที่เข้าถึง")
     x = page.get('extras') or {}
     if x.get('oppday') and not str(x['oppday'].get('file') or '').strip():
         err.append('Oppday ไม่ระบุไฟล์ต้นทาง')

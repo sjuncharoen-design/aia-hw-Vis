@@ -18,7 +18,7 @@ import argparse, json, os, sys
 from datetime import date, timedelta
 
 KEEP = ('why', 'evidence', 'conf', 'cat', 'driver', 'metric_move', 'sources_checked', 'context', 'from_deepdive',
-        'what', 'direction_match', 'pnl_quarter', 'pnl_note', 'pnl_links', 'market_view', 'market_view_public', 'market_view_src', 'outlook', 'hypothesis', 'next_check', 'conflicts')
+        'what', 'direction_match', 'pnl_quarter', 'pnl_note', 'pnl_links', 'market_view', 'market_view_public', 'vs_consensus', 'market_view_src', 'outlook', 'hypothesis', 'next_check', 'conflicts')
 
 
 def pct(a, b):
